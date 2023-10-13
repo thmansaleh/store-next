@@ -1,5 +1,5 @@
 "use client"
- import './style.css' 
+import './style.css' 
 import Product from "./Product"
   
  export default function Products() {
