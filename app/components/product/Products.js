@@ -6,7 +6,7 @@ import Product from './Product"
 const data=[1,1,1,1,1,1,1]
    return <div className="products-patient"> 
    {data.map((e,i)=>{
-   return <product/>
+   return <Product/>
 })
 
 }
