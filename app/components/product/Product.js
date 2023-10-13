@@ -1,6 +1,6 @@
 "use client"
 
-function Product() {
+export default function Product() {
   
 return  <div class="product">
     <img srcset="" src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" alt="">
