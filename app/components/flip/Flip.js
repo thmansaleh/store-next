@@ -1,3 +1,4 @@
+"use client"
 import './style.css'
 import tamara from './tamara.png';
 import tabby from './tabby.png';
