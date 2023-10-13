@@ -6,6 +6,7 @@ export default function Product(){
     <span className="product-name">iPhone 12</span>
     <div
     className="price-container">
+ <div>600 AED</div>
       <div className="previous-price">700 AED </div>
     </div>
   </div>
