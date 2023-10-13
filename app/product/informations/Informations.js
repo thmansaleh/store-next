@@ -1,5 +1,5 @@
 "use client"
-import Filp from '../../../Layout/filp/Flip'
+import Flip from '.../components/flip/Flip'
 import './style.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -31,7 +31,7 @@ const Information = () => {
     <span>Delivery by </span>
     <span>10 May, Wednesday</span>
   </div>
-  <Filp/>
+  <Flip/>
   <button onClick={()=>{
 
     notify()
