@@ -1,3 +1,4 @@
+import Slider from '../Slider'
 export default function ProductId() {
-  return <>product id</>
+  return <> <Slider/></>
 }
