@@ -50,4 +50,4 @@ const Flip = () => {
   )
 }
 
-export default Filp
+export default Flip
