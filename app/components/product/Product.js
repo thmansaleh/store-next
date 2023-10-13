@@ -1,5 +1,5 @@
 "use client"
-
+import "./style.css"
 export default function Product(){
   return  <div class="product">
     <img srcset="" src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" alt="">
