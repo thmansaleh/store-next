@@ -1,0 +1,81 @@
+  .login-container{ 
+     position: relative; 
+   backgrougtnd: radial-gradient( 70.53% 123.02% at 33.28% 23.99%, #222a3f 0%, #131521 100% ); 
+   background-color: #fff; 
+   height: 100vh; 
+   padding: 10px 15px; 
+   display: flex; 
+   justify-content: center 
+  
+   } 
+   .form{ 
+     width: 100%; 
+   } 
+  
+   .login-container .sign-in-title { 
+  
+     text-align: center; 
+     font-size: 1.3rem; 
+     margin-top: 10px  
+  
+  
+  
+   } 
+   .login-container form input{ 
+     display: block; 
+     border-radius: 0; 
+     margin: 5px 0; 
+     height: 36px; 
+     border: none; 
+     border-bottom:  solid  ; 
+     border-color: rgba(0,0,0,0.4);; 
+     outline: none; 
+     background-color: rgba(255,255,255,0.4); 
+     border-width: 1px; 
+     padding: 6px 10px; 
+     width: 100%; 
+     margin: 30px 0 
+   } 
+   .login-container form input:focus{ 
+     border-color: #0067b8; 
+   } 
+   .login-container form button{ 
+     width: 100%; 
+     height: 40px; 
+     border: none; 
+     border-radius: 7px ; 
+     background: darkgray; 
+     margin: 10px 0; 
+     color: white; 
+     font-weight: 700 
+   } 
+   .login-container form  span{ 
+     font-size: 0.7rem; 
+     color: rgba(0,0,0,0.4);; 
+  
+   } 
+   .login-container .forgot-password{ 
+     color: dodgerblue ; 
+     display: block 
+   } 
+   .login-container .register-title{ 
+     color: dodgerblue; 
+     font-size: 0.8rem; 
+   } 
+   .arrow-back-page{ 
+     position: fixed; 
+     top: 20px; 
+     height: 27px; 
+     left: 9%; 
+     transform: translateX(-50%); 
+     fill: dimgray 
+   } 
+  
+   @media screen and (min-width: 500px) { 
+     .login-container{ 
+       align-items: center 
+     } 
+     .login-container form { 
+       width: 40% !important; 
+     } 
+   }
