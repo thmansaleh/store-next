@@ -1,5 +1,7 @@
 
-
+import Item from './Item'
 export default function Cart(){
-  return <div>cart</div>
+  return <div>
+   <Item/>
+   </div>
 }
