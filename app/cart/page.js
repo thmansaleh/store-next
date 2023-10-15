@@ -1,6 +1,6 @@
 
 export default function Cart(){
   return <div>
-   fkfkfk
+   new cart from guthub
    </div>
 }
