@@ -2,7 +2,7 @@
 
 import './style.css'
 import Category from './Category'
-import SetNav from '../components/SetNav'
+import SetNave from '../components/SetNav'
 export default function Categories(){
 
   return <div className="categories" >
