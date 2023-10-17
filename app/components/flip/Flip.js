@@ -1,7 +1,7 @@
 "use client"
 import './style.css'
-import tabby from "@app/components/flip/tabby.png"
-import tamara from "./tamara.png"
+import tabby from "./tabby"
+import tamara from "./tamara"
 import { useEffect ,useRef} from 'react';
 
 
