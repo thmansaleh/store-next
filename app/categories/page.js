@@ -4,7 +4,7 @@ import './style.css'
 import Category from './Category'
 import SetNave from '../components/SetNave'
 export default function Categories(){
- SetNave({name:"categories",show:true)
+ SetNave({name:"categor6ies",show:true)
   return <div className="categories" >
       <Category 
       name="عبايات ملونة"
