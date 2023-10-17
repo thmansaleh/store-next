@@ -30,6 +30,7 @@ function Navigation() {
     const pageName = useSelector(state => state.navigation.name);
 
   return (
+    
     <nav>
         {
         icons.map(e=>{
@@ -39,6 +40,7 @@ function Navigation() {
         })
         }
     </nav>
+
   )
 }
 

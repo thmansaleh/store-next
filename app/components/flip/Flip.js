@@ -1,7 +1,6 @@
 "use client"
 import './style.css'
-import tamara from "@public/tamara.png
-import Image from "next/image"
+
 import { useEffect ,useRef} from 'react';
 
 
@@ -28,8 +27,8 @@ const Flip = () => {
     <div className="filp-container">
   <div className="scene scene--card" style={{padding: '0 5px'}}>
     <div ref={card1} className="card">
-      <Image className="card__face card__face--front" src={tamara}  alt='rr'/>
-      <Image className="card__face card__face--back" src="./tabby.png" alt='ff'/>
+      <img className="card__face card__face--front"  src='/tamara.png' alt='rr'/>
+      <img className="card__face card__face--back"   src='/tabby.png' alt='ff'/>
     </div>
   </div>
   <span>Pay in</span>

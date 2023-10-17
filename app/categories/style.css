@@ -4,7 +4,7 @@
   flex-wrap: wrap ;
 
 }
-.categories>div{
+.categories>a{
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 0 8px #aaa;
@@ -16,14 +16,17 @@
       position: relative;
       text-align: center;
       width: 35% !important;
+      display: inline-block;
+      text-decoration: none;
+      color: #000;
 }
-.categories>div>img{
+.categories>a>img{
       height: 80%;
     object-fit: cover;
     width: 100%;
     border-radius: 7px;
 }
-.categories>div>span{
+.categories>a>span{
       display: block;
     font-weight: 700;
     padding: 15px 0;

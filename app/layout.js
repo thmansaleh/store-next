@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body >
         <ProviderPage children={children}/>
+        <div  className="navigation-hidden"></div>
         </body>
     </html>
   )

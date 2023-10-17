@@ -1,9 +1,9 @@
 "use client" 
-  
+  import Link from "next/link"
  export default function Category({name,img}){ 
   
-   return <div> 
+   return <Link href='/'> 
        <img  src={img} alt="" /> 
         <span>{name}</span> 
-     </div> 
+     </Link> 
  }
