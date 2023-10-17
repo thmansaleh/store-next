@@ -1,8 +1,7 @@
 "use client"
 import './style.css'
-import tabby from "./tabby"
+
 import Image from "next/image"
-import tamara from "./tamara"
 import { useEffect ,useRef} from 'react';
 
 
