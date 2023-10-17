@@ -1,5 +1,5 @@
 "use client"
-
+import './style.css'
 export default function ProductInformation(){
   return <div className="product-information">
         <span>iPhone 12</span>
