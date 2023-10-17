@@ -1,5 +1,7 @@
 "use client"
 import './style.css'
+import tabby './tabby.png'
+import tamara from './tamara.png'
 import { useEffect ,useRef} from 'react';
 
 
@@ -26,8 +28,8 @@ const Flip = () => {
     <div className="filp-container">
   <div className="scene scene--card" style={{padding: '0 5px'}}>
     <div ref={card1} className="card">
-      <img className="card__face card__face--front" src="./tamara.png"  alt='rr'/>
-      <img className="card__face card__face--back" src="./tabby.png" alt='ff'/>
+      <img className="card__face card__face--front" src={tamara}  alt='rr'/>
+      <img className="card__face card__face--back" src={tabby} alt='ff'/>
     </div>
   </div>
   <span>Pay in</span>
@@ -40,7 +42,7 @@ const Flip = () => {
   <span> installments with</span>
   <div style={{width: 0, padding: '0 30px'}} className="scene scene--card">
     <div ref={card3} className="card">
-      <div className="card__face card__face--front">Tamara</div>
+      <div className="card__face card__face--front"> Tamara</div>
       <div className="card__face card__face--back">Tabby</div>
     </div>
   </div>
