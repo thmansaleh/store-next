@@ -3,7 +3,9 @@
 import './style.css'
 import Category from './Category'
 import SetNave from '../components/SetNave'
+import {SetNav} from '../components/setNave'
 export default function Categories(){
+  SetNav("categories new function')
   return <div className="categories" >
       <Category 
       name="عبايات ملونة"
