@@ -1,5 +1,5 @@
 import SetNave from '../components/SetNave'
-import Item from './item/Item'
+// import Item from './item/Item'
 import EmptyCart from './item/empty-cart/EmptyCart'
 
 export default function Cart(){
