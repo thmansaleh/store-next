@@ -1,11 +1,12 @@
 import SetNave from '../components/SetNave'
-import Item from './Item'
-import './style.css'
+import Item from './item/Item'
+import EmptyCart from './item/empty-cart/EmptyCart'
 
 export default function Cart(){
 
   return <div className='cart'>
     <SetNave name='cart' show={true}/>
-   <Item/>
+   {/* <Item/> */}
+   <EmptyCart/>
    </div>
 }
