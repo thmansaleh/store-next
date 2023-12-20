@@ -4,8 +4,8 @@ import Item from './item/Item'
 
 export default function Cart(){
 
-  return <div className='cart'>
-    <SetNave name='cart' show={true}/>
+  return <div className='cart relative'>
+    <SetNave name='cart' show={false}/>
    <Item/>
    <Item/>
    <Item/>
