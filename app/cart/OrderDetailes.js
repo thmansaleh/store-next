@@ -13,5 +13,6 @@ return <div className="px-4 py-2 font-sans bg-gray-50">
     <span className="font-semibold">Total Amount</span>
     <span className="font-semibold">AED 1415</span>
   </div>
+  <button class="bg-black rounded-lg w-full text-white py-2">Checkout</button>
 </div>
 }
