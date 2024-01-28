@@ -1,3 +1,4 @@
+"use client"
 export default function Serach(){
 return <div dir="rtl">
   <div className=" bg-white sticky top-0  bottom-0   py-4 flex items-center justify-between p-2 px-3 bg-white border-b border-zinc-200">
