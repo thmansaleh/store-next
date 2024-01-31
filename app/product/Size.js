@@ -12,6 +12,20 @@ export default function Size(){
     <div className=" hover:text-black text-sm hover:border-black hover:border  mx-2 px-6 py-2 bg-zinc-100 rounded-full text-gray-600">XL</div>
     <div className="hover:text-black hover:border-black hover:border text-sm mx-2 px-6 py-2 bg-zinc-100 rounded-full text-gray-600">XXL</div>
   </div>
+  <div className="bg-zinc-50 p-2">
+    <span className="block text-xs text-zinc-500 ">Product Measurement</span>
+    <div className=" select-none leading-3 inline-block">
+      <span className="text-xs text-block">Length:</span>
+      <span className="text-xs text-zinc-500">8.9 inch,</span>
+    </div>
+    <div className=" select-none leading-3 inline-block">
+      <span className="text-xs text-block">Waist Size:</span>
+      <span className="text-xs text-zinc-500">26 inch,</span>
+    </div>
+    <div className=" select-none leading-3 inline-block">
+      <span className="text-xs text-block">Hip Size:</span>
+      <span className="text-xs text-zinc-500">8.9 inch,</span>
+    </div>
+  </div>
 </div>
-
 }
