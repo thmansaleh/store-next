@@ -14,15 +14,15 @@ export default function Size(){
   </div>
   <div className="bg-zinc-50 p-2">
     <span className="block text-xs text-zinc-500 ">Product Measurement</span>
-    <div className=" select-none leading-3 inline-block">
+    <div className=" mx-1  leading-3 inline-block">
       <span className="text-xs text-block">Length:</span>
       <span className="text-xs text-zinc-500">8.9 inch,</span>
     </div>
-    <div className=" select-none leading-3 inline-block">
+    <div className=" mx-1  leading-3 inline-block">
       <span className="text-xs text-block">Waist Size:</span>
-      <span className="text-xs text-zinc-500">26 inch,</span>
+      <span className="text-xs text-zinc-500">8.9 inch,</span>
     </div>
-    <div className=" select-none leading-3 inline-block">
+    <div className=" mx-1 leading-3 inline-block">
       <span className="text-xs text-block">Hip Size:</span>
       <span className="text-xs text-zinc-500">8.9 inch,</span>
     </div>
