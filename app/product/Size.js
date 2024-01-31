@@ -1,5 +1,5 @@
 export default function Size(){
-  return <div className="p-2 bg-grbay-200">
+  return <div className="select-none p-2 bg-grbay-200">
   <div className="flex py-1 
   text-sm justify-between items-center bg-white">
     <div>Size</div>
