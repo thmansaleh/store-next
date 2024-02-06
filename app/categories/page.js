@@ -1,6 +1,7 @@
 
 import Categories from './Categories'
 import Sections from './Sections'
+import Brands from './Brands'
 import SetNave from '../components/SetNave'
 
 export default function () {
@@ -20,6 +21,7 @@ export default function () {
 <div className="w-full overflow-auto">
 <span className="block text-sm font-semibold p-2">تسوق حسب الفئة</span>
 <Sections/>
+<Brands/>
 </div>
 
 
