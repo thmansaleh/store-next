@@ -9,7 +9,7 @@ import SetNave from '@/components/SetNave'
 
 export default function ProductId() {
   return <> 
-    <SetNave show={true}/>
+    <SetNave show={false}/>
     <Slider/>
 <div className="p-2">
 
