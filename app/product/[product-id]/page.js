@@ -7,12 +7,14 @@ import Size from '@/app/product/Size'
 export default function ProductId() {
   return <> 
     <Slider/>
+<div className="p-2">
+
     <ProductInformation/>
     <Size/>
 <FreeDelivery/>
     <Flip/>
     <Description/>
-
+</div>
    
     </>
 }
