@@ -1,10 +1,10 @@
 
-import Categories from './Categories'
-import Sections from './Sections'
-import Brands from './Brands'
+//import Categories from './Categories'
+//import Sections from './Sections'
+//import Brands from './Brands'
 import SetNave from '../components/SetNave'
 
-export default function () {
+export default function Categories() {
 
   return <>
           <SetNave name='categories' show={true}/>
