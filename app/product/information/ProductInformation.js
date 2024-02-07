@@ -1,6 +1,6 @@
 
 export default function ProductInformation(){
-  return <div className="bg-white p-4 shadow rounded-lg">
+  return <div className="bg-white py-4 shadow rounded-lg">
   <div className="text-lg font-bold text-gray-800">NINE WEST</div>
   <div className="text-sm text-gray-500">FANTASY EMBELLISHED POINTED TOE PUMPS</div>
   <div className="flex items-baseline mt-2">
