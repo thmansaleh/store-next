@@ -18,8 +18,9 @@ export default function ProductId() {
 <FreeDelivery/>
     <Flip/>
     <Description/>
-<AddToCartButton/>
+
 </div>
+<AddToCartButton/>
    
     </>
 }
