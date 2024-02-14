@@ -1,8 +1,8 @@
 export default function (){
-return <div className="px-4 py-2 font-sans bg-gray-50 fixed bottom-0 left-0 w-full mb-16">
-  <div className="text-md font-semibold">ORDER DETAILS</div>
+return <div className="px-4 py-2 font-sans bg-zinc-50 fixed bottom-0 left-0 w-full mb-16">
+  <div className="text-base font-semibold">ORDER DETAILS</div>
   <div className="flex justify-between  py-2">
-    <span>Subtotal</span>
+    <span >Subtotal</span>
     <span className="font-semibold">AED 1415</span>
   </div>
   <div className="flex justify-between border-b py-2">
