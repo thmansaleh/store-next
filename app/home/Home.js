@@ -6,7 +6,7 @@ export default function Home(){
   return <>
     <SetNave name='/' show={true}/>
 <SearchInput/>
-<Products/<
+<Products/>
 
 </>
 
