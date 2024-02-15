@@ -2,7 +2,7 @@
 export default function Serach(){
 return <div dir="rtl">
   <div className=" bg-white sticky top-0  bottom-0   py-4 flex items-center justify-between p-2 px-3 bg-white border-b border-zinc-200">
-    <svg className="w-5 object-contain h-5  fill-back-500 bg-white" xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width={512} height={512}>
+    <svg className="w-5 object-contain h-5  fill-black-500 bg-white rtl:rotate-180 " xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width={512} height={512}>
       <path d="M17.921,1.505a1.5,1.5,0,0,1-.44,1.06L9.809,10.237a2.5,2.5,0,0,0,0,3.536l7.662,7.662a1.5,1.5,0,0,1-2.121,2.121L7.688,15.9a5.506,5.506,0,0,1,0-7.779L15.36.444a1.5,1.5,0,0,1,2.561,1.061Z" />
     </svg>
     <input placeholder="بحث" type="search" className="bg-gray-100 rounded outline-0 px-3 py-2 text-sm w-3/4 " />
