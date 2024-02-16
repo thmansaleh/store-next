@@ -7,6 +7,7 @@ export default function Cart(){
   return <div style={{"background-color":"#f7f7f7"}} className=" p-3">
   <div className="
 my-2">
+<SetNave name='cart' show={false}/>
     <div className="my-1.5 rounded-lg   border w-full flex border-gray-300 justify-between items-center bg-white p-3">
       <img className="object-contain w-24 mx-2" loading="lazy" src="https://jomla.ae/_next/image/?url=https%3A%2F%2Fwp.jomla.ae%2Fwp-content%2Fuploads%2F2021%2F12%2FN42661645A_1.jpg&w=256&q=75" />
       <div className>
