@@ -18,7 +18,7 @@ export default function FristSlider() {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+      //  modules={[Pagination]}
         className="mySwiper my-3 "
       >
         <SwiperSlide>
