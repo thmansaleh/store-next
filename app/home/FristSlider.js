@@ -10,8 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 //import { Pagination } from 'swiper/modules';
 
 export default function FristSlider() {
-  return (
-    <>
+  return <>
       <Swiper
         slidesPerView={2.5}
         spaceBetween={15}
@@ -38,6 +37,5 @@ export default function FristSlider() {
       
 
 </>
-)
 
 }
