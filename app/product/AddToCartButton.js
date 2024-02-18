@@ -1,7 +1,7 @@
 export default function AddToCartButton(){
 
 return <div className="w-full bg-white select-none p-3 sticky bottom-0">
-  <button className="rounded-lg w-full bg-black text-sm font-semibold text-white py-2">إضافة الى السلة</button>
+  <button className="rounded-lg w-full bg-black text-sm font-semibold text-white py-3">إضافة الى السلة</button>
 </div>
 
 }
