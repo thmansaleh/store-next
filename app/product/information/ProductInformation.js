@@ -8,7 +8,7 @@ export default function ProductInformation(){
     <div className="text-sm text-gray-500 line-through ml-2">499 د.إ</div>
     <div className="text-sm font-semibold text-red-500 ml-2">تخفيض -60% عند الشراء </div>
   </div>
-  <div className="text-sm text-gray-500 mt-1">توصيل في  <span className="text-green-400">16 Nov, Thursday</span></div>
+  <div className="text-sm text-gray-500 mt-1">توصيل في  <span className="text-green-400">16 نوفمبر, الثلاثاء</span></div>
 
 </div>
 }
