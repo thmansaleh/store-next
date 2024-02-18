@@ -22,21 +22,18 @@ export default function FristSlider() {
         className="mySwiper my-3 "
       >
         <SwiperSlide>
-  <img class="rounded-lg  h-64 object-contain border border-zinc-300 " src="https://m.media-amazon.com/images/I/31RJGO+PNNL._AC_SY580_.jpg" alt="">
+  <img className="rounded-lg  h-64 object-contain border border-zinc-300 " src="https://m.media-amazon.com/images/I/31RJGO+PNNL._AC_SY580_.jpg" alt />
 
 </SwiperSlide>
 
    <SwiperSlide>
-  <img class="rounded-lg  h-64 object-contain border border-zinc-300 " src="https://m.media-amazon.com/images/I/31RJGO+PNNL._AC_SY580_.jpg" alt="">
-
+  <img className="rounded-lg  h-64 object-contain border border-zinc-300 " src="https://m.media-amazon.com/images/I/31RJGO+PNNL._AC_SY580_.jpg" alt />
 </SwiperSlide>
    <SwiperSlide>
-  <img class="rounded-lg  h-64 object-contain border border-zinc-300 " src="https://m.media-amazon.com/images/I/31RJGO+PNNL._AC_SY580_.jpg" alt="">
-
+  <img className="rounded-lg  h-64 object-contain border border-zinc-300 " src="https://m.media-amazon.com/images/I/31RJGO+PNNL._AC_SY580_.jpg" alt />
 </SwiperSlide>
    <SwiperSlide>
-  <img class="rounded-lg  h-64 object-contain border border-zinc-300 " src="https://m.media-amazon.com/images/I/31RJGO+PNNL._AC_SY580_.jpg" alt="">
-
+  <img className="rounded-lg  h-64 object-contain border border-zinc-300 " src="https://m.media-amazon.com/images/I/31RJGO+PNNL._AC_SY580_.jpg" alt />
 </SwiperSlide>
       
 
