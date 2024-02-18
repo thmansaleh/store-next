@@ -12,8 +12,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export default function FristSlider() {
   return <>
       <Swiper
-        slidesPerView={2.5}
-        spaceBetween={15}
+        slidesPerView={1.5}
+        spaceBetween={0}
         pagination={{
           clickable: true,
         }}
