@@ -1,4 +1,4 @@
-
+"use client"
 import Form from "./Form"
 import PaymentMethods from "./PaymentMethods"
 export default function page(){
