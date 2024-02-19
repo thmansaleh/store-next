@@ -1,7 +1,7 @@
 import SetNave from '../components/SetNave'
 import OrderDetailes from './OrderDetailes'
 import Item from './item/Item'
-
+import Link from "next/link"
 export default function Cart(){
 
   return <div style={{"background-color":"#f7f7f7"}} className=" p-3">
@@ -58,11 +58,11 @@ my-2">
     <div className="my-4 flex justify-between">
       <span className="text-md font-bold text-gray-500">المجموع</span><span className="text-md font-bold">669 د.أ</span>
     </div>
-    <a href="#" className>
+    <link href="checkout" className>
       <button className="md:w-24 w-full bg-black text-white text-md font-semibold rounded-lg py-2 my-2">
         الدفع 
       </button>
-    </a>
+    </Link>
   </div>
 </div>
 }
