@@ -1,7 +1,7 @@
 
 
 
-improt TamraSteper from "./Tamarasteper" 
+import TamraSteper from "./Tamarasteper" 
 export default function PaymentMethods(){
  return <div className="p-3 rounded-lg border my-3 ">
   <div className>
