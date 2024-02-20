@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
-      <body >
+      <body className="font-mono">
         <ProviderPage children={children}/>
         <div  className="navigation-hidden"></div>
         </body>
