@@ -2,7 +2,7 @@
 
 export default function TamaraSteper(){
 
-return <ul className="relative flex flex-col md:flex-row gap-2  my-1 px-2">
+return <ul className="relative flex flex-col md:flex-row gap-2   px-2">
   {/* Item */}
   <li className="md:shrink md:basis-0 flex-1 group flex gap-x-2 md:block">
     <div className="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
