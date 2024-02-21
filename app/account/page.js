@@ -1,7 +1,7 @@
 import SetNave from "../components/SetNave"
 import Login from "./login/page"
 import LanguageModal from './LanguageModal'
-function page() {
+ export default function page() {
 
  return (
     <>
@@ -79,4 +79,4 @@ function page() {
  )
 }
 
-export default page
+
