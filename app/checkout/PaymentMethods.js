@@ -63,6 +63,7 @@ export default function PaymentMethods(){
       </label>
     </div>
 <TamaraSteper/>
-  </div>
+ 
+ </div>
 </div>
 }
