@@ -3,6 +3,20 @@
 import {useState, useRef} from "react"
 export default function CurrencyModal(){
 const modal = useRef();
+const currencies = [
+  { english: "Bahraini Dinar", arabic: "دينار بحريني" },
+  { english: "Saudi Riyal", arabic: "ريال سعودي" },
+  { english: "Emirati Dirham", arabic: "درهم إماراتي" },
+  { english: "Qatari Riyal", arabic: "ريال قطري" },
+  { english: "Kuwaiti Dinar", arabic: "دينار كويتي" },
+  { english: "Omani Rial", arabic: "ريال عماني" },
+ 
+ 
+  
+  { english: "US Dollar", arabic: "دولار أمريكي" },
+  { english: "British Pound", arabic: "جنيه إسترليني" }
+];
+
 
 const OpenModal = () => {
     modal.current.style.display='flex'
@@ -38,7 +52,7 @@ return <>
 
 
 
-{[1,2,3,4].map((item, index) => (
+{currencies.map((currency, index) => (
            <div key={index} role="button" className="flex items-center w-full p-0 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
         <label htmlfor="vertical-list-react" className="flex items-center w-full px-3 py-2 cursor-pointer">
           <div className="grid mr-3 place-items-center">
@@ -54,7 +68,7 @@ return <>
             </div>
           </div>
           <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-400 px-2">
-            درهم إماراتي
+            {currency.arabic}
           </p>
         </label>
       </div>
