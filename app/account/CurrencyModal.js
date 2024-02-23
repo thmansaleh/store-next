@@ -36,7 +36,7 @@ return <>
     </div>
 
 
-<div ref={modal} className=" hidden bg-gray-100 bg-opacity-75  transition-all modal-container flex overflow-y-auto overflow-x-hidden fixed  z-40 inset-y-0 inset-x-0 justify-center items-center    bg-gray-400 max-h-full">
+<div ref={modal} className=" hidden bg-gray-100 bg-opacity-75  transition-all modal-container flex overflow-y-auto overflow-x-hidden fixed  z-40 inset-y-0 inset-x-0 justify-center items-center     max-h-full">
   <div id="div" className="z-50   shadow relative rounded-lg w-3/4 bg-white transition-all">
 
 
