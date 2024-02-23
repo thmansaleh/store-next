@@ -24,6 +24,7 @@ const OpenModal = () => {
 
 const closeModal = () => {
     modal.current.style.display='none'
+console.log("close")
   };
 
 
