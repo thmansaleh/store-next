@@ -2,10 +2,10 @@
 
 import {useState, useRef} from "react"
 export default function LanguageModal(){
-const inputRef = useRef(null);
+const inputRef = useRef();
 
 const handleClick = () => {
-    inputRef.current.style.display='flex
+    inputRef.current.style.display='flex'
   };
 
 
