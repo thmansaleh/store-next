@@ -33,7 +33,7 @@ return <>
         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
       </svg>
     </button>   
-    <div className="relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+    
       <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
         <div role="button" className="flex items-center w-full p-0 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
           <label htmlfor="vertical-list-react" className="flex items-center w-full px-3 py-2 cursor-pointer">
@@ -93,7 +93,7 @@ return <>
           </label>
         </div>
       </nav>
-    </div>
+    
   </div>
 </div>
 
