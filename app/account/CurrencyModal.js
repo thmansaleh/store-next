@@ -22,7 +22,7 @@ const OpenModal = () => {
     modal.current.style.display='flex'
   };
 
-const CloseModal = () => {
+const closeModal = () => {
     modal.current.style.display='none'
 console.log("close")
   };
@@ -36,16 +36,17 @@ return <>
     </div>
 
 
-<div ref={modal} className=" hidden bg-gray-100 bg-opacity-75 transition-all modal-container flex overflow-y-auto overflow-x-hidden fixed  z-40 inset-y-0 inset-x-0 justify-center items-center    bg-gray-400 max-h-full">
+<div ref={modal} className=" hidden bg-gray-100 bg-opacity-75 relative  transition-all modal-container flex overflow-y-auto overflow-x-hidden fixed  z-40 inset-y-0 inset-x-0 justify-center items-center    bg-gray-400 max-h-full">
   <div id="div" className="z-50   shadow relative rounded-lg w-3/4 bg-white transition-all">
 
 
 
-    <button onclick={CloseModal} type="button" className=" text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 m-3 flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+        <button onClick={closeModal} type="button" className="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
       <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
       </svg>
-    </button>   
+    </button>
+
 
     <div className=" flex flex-col gap-1 p-2 font-sans text-base font-normal text-black">
 
