@@ -2,7 +2,7 @@ import SetNave from '../components/SetNave'
 import OrderDetailes from './OrderDetailes'
 import Item from './item/Item'
 import Link from "next/link"
-import PromotionCode from="./PromotionCode"
+import PromotionCode from "./PromotionCode"
 export default function Cart(){
 
   return <div style={{"background-color":"#f7f7f7"}} className=" p-3">
