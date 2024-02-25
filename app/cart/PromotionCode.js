@@ -5,7 +5,7 @@ import {useRef} from  "react"
 export default function PromotionCode(){
 const inputRef =useRef(null)
 
-left openInput = () => {
+let openInput = () => {
 console.log("toggle")
 inputRef.current.classList.toggle('h-20')
 }
