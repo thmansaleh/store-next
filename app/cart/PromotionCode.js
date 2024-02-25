@@ -3,11 +3,11 @@ import {useRef} from  "react"
 
 
 export default function PromotionCode(){
-const inputRef =useRef(null)
+const code = useRef()
 
 let openInput = () => {
 console.log("toggle")
-inputRef.current.classList.toggle('h-20')
+code.current.classList.toggle('h-20')
 }
 
 
@@ -23,7 +23,7 @@ inputRef.current.classList.toggle('h-20')
 
 
 
-<div ref={inputRef} className="h-0 w-full  transition-all overflow-y-hidden">
+<div ref={code} className="h-0 w-full  transition-all overflow-y-hidden">
   <div className="mt-5 flex px-4">
     <input className="flex-1 rounded-s-xl border-2 border-black p-2 focus:outline-none" placeholder="ادخل الكود" type="text" defaultValue />
     <button className="flex w-20 justify-center rounded-e-xl bg-black p-2 text-white  hover:bg-opacity-80">تفعيل</button>
