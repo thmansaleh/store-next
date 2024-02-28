@@ -8,7 +8,7 @@ name:'home',
 show:true
 },
   reducers: {
-    setNav: (state, action) => {
+    setItemCart: (state, action) => {
       state.name=action.payload.pageName;
       state.show=action.payload.show;
     }
@@ -16,4 +16,6 @@ show:true
   },
 });
 
-export const { setNav } = navigationSlice.actions;
+export const { setItemCart } = navigationSlice.actions;
+
+export default cartSlice.reducer;
