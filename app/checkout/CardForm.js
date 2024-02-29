@@ -2,13 +2,15 @@
 import { useRef,  useEffect} from "react"
 
 export default function CardForm(){
-const ContainerRef= useRef(null)
+const paymentMethod=""
+const containerRef= useRef(null)
 useEffect(() => {
     if(payment=="card"){
-
-
+containerRef.current.classList.add("h-44")
+}else{
+ContainerRef.current.classList.remove("h-44")
 }
-  },[payment]);
+  },[paymentMethod]);
 
 
 return <div className=" w-full py-3 px-6">
