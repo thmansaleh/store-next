@@ -10,6 +10,12 @@ export default function CardForm(){
 const containerRef= useRef(null)
 useEffect(() => {
 console.log(paymentMethod)
+if(paymentMethod=="card"){
+ containerRef.current.classList.add("h-44")
+}else{
+containerRef.current.classList.remove("h-44")
+}
+}
 
   },[paymentMethod]);
 
