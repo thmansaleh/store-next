@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const checkoutSlice= createSlice({
   name: 'checkout',
   initialState: {
-paymentMethod:'',
+paymentMethod:'othman',
 name:"",
 cardHolderName:"",
 cardNumber:0,
