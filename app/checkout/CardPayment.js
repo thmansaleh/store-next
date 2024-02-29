@@ -14,6 +14,7 @@ return   <div className>
         <input 
 
 onChange={() =>{
+console.log("change")
       dispatch(changePaymentMethod("card")) 
 
 }}
