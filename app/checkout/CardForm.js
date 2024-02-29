@@ -15,7 +15,7 @@ if(paymentMethod=="card"){
 }else{
 containerRef.current.classList.remove("h-44")
 }
-}
+
 
   },[paymentMethod]);
 
