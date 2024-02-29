@@ -4,7 +4,7 @@ import { useRef,  useEffect} from "react"
     
 export default function CardForm(){
 
-    const paymentMethod = useSelector(state => state.checkout.paymebtMethod);
+    const paymentMethod = useSelector(state => state.checkout.paymentMethod);
 
 
 const containerRef= useRef(null)
