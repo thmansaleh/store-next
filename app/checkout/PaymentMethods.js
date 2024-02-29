@@ -1,6 +1,6 @@
 
 
-
+import CardPayment from "./CardPayment"
 import TamaraSteper from "./TamaraSteper" 
 export default function PaymentMethods(){
  return <div className="p-3 rounded-lg border my-3 ">
@@ -32,7 +32,7 @@ export default function PaymentMethods(){
 
 
 
-
+<CardPayment/>
 
 
 
