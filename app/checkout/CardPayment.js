@@ -1,3 +1,6 @@
+
+import CardForm from "./CardForm"
+
 export default function CardPayment() {
 
 return   <div className>
@@ -21,5 +24,8 @@ return   <div className>
         </div>
       </label>
     </div>
+
+<CardForm/>
+
   </div>
 }
