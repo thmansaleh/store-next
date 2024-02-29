@@ -13,7 +13,7 @@ return   <div className>
       <label className="relative flex items-center p-3 rounded-full cursor-pointer" htmlfor="custom-style1">
         <input 
 
-onClick={() =>{
+onChange={() =>{
       dispatch(changePaymentMethod("card")) 
 
 }}
