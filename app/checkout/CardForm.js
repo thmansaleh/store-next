@@ -1,16 +1,17 @@
 "use client"
+import { useSelector } from 'react-redux';
 import { useRef,  useEffect} from "react"
-
+    
 export default function CardForm(){
-const paymentMethod=""
+
+    const paymentMethod = useSelector(state => state.checkout.paymebtMethod);
+
+
 const containerRef= useRef(null)
 useEffect(() => {
-    if(payment=="card"){
-containerRef.current.classList.add("h-44")
-}else{
-ContainerRef.current.classList.remove("h-44")
-}
-  },[paymentMethod]);
+console.log(paymentMethod)
+
+  },[]);
 
 
 return <div ref={containerRef} className=" w-full py-3 px-6">
