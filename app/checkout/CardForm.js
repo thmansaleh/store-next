@@ -11,7 +11,7 @@ const containerRef= useRef(null)
 useEffect(() => {
 console.log(paymentMethod)
 
-  },[]);
+  },[paymentMethod]);
 
 
 return <div ref={containerRef} className=" w-full py-3 px-6">
