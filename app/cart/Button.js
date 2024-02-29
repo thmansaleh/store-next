@@ -1,5 +1,5 @@
 'use client'
-export default function Button() {
+export default function PromotionCode() {
 
    return <>
 <button onClick={() => console.log("othman")} className="flex  bg-white rounded-lg text-sm font-semibold text-black justify-center items-center my-3 py-2 border-dashed border-4 w-full ">
