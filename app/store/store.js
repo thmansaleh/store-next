@@ -6,6 +6,7 @@ import checkoutReducer from './features/checkout'
 const store = configureStore({
     reducer: {
         navigation: navigationReducer,
+        checkout: checkoutReducer
     },
   });
   
