@@ -1,8 +1,26 @@
+import { useSelector } from 'react-redux';
+import { useRef,  useEffect} from "react"
 
 
 export default function TamaraSteper(){
+    const paymentMethod = useSelector(state => state.checkout.paymentMethod);
 
-return <ul className="relative flex flex-col md:flex-row gap-2   px-2">
+
+const containerRef= useRef(null)
+useEffect(() => {
+
+if(paymentMethod=="tamara"){
+ containerRef.current.classList.add("h-44")
+}else{
+containerRef.current.classList.remove("h-44")
+}
+
+
+  },[paymentMethod]);
+
+
+
+return <ul ref={containerRef} className="relative flex flex-col md:flex-row gap-2   px-2">
   {/* Item */}
   <li className="md:shrink md:basis-0 flex-1 group flex gap-x-2 md:block">
     <div className="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
