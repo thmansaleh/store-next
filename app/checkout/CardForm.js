@@ -20,7 +20,7 @@ containerRef.current.classList.remove("h-44")
   },[paymentMethod]);
 
 
-return <div ref={containerRef} className="w-full py-3 px-6
+return <div ref={containerRef} className="w-full  px-6
 transition-all overflow-y-hidden h-0">
   <input type="number" className="w-full p-2 text-center text-sm border-b outline-none " placeholder="Card Number" />
   <div className="flex w-full ">
