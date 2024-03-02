@@ -1,5 +1,6 @@
 
 "use client"
+import OrderDetailes from "./OrderDetailes"
 import SetNave from '../components/SetNave'
 import OrderDetailes from './OrderDetailes'
 import Item from './item/Item'
@@ -23,8 +24,7 @@ my-2">
 
 
 <PromotionCode/>
-
-
+<OrderDetailes/>
 
 </div>
 }
