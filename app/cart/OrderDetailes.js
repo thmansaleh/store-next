@@ -1,6 +1,6 @@
 
 "use client"
-
+import Link from "next/link"
 export default function OrderDetailes() {
 
 return  <div className=" my-2 overflow-hidden rounded-xl border border-gray-300 bg-white px-4 py-6 md:mx-4">
