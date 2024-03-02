@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Products(){
 const products = async () => {
      const data =   await fetch('https://dummyjson.com/products')
-    const products = await dataa.json()
+    const products = await data.json()
     return products.products
     
     }
