@@ -7,7 +7,7 @@ import Link from "next/link"
 import PromotionCode from "./PromotionCode"
  import { useSelector } from 'react-redux';
 
-import Items from "./Items/>
+import Items from "./Items"
 export default function Cart(){
     const items = useSelector(state => state.cart.items);
 console.log(items)
