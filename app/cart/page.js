@@ -1,6 +1,6 @@
 
 "use client"
-import OrderDetailes from "./OrderDetailes"
+
 import SetNave from '../components/SetNave'
 import OrderDetailes from './OrderDetailes'
 import Item from './item/Item'
