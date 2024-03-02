@@ -1,9 +1,9 @@
 "use client"
-import { useSelector } from 'react-redux';
-export default function Items(){
 
-    const cartItems= useSelector(state => state.cart.items);
-console.log(cartItems)
+export default function Items({cartItems}){
+
+    const cartItems= cartItems 
+
  return <div>
 
   {cartItems.map((e,i) => { 
