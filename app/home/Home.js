@@ -8,7 +8,11 @@ export default function Home(){
     <SetNave name='/' show={true}/>
 <SearchInput/>
 <FristSlider/>
+
+<div className="p-2 flex wrap justify-around bg-white  flex-wrap">
 <Products/>
+</div>
+
 
 </>
 
