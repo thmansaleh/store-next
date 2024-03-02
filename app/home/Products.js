@@ -7,7 +7,7 @@ const products = async () => {
     return products.products
     
     }
-
+console.log(products)
 return <div className="p-2 flex wrap justify-around bg-white  flex-wrap">
 
 
