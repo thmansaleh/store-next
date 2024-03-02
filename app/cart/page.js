@@ -4,7 +4,6 @@
 import SetNave from '../components/SetNave'
 import OrderDetailes from './OrderDetailes'
 import Item from './item/Item'
-import Link from "next/link"
 import PromotionCode from "./PromotionCode"
  import { useSelector } from 'react-redux';
 
