@@ -6,6 +6,6 @@ const products= async () => {
     return products.products
 
     }
-console.log(data)
-  return  <Home products={data}/>
+console.log(products)
+  return  <Home products={products}/>
 }
