@@ -1,8 +1,8 @@
-
+"use client"
 import Link from 'next/link'
-export default function Products(){
+export default function Products({products}){
 
-
+console.log(products)
 
 return [1,2,2,2,2,2,2,2,2].map((e,i) => {
 return <Link href="product/hthhh" className=" relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">
