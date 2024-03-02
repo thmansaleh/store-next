@@ -1,6 +1,8 @@
 
 import Link from 'next/link'
 export default function Products({products}){
+
+
 const productss = products
 return productss.map((e,i) => { <Link href="product/hthhh" className=" relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">
     <span className=" bg-red-700 text-white top-0 right-0 text-center absolute rounded-bl-lg px-3 text-xs bg-blend-multiply line-height opacity-80 ">خصم 20%</span>
