@@ -21,7 +21,6 @@ console.log(cartItems)
 </div>
 </div>
 }
-}
 
 
 
