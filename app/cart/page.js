@@ -9,8 +9,8 @@ import PromotionCode from "./PromotionCode"
 
 import Items from "./Items"
 export default function Cart(){
-    const items = useSelector(state => state.cart.items);
-console.log(items)
+    const cartItems = useSelector(state => state.cart.items);
+console.log(cartItems)
 
   return <div style={{"background-color":"#f7f7f7"}} className=" p-3">
   <div className="
