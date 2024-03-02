@@ -1,4 +1,4 @@
-
+"use client"
 import { useDispatch } from "react-redux";
 import { addItemToCart} from "@/app/store/features/cart";
 
