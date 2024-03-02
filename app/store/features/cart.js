@@ -8,6 +8,7 @@ items:[1]
 },
   reducers: {
     addItemToCart: (state, action) => {
+// if(action.payload.id)
       state.items.push(action.payload);
     }
 
