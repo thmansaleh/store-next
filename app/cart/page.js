@@ -19,7 +19,7 @@ console.log(cartItems)
 <PromotionCode/>
 <OrderDetailes/>
 </div>
-
+</div>
 }
 }
 
