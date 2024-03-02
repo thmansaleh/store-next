@@ -6,5 +6,5 @@ const products= async () => {
     return products.products
 
     }
-  return  <Home products={products}/>
+  return  <Home/>
 }
