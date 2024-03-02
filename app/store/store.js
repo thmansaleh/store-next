@@ -2,11 +2,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import navigationReducer from './features/navigationSlice';
 import checkoutReducer from './features/checkout'
+import  cart from "./features/cart"
 
 const store = configureStore({
     reducer: {
         navigation: navigationReducer,
-        checkout: checkoutReducer
+        checkout: checkoutReducer,
+        cart:cart
     },
   });
   
