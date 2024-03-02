@@ -1,13 +1,12 @@
 
 import Link from 'next/link'
 export default function Products(){
-let products =[]
-
-
- fetch('https://dummyjson.com/products')
-      .then(res => res.json())
-      .then(
-data => products =data.products);
+const products = async () => {
+     const data =   await fetch('https://dummyjson.com/products')
+    const products = await dataa.json()
+    return products.products
+    
+    }
 
 return <div className="p-2 flex wrap justify-around bg-white  flex-wrap">
 
