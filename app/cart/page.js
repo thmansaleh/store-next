@@ -12,17 +12,12 @@ export default function Cart(){
 console.log(cartItems)
 
   return <div style={{"background-color":"#f7f7f7"}} className=" p-3">
-  <div className="
-my-2">
+  <div className="my-2">
+
 <SetNave name='cart' show={false}/>
 <Items/>
-
-
-    
-
-
 <PromotionCode/>
 <OrderDetailes/>
-
 </div>
+
 }
