@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 export default function Products(){
-const products =[]
+let products =[]
 
 
  fetch('https://dummyjson.com/products')
