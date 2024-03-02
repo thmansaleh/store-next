@@ -1,4 +1,8 @@
-export default function OrderDetailes(){
+
+"use client"
+
+export default function OrderDetailes() {
+
 return  <div className=" my-2 overflow-hidden rounded-xl border border-gray-300 bg-white px-4 py-6 md:mx-4">
     <div className="my-4 flex justify-between">
       <span className="text-gray-500 text-sm">المجموع الفرعي</span>
