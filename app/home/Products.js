@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 export default function Products(){
-const products fetch('https://dummyjson.com/products')
+const products = fetch('https://dummyjson.com/products')
       .then(res => res.json())
       .then(
 data => return data.products);
