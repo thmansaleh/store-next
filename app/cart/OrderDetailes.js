@@ -1,18 +1,20 @@
-export default function (){
-return <div className="px-4 py-2 font-sans bg-zinc-50 fixed bottom-0 left-0 w-full mb-16">
-  <div className="text-base font-semibold">ORDER DETAILS</div>
-  <div className="flex justify-between  py-2">
-    <span >Subtotal</span>
-    <span className="font-semibold">AED 1415</span>
+export default function OrderDetailes(){
+return 
+  <div className=" my-2 overflow-hidden rounded-xl border border-gray-300 bg-white px-4 py-6 md:mx-4">
+    <div className="my-4 flex justify-between">
+      <span className="text-gray-500 text-sm">المجموع الفرعي</span>
+      <span className="font-bold text-sm">649 AED</span>
+    </div>
+    <div className="my-4 flex justify-between">
+      <span className="text-gray-500 text-sm">رسوم الشحن</span><span className="flex items-center font-bold text-sm text-green-600">مجانا</span>
+    </div><hr className="my-5 border-gray-300" />
+    <div className="my-4 flex justify-between">
+      <span className="text-md font-bold text-gray-500">المجموع</span><span className="text-md font-bold">669 د.أ</span>
+    </div>
+    <Link href="checkout" className>
+      <button className="md:w-24 w-full bg-black text-white text-md font-semibold rounded-lg py-2 my-2">
+        الدفع 
+      </button>
+    </Link>
   </div>
-  <div className="flex justify-between border-b py-2">
-    <span>Shipping fee</span>
-    <span className="ml-2 text-green-600 font-semibold">FREE</span>
-  </div>
-  <div className="flex justify-between pt-2">
-    <span className="font-semibold">Total Amount</span>
-    <span className="font-semibold">AED 1415</span>
-  </div>
-  <button className="bg-black rounded-lg w-full text-white py-2 my-2">Checkout</button>
-</div>
 }
