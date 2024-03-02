@@ -20,7 +20,7 @@ export default function ProductId() {
     <Description/>
 
 </div>
-<AddToCartButton item={item:0}/>
+<AddToCartButton item="0"/>
    
     </>
 }
