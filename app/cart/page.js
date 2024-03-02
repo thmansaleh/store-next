@@ -10,7 +10,7 @@ import Items from "./Items"
 export default function Cart(){
     const cartItems = useSelector(state => state.cart.items);
 console.log(cartItems)
-
+if(cartItems.length>0){
   return <div style={{"background-color":"#f7f7f7"}} className=" p-3">
   <div className="my-2">
 
@@ -20,6 +20,9 @@ console.log(cartItems)
 <OrderDetailes/>
 </div>
 </div>
+}else{
+return <h1 > no content </h1>
+}
 }
 
 
