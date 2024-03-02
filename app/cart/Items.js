@@ -2,11 +2,11 @@
 import { useSelector } from 'react-redux';
 export default function Items(){
 
-    const items= useSelector(state => state.cart.items);
-
+    const cartItems= useSelector(state => state.cart.items);
+console.log(cartItems)
  return <div>
 
-  {items.map((e,i) => { 
+  {cartItems.map((e,i) => { 
 
 <div key={i} className="my-1.5 rounded-lg   border w-full flex border-gray-300 justify-between items-center bg-white p-3">
       <img className="object-contain w-24 mx-2" loading="lazy" src="https://jomla.ae/_next/image/?url=https%3A%2F%2Fwp.jomla.ae%2Fwp-content%2Fuploads%2F2021%2F12%2FN42661645A_1.jpg&w=256&q=75" />
