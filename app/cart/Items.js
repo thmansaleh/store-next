@@ -1,6 +1,10 @@
 "use client"
-
+import { useSelector } from 'react-redux';
 export default function Items(){
+
+    const items= useSelector(state => state.cart.items);
+
+
  return <div>
  
 
