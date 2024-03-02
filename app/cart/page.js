@@ -15,7 +15,7 @@ if(cartItems.length>0){
   <div className="my-2">
 
 <SetNave name='cart' show={false}/>
-<Items/>
+<Items cartItems={cartItems}/>
 <PromotionCode/>
 <OrderDetailes/>
 </div>
