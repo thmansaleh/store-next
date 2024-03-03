@@ -16,7 +16,7 @@ import Size from '@/app/product/Size'
 
 const data= async () => {
 const searchParams = useSearchParams()
-  const id = searchParams.get('product_id)
+  const id = searchParams.get('product_id')
  
      const product=   await fetch(`https://dummyjson.com/products/${id}`)
     const productData = await data.json()
