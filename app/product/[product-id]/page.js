@@ -1,9 +1,6 @@
 
 
- 'use client'
- import { useRouter } from 'next/router'
 
- 
 
 import Flip from '@/app/components/flip/Flip'
 import Slider from '../Slider'
@@ -15,21 +12,9 @@ import Size from '@/app/product/Size'
 //import SetNave from '@/components/SetNave'
 
 
-const data= async () => {
-// const searchParams = useSearchParams()
- 
- const router = useRouter()
-const id = router.query.product-id
-     const product=   await fetch(`https://dummyjson.com/products/${id}`)
-    const productData = await data.json()
-    return productData
-
-    }
 
 
-export default async function ProductId() {
-const productsData=await data()
-console.log(productsData)
+export default a function ProductId() {
   return <> 
     
     <Slider />
