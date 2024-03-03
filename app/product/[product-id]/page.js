@@ -14,7 +14,7 @@ import Size from '@/app/product/Size'
 
 
 
-export default a function ProductId() {
+export default  function ProductId() {
   return <> 
     
     <Slider />
