@@ -7,6 +7,15 @@ import FreeDelivery from '@/app/product/FreeDelivery'
 import Size from '@/app/product/Size'
 //import SetNave from '@/components/SetNave'
 
+
+const data= async () => {
+     const product=   await fetch('https://dummyjson.com/products/1')
+    const products = await data.json()
+    return products.products
+
+    }
+
+
 export default function ProductId() {
   return <> 
     
