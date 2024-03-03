@@ -10,8 +10,8 @@ import Size from '@/app/product/Size'
 
 const data= async () => {
      const product=   await fetch('https://dummyjson.com/products/1')
-    const products = await data.json()
-    return products.products
+    const productData = await data.json()
+    return productData
 
     }
 
@@ -19,17 +19,17 @@ const data= async () => {
 export default function ProductId() {
   return <> 
     
-    <Slider/>
+    <Slider images={data.images}/>
 <div className="p-2">
 
-    <ProductInformation/>
+    <ProductInformation product={data}/>
     <Size/>
 <FreeDelivery/>
     <Flip/>
-    <Description/>
+    <Description description={data.description}/>
 
 </div>
-<AddToCartButton item="0"/>
+<AddToCartButton item={data}/>
    
     </>
 }
