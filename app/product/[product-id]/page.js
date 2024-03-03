@@ -1,3 +1,9 @@
+
+
+'use client'
+ 
+import { useSearchParams } from 'next/navigation'
+ 
 import Flip from '@/app/components/flip/Flip'
 import Slider from '../Slider'
 import ProductInformation from '@/app/product/information/ProductInformation'
@@ -9,27 +15,31 @@ import Size from '@/app/product/Size'
 
 
 const data= async () => {
-     const product=   await fetch('https://dummyjson.com/products/1')
+const searchParams = useSearchParams()
+  const id = searchParams.get('product_id)
+ 
+     const product=   await fetch(`https://dummyjson.com/products/${id}`)
     const productData = await data.json()
     return productData
 
     }
 
 
-export default function ProductId() {
+export default async function ProductId() {
+const productsData=await data()
   return <> 
     
-    <Slider images={data.images}/>
+    <Slider images={productsData.images}/>
 <div className="p-2">
 
-    <ProductInformation product={data}/>
+    <ProductInformation product={productsData}/>
     <Size/>
 <FreeDelivery/>
     <Flip/>
-    <Description description={data.description}/>
+    <Description description={productsData.description}/>
 
 </div>
-<AddToCartButton item={data}/>
+<AddToCartButton item={productsData}/>
    
     </>
 }
