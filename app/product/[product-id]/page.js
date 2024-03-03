@@ -28,19 +28,20 @@ const id = router.query.product-id
 
 export default async function ProductId() {
 const productsData=await data()
+console.log(productsData)
   return <> 
     
-    <Slider images={productsData.images}/>
+    <Slider />
 <div className="p-2">
 
-    <ProductInformation product={productsData}/>
+    <ProductInformation />
     <Size/>
 <FreeDelivery/>
     <Flip/>
-    <Description description={productsData.description}/>
+    <Description/>
 
 </div>
-<AddToCartButton item={productsData}/>
+<AddToCartButton item="0"/>
    
     </>
 }
