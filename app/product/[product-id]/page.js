@@ -2,8 +2,9 @@
 
  'use client'
  import { useRouter } from 'next/router'
-//import { useSearchParams } from 'next///navigation'
+
  
+
 import Flip from '@/app/components/flip/Flip'
 import Slider from '../Slider'
 import ProductInformation from '@/app/product/information/ProductInformation'
