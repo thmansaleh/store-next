@@ -1,7 +1,7 @@
 
 
 'use client'
- 
+ import {useState,  useEffect} from "react"
 import { useSearchParams } from 'next/navigation'
  
 import Flip from '@/app/components/flip/Flip'
@@ -21,6 +21,20 @@ const searchParams = useSearchParams()
  
   const id = searchParams.get('product_id)
  
+useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://api.example.com/data');
+        const responseData = await response.json();
+        setData(responseData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+
+  }, []); 
 
 
 
