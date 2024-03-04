@@ -4,7 +4,10 @@ export default function Products({products}){
 
 return products.map((e,i) => {
 const url =`product/${e.id}`
-return <Link href={url} className=" relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">
+return <Link href={{
+    pathname: '/products',
+    query: { product_id: e.id},
+  }} className=" relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">
     <span className=" bg-red-700 text-white top-0 right-0 text-center absolute rounded-bl-lg px-3 text-xs bg-blend-multiply line-height opacity-80 ">خصم 20%</span>
     <div className="  ">
       <img className="h-48 w-full object-contain " src={e.thumbnail} alt />
