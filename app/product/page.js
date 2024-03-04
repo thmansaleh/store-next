@@ -1,3 +1,9 @@
+
+
+'use client'
+ 
+import { useSearchParams } from 'next/navigation'
+ 
 import Flip from '@/app/components/flip/Flip'
 import Slider from './Slider'
 import ProductInformation from '@/app/product/information/ProductInformation'
@@ -11,6 +17,13 @@ import Size from '@/app/product/Size'
 
 
 export default  function ProductId() {
+const searchParams = useSearchParams()
+ 
+  const id = searchParams.get('product_id)
+ 
+
+
+
   return <> 
 
     <Slider />
