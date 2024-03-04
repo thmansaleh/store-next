@@ -19,14 +19,15 @@ import Size from '@/app/product/Size'
 export default  function ProductId() {
 const searchParams = useSearchParams()
  
-  const id = searchParams.get('product_id)
+  const id = searchParams.get('product_id')
  
 useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://api.example.com/data');
+        const response = await fetch(`https://dummyjson.com/products/${id}`);
         const responseData = await response.json();
-        setData(responseData);
+console.log(responseData)
+     
       } catch (error) {
         console.error('Error fetching data:', error);
       }
