@@ -3,7 +3,12 @@
 import Link from "next/link"
 export default function OrderDetailes({items}) {
 
-    let totalPrice = items.reduce((total, item) => total + (item.price * item.quantity), 0);
+    let totalPrice = 0;
+
+
+for (let i = 0; i < items.length; i++) {
+    totalPrice += items[i].price * items[i].quantity;
+}
 
 return  <div className=" my-2 overflow-hidden rounded-xl border border-gray-300 bg-white px-4 py-6 md:mx-4">
     <div className="my-4 flex justify-between">
