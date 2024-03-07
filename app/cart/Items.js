@@ -11,7 +11,7 @@ const itemContainer =useRef(null)
     const dispatch = useDispatch()
 
 const remove =(id) =>{
-itemContainer.classList.add("scale-0")
+itemContainer.classList.toggle("scale-0")
 setTimeout(() => {
 
 dispatch(removeItemFromCart(id))
