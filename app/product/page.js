@@ -53,7 +53,7 @@ setProduct(responseData)
     <Description/>
 
 </div>
-<AddToCartButton item="0"/>
+<AddToCartButton item={product}/>
 
     </>
 }
