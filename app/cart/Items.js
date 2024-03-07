@@ -1,5 +1,5 @@
 "use client"
-import {useRef} from "react"
+
 import { useDispatch } from "react-redux";
 import { removeItemFromCart} from "@/app/store/features/cart";
 
@@ -7,7 +7,7 @@ import DeleteButton from "./DeleteButton"
 export default function Items({cartItems}){
 
     const cartItemss= cartItems 
-const itemContainer =useRef(null)
+
     const dispatch = useDispatch()
 
 const remove =(this,id) =>{
@@ -28,7 +28,7 @@ dispatch(removeItemFromCart(id))
 
   {cartItemss.map((e,i) => { 
 
-return <div ref={itemContainer} key={i} className=" transition-all  my-1.5 rounded-lg   border w-full flex border-gray-300 justify-between items-center bg-white p-3">
+return <div key={i} className=" transition-all  my-1.5 rounded-lg   border w-full flex border-gray-300 justify-between items-center bg-white p-3">
       <img className="object-contain w-24 mx-2" loading="lazy" src={e.thumbnail} />
       <div className>
         <h3 className="text-sm line-clamp-2">{e.description}</h3>
