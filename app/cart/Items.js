@@ -16,7 +16,7 @@ const remove =(element,id) =>{
 element.target.parentElement.parentElement.parentElement.classList.add("scale-0")
 setTimeout(() => {
 dispatch(removeItemFromCart(id))
-}, 150);
+}, 200);
 
 }
 
