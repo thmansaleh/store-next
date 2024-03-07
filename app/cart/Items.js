@@ -2,7 +2,7 @@
 
 import { useDispatch } from "react-redux";
 import { removeItemFromCart} from "@/app/store/features/cart";
-
+import { increaseQuantity} from "@/app/store/features/cart";
 import DeleteButton from "./DeleteButton"
 export default function Items({cartItems}){
 
@@ -11,11 +11,11 @@ export default function Items({cartItems}){
     const dispatch = useDispatch()
 
 const remove =(id) =>{
-
 dispatch(removeItemFromCart(id))
-
-
 }
+
+
+const increase = (id) => dispatch(increaseQuantity(id))
 
 
 
@@ -33,7 +33,7 @@ return <div key={i} className=" transition-all  my-1.5 rounded-lg   border w-ful
         <div className="b flex justify-between items-center  ">
           <div>
             <button className="h-8 w-8 rounded-full border border text-xl leading-none text-black hover:bg-black hover:text-white">+</button>
-            <input className="mx-1 h-8 w-14 appearance-none rounded-2xl border border-gray-600 text-center outline-none" type="number" max={20} min={1} defaultValue={1} /><button className="h-8 w-8 rounded-full border border text-xl leading-none text-primary hover:bg-black hover:text-white">-</button>
+            <input className="mx-1 h-8 w-14 appearance-none rounded-2xl border border-gray-600 text-center outline-none" type="number" max={20} min={1} defaultValue={1} /><button onClick={() => increase(e.id)} className="h-8 w-8 rounded-full border border text-xl leading-none text-primary hover:bg-black hover:text-white">-</button>
           </div>
           
 
