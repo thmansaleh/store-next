@@ -7,7 +7,7 @@ export default function DeleteButton({id,containerEffect}){
 const remove =() =>{
 setTimeout(() => {
     
-containerEffect
+containerEffect()
 dispatch(removeItemFromCart(id))
 }, 1000);
 
