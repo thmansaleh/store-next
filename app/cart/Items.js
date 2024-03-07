@@ -8,6 +8,19 @@ export default function Items({cartItems}){
 
     const cartItemss= cartItems 
 const itemContainer =useRef(null)
+    const dispatch = useDispatch()
+
+const remove =() =>{
+setTimeout(() => {
+
+containerEffect()
+dispatch(removeItemFromCart(id))
+}, 1000);
+
+}
+
+
+
 const containerEffect =() =>{
 itemContainer.classList.add("scale-0")
 }
