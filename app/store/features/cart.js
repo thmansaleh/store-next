@@ -8,11 +8,33 @@ items:[1]
 },
   reducers: {
     addItemToCart: (state, action) => {
-// if(action.payload.id)
-      state.items.push(action.payload);
+if(state.items.length>0)
+const newItem = action.payload;
+const exists = state.items.some(item => item.id === newItem.id);
+
+if (exists) {
+  
+} else {
+  state.items.push(newItem);
+}
+
+     
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
   },
+
 });
 
 export const {addItemToCart} = cartSlice.actions;
