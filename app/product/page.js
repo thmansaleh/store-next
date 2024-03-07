@@ -20,6 +20,7 @@ export default  function ProductId() {
 const searchParams = useSearchParams()
  
   const id = searchParams.get('product_id')
+const [product, setProduct]= useState(false)
  
 useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +28,7 @@ useEffect(() => {
         const response = await fetch(`https://dummyjson.com/products/${id}`);
         const responseData = await response.json();
 console.log(responseData)
+setProduct(responseData)
      
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -44,7 +46,7 @@ console.log(responseData)
     <Slider />
 <div className="p-2">
 
-    <ProductInformation />
+    <ProductInformation product={product}/>
     <Size/>
 <FreeDelivery/>
     <Flip/>
