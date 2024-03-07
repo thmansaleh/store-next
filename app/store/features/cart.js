@@ -23,7 +23,17 @@ else{
 state.items.push(newItem);
 }
      
-    }
+    }, 
+
+
+removeItemFromCart:(state,action) =>{
+const idToRemove = action.payload;
+const newItems = state.items.filter(item => item.id !== idToRemove);
+
+state.items=newItems
+
+
+}
 
 
 
@@ -41,6 +51,6 @@ state.items.push(newItem);
 
 });
 
-export const {addItemToCart} = cartSlice.actions;
+export const {addItemToCart,removeItemFromCart} = cartSlice.actions;
 
 export default cartSlice.reducer;
