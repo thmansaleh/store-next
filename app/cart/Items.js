@@ -1,5 +1,7 @@
 "use client"
 import {useRef} from "react"
+import { useDispatch } from "react-redux";
+import { removeItemFromCart} from "@/app/store/features/cart";
 
 import DeleteButton from "./DeleteButton"
 export default function Items({cartItems}){
