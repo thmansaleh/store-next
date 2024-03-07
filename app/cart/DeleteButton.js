@@ -1,7 +1,7 @@
 "use client"
 import { useDispatch } from "react-redux";
 import { removeItemFromCart} from "@/app/store/features/cart";
-export default function RemoveItemButton({id}){
+export default function DeleteButton({id}){
     const dispatch = useDispatch()
 
 const remove =() =>{dispatch(removeItemFromCart(id) )}
