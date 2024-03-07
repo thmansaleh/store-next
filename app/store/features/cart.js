@@ -46,6 +46,7 @@ state.items=newItems
 
 increaseQuantity:(state,action) => {
 state.items[action.payload] +=1
+state.items=state.items
 }
 
 
