@@ -8,8 +8,8 @@ items:[1]
 },
   reducers: {
     addItemToCart: (state, action) => {
-if(state.items.length>0)
 const newItem = action.payload;
+if(state.items.length>0){
 const exists = state.items.some(item => item.id === newItem.id);
 
 if (exists) {
@@ -17,7 +17,11 @@ if (exists) {
 } else {
   state.items.push(newItem);
 }
+}
+else{
 
+state.items.push(newItem);
+}
      
     }
 
