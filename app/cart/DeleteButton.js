@@ -1,10 +1,13 @@
 "use client"
 import { useDispatch } from "react-redux";
 import { removeItemFromCart} from "@/app/store/features/cart";
-export default function DeleteButton({id}){
+export default function DeleteButton({id,containerEffect}){
     const dispatch = useDispatch()
 
-const remove =() =>{dispatch(removeItemFromCart(id) )}
+const remove =() =>{
+dispatch(removeItemFromCart(id))
+containerEffect()
+}
 
 
 return <svg onClick={remove} className="fill-red-500          h-5 w-5" stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 16 16" height={20} width={20} xmlns="http://www.w3.org/2000/svg">
