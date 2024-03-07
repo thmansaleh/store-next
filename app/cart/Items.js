@@ -13,10 +13,10 @@ export default function Items({cartItems}){
 
 const remove =(element,id) =>{
 
-console.log(element.target.parentElement.parentElement.parentElement.parentElement)
-//setTimeout(() => {
-//dispatch(removeItemFromCart(id))
-//}, 1000);
+element.target.parentElement.parentElement.parentElement.classList.add("scale-0")
+setTimeout(() => {
+dispatch(removeItemFromCart(id))
+}, 1000);
 
 }
 
