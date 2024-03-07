@@ -17,7 +17,7 @@ if(cartItems.length>0){
 <SetNave name='cart' show={false}/>
 <Items cartItems={cartItems}/>
 <PromotionCode/>
-<OrderDetailes items{cartItems}/>
+<OrderDetailes items={cartItems}/>
 </div>
 </div>
 }else{
