@@ -10,9 +10,9 @@ export default function Items({cartItems}){
 
     const dispatch = useDispatch()
 
-const remove =(this,id) =>{
-//itemContainer.classList.toggle("scale-0")
-console.log(this)
+const remove =(element,id) =>{
+
+console.log(element)
 setTimeout(() => {
 
 dispatch(removeItemFromCart(id))
