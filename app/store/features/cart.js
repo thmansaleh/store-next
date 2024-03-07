@@ -17,11 +17,13 @@ if (exists) {
   
 } else {
   state.items.push(newItem);
+console.log(state.items)
 }
 }
 else{
 
 state.items.push(newItem);
+console.log(state.items)
 }
      
     }, 
