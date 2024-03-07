@@ -5,8 +5,12 @@ export default function DeleteButton({id,containerEffect}){
     const dispatch = useDispatch()
 
 const remove =() =>{
-dispatch(removeItemFromCart(id))
+setTimeout(function() {
+    
 containerEffect()
+dispatch(removeItemFromCart(id))
+}, 1000);
+
 }
 
 
