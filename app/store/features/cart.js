@@ -34,10 +34,12 @@ const idToRemove = action.payload;
 const newItems = state.items.filter(item => item.id !== idToRemove);
 
 state.items=newItems
-
-
 }
 
+
+increaseQuantity:(state,action) => {
+state.items[action.payload] +=1
+}
 
 
 
