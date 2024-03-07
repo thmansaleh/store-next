@@ -1,5 +1,5 @@
 "use client"
-import ReomveItemButton from "./RemoveItemButton"
+import DeleteButton from "./DeleteButton"
 export default function Items({cartItems}){
 
     const cartItemss= cartItems 
@@ -19,7 +19,7 @@ return <div key={i} className="my-1.5 rounded-lg   border w-full flex border-gra
             <input className="mx-1 h-8 w-14 appearance-none rounded-2xl border border-gray-600 text-center outline-none" type="number" max={20} min={1} defaultValue={1} /><button className="h-8 w-8 rounded-full border border text-xl leading-none text-primary hover:bg-black hover:text-white">-</button>
           </div>
           
-<RemoveItemButton id={e.id} />
+<DeleteButton id={e.id} />
 
 
 
