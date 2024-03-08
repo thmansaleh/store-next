@@ -45,10 +45,10 @@ state.items=newItems
 
 
 increaseQuantity:(state,action) => {
-state.items[action.payload] +=1
-state.items=[...state.items]
-console.log(state.items)
-}
+//state.items[action.payload] +=1
+//state.items=[...state.items]
+console.log(action.payload)
+},
 
 
 
