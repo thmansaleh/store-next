@@ -44,7 +44,8 @@ state.items=newItems
 
 
 
-increaseQuantity:(state,action) => {state.items[action.payload] +=1
+increaseQuantity:(state,action) => {
+//state.items[action.payload] +=1
 //state.items=[...state.items]
 //console.log(action)
 let itemIndex = state.items.findIndex(item => item.id === action.payload); // Find the index of 'item2'
