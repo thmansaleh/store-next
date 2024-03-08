@@ -35,7 +35,7 @@ dispatch(decreaseQuantity(id))
 
 
 
- return <div>
+ return <div className="select-none">
 
   {cartItemss.map((e,i) => { 
 
