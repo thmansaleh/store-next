@@ -45,6 +45,7 @@ state.items=newItems
 
 
 increaseQuantity:(state,action) => 
+{
 let itemIndex = state.items.findIndex(item => item.id === action.payload); // Find the index of 'item2'
 if (itemIndex !== -1) { // If 'item2' is found
     state.items[itemIndex].quantity += 1; // Increase the quantity by 1
