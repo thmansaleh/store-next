@@ -15,7 +15,11 @@ dispatch(removeItemFromCart(id))
 }
 
 
-const increase = (id) => { dispatch(increaseQuantity(id))}
+const increase = (id) =>
+ { 
+console.log(id)
+dispatch(increaseQuantity(id))
+}
 
 
 
