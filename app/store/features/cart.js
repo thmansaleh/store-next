@@ -44,16 +44,33 @@ state.items=newItems
 
 
 
-increaseQuantity:(state,action) => {
-//state.items[action.payload] +=1
-//state.items=[...state.items]
-//console.log(action)
+increaseQuantity:(state,action) => 
 let itemIndex = state.items.findIndex(item => item.id === action.payload); // Find the index of 'item2'
 if (itemIndex !== -1) { // If 'item2' is found
     state.items[itemIndex].quantity += 1; // Increase the quantity by 1
 }
-console.log(state.items)
+
 },
+
+
+
+
+
+
+decreaseQuantity:(state,action) => 
+let itemIndex = state.items.findIndex(item => item.id === action.payload); // Find the index of 'item2'
+if (itemIndex !== -1) { 
+    if(state.items[itemIndex].quantity > 0) {
+state.items[itemIndex].quantity -= 1;
+}
+}
+
+},
+
+
+
+
+
 
 
 
