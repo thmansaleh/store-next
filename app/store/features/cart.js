@@ -45,7 +45,7 @@ state.items=newItems
 
 
 increaseQuantity:(state,action) => {
-//state.items[action.payload] +=1
+state.items[action.payload] +=1
 //state.items=[...state.items]
 console.log(action.payload)
 },
@@ -60,6 +60,6 @@ console.log(action.payload)
 
 });
 
-export const {addItemToCart,removeItemFromCart} = cartSlice.actions;
+export const {addItemToCart,removeItemFromCart,increaseQuantity} = cartSlice.actions;
 
 export default cartSlice.reducer;
