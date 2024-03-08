@@ -3,6 +3,14 @@
 import { useDispatch } from "react-redux";
 import { removeItemFromCart} from "@/app/store/features/cart";
 import { increaseQuantity} from "@/app/store/features/cart";
+
+
+import { increaseQuantity} from "@/app/store/features/cart";
+
+import { decreaseQuantity} from "@/app/store/features/cart";
+
+
+
 import DeleteButton from "./DeleteButton"
 export default function Items({cartItems}){
 
