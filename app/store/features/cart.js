@@ -82,6 +82,6 @@ state.items[itemIndex].quantity -= 1;
 
 });
 
-export const {addItemToCart,removeItemFromCart,increaseQuantity} = cartSlice.actions;
+export const {addItemToCart,removeItemFromCart,increaseQuantity, decreaseQuantity} = cartSlice.actions;
 
 export default cartSlice.reducer;
