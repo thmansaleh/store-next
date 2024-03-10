@@ -7,8 +7,7 @@ export default function OrderDetailes({items}) {
 
 return  <div className=" my-2 overflow-hidden rounded-xl border border-gray-300 bg-white px-4 py-6 md:mx-4">
     <div className="my-4 flex justify-between">
-      <span className="text-gray-500 text-sm">المجموع الفرعي</span>
-      <span className="font-bold text-sm">649 AED</span>
+      <span className="text-gray-500 text-sm">المجموع الفرعي</span> <span className="font-bold text-sm">{totalPrice} AED</span>
     </div>
     <div className="my-4 flex justify-between">
       <span className="text-gray-500 text-sm">رسوم الشحن</span><span className="flex items-center font-bold text-sm text-green-600">مجانا</span>
