@@ -32,14 +32,12 @@ return
 {
 icons.map(e=> {
 return  <div className="bg-ghray-500 px-3 h-10 overflow-hidden   relative">
-    <input type="radio" id={e.page} class="hidden" name="nav">
-    <label for={e.page}>
-    {e.icon}
-  
-      <span className="bg-black  -bottom-2 inset-x-1/2    translate-x-1/2 absolute  size-1.5 rounded-full  transition-all duration-100"></span>
-    </label>
-  
-  </div>
+  <input type="radio" id={e.page} className="hidden" name="nav" />
+  <label htmlFor={e.page}>
+{e.icon}
+    <span className="bg-black  -bottom-2 inset-x-1/2    translate-x-1/2 absolute  size-1.5 rounded-full  transition-all duration-100" />
+  </label>
+</div>
 
 })
 
