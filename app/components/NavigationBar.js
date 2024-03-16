@@ -36,7 +36,7 @@ return  <div className="bg-ghray-500 px-3 h-10 overflow-hidden   relative">
     <label for={e.page}>
     {e.icon}
   
-      <span class="bg-black  -bottom-2 inset-x-1/2    translate-x-1/2 absolute  size-1.5 rounded-full  transition-all duration-100"></span>
+      <span className="bg-black  -bottom-2 inset-x-1/2    translate-x-1/2 absolute  size-1.5 rounded-full  transition-all duration-100"></span>
     </label>
   
   </div>
