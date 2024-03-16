@@ -1,5 +1,5 @@
 "use client"
-
+import styles from './styles.css'
 export default function NavigationBar(){
 
 const icons = [
