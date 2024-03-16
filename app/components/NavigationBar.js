@@ -31,7 +31,7 @@ return
 <div id="navs" className=" fixed rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
 {
 icons.map(e=> {
-return  <div className="bg-ghray-500 px-3 h-10 overflow-hidden   relative">
+ <div className="bg-ghray-500 px-3 h-10 overflow-hidden   relative">
   <input type="radio" id={e.page} className="hidden" name="nav" />
   <label htmlFor={e.page}>
 {e.icon}
