@@ -15,10 +15,10 @@ return <>
 
 <Swiper 
 style={{
-  "--swiper-pagination-color": "red",
+  "--swiper-pagination-color": "black ",
   "--swiper-pagination-bullet-inactive-color": "#999999",
   "--swiper-pagination-bullet-inactive-opacity": "1",
-  "--swiper-pagination-bullet-size": "16px",
+  "--swiper-pagination-bullet-size": "10px",
   "--swiper-pagination-bullet-horizontal-gap": "6px"
 }}
 
