@@ -13,11 +13,17 @@ export default function Slider() {
 
 return <>
 
-<Swiper className='product-swiper-container' modules={[Navigation, Pagination, Scrollbar, A11y]}
+<Swiper className='product-swiper-container' modules={[Pagination]}
 spaceBetween={50}
 rewind={true}
 slidesPerView={1}
-navigation Scrollbar pagination={{ clickable: true }}
+ pagination={{
+ clickable: true ,
+ dynamicBullets: true,
+
+
+
+}}
 
 >
 
