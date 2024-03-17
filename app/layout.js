@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="rtl">
       <body className="font-sans">
         <ProviderPage children={children}/>
-        <NavigationBar/>
+       
         </body>
     </html>
   )
