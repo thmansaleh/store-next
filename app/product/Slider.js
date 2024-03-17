@@ -13,7 +13,16 @@ export default function Slider() {
 
 return <>
 
-<Swiper className='product-swiper-container' modules={[Pagination]}
+<Swiper 
+style={{
+  "--swiper-pagination-color": "red",
+  "--swiper-pagination-bullet-inactive-color": "#999999",
+  "--swiper-pagination-bullet-inactive-opacity": "1",
+  "--swiper-pagination-bullet-size": "16px",
+  "--swiper-pagination-bullet-horizontal-gap": "6px"
+}}
+
+className='product-swiper-container' modules={[Pagination]}
 spaceBetween={50}
 rewind={true}
 slidesPerView={1}
