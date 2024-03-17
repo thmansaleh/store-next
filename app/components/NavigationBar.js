@@ -28,7 +28,7 @@ const icons = [
 
 
 return   
-<div id="navs" className=" fixed rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
+<div id="navs" className=" fixed rounded-t-lg bottom-0  w-screen py-4 bg-red-400  flex items-center  justify-around ">
 {
 icons.map(e=> {
  <div className="bg-ghray-500 px-3 h-10 overflow-hidden   relative">
