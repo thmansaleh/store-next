@@ -1,6 +1,6 @@
 import './globals.css'
 import ProviderPage  from './Provider'
-import NavigationBar from "./components/NavigationBar"
+import NavigationBar from "@/app/components/NavigationBar"
 export const metadata = {
   title: 'store app',
   description: 'othman saleh abdulhameed',
