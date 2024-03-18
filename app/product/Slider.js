@@ -8,6 +8,7 @@ import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import ShareHeartIcons from "./ShareHeartIcons"
 
 export default function Slider() {
 
@@ -22,7 +23,7 @@ style={{
   "--swiper-pagination-bullet-horizontal-gap": "6px"
 }}
 
-className='product-swiper-container' modules={[Pagination]}
+className=' relative  product-swiper-container' modules={[Pagination]}
 spaceBetween={50}
 rewind={true}
 slidesPerView={1}
@@ -37,7 +38,7 @@ slidesPerView={1}
 >
 
 
-
+<ShareHeartIcons/>
 
 {[1,4,4,4,4].map(e=>{
 
