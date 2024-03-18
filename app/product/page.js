@@ -46,7 +46,7 @@ setProduct(responseData)
     <Slider product={product} />
 <div className="p-2">
 
-    <ProductInformation product={product}/>
+    <ProductInformation images={product.images}/>
     <Size/>
 <FreeDelivery/>
     <Flip/>
