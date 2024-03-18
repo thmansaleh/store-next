@@ -40,7 +40,7 @@ slidesPerView={1}
 
 <ShareHeartIcons/>
 
-{[1,1,1,1].map(e=>{
+{images.map(e=>{
 
 return <SwiperSlide style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
   
