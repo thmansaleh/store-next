@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 import ShareHeartIcons from "./ShareHeartIcons"
 
 export default function Slider({images}) {
-
+console.log(images)
 return <>
 
 <Swiper 
@@ -40,7 +40,7 @@ slidesPerView={1}
 
 <ShareHeartIcons/>
 
-{images.map(e=>{
+{[1,1,1,1].map(e=>{
 
 return <SwiperSlide style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
   
