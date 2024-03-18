@@ -10,8 +10,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import ShareHeartIcons from "./ShareHeartIcons"
 
-export default function Slider({images}) {
-console.log(images)
+export default function Slider({product}) {
+console.log(product)
 return <>
 
 <Swiper 
