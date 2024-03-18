@@ -40,7 +40,7 @@ slidesPerView={1}
 
 <ShareHeartIcons/>
 
-{product.images.map(e=>{
+{product.images.length>0?product.images.map(e=>{
 
 return <SwiperSlide style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
   
@@ -48,7 +48,7 @@ return <SwiperSlide style={{ textAlign: 'center', height: '50vh', width: '100%',
   </SwiperSlide>
 
 
-})}
+}):<h1>no images</h1>}
 
 
 
