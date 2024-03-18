@@ -6,7 +6,7 @@ import NavigationBar from "./components/NavigationBar"
 
 function ProviderPage({children}) {
   return <Provider store={store}>{children}
-
+<div className="h-18 w-full" ></div>
 <Navigation/>
 
 </Provider>
