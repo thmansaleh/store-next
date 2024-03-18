@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import ShareHeartIcons from "./ShareHeartIcons"
 
-export default function Slider() {
+export default function Slider({images}) {
 
 return <>
 
@@ -40,7 +40,7 @@ slidesPerView={1}
 
 <ShareHeartIcons/>
 
-{[1,4,4,4,4].map(e=>{
+{images.map(e=>{
 
 return <SwiperSlide style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
   
