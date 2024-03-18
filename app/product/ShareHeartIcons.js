@@ -3,7 +3,7 @@
 
 export default function ShareHeartIcons(){
 
-return <div className=" 
+return <div className=" z-50 
     absolute inline-block  top-3 start-3 -60 space-y-3 
     ">
   <div className="rounded-full bg-white p-2 ring-2   ring-gray-500">
