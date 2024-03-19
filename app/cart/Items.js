@@ -47,7 +47,7 @@ return <div key={i} className=" transition-all  my-1.5 rounded-lg   border w-ful
         <div className="b flex justify-between items-center  ">
           <div>
             <button onClick={() => increase(e.id)} className="h-8 w-8 rounded-full border border text-xl leading-none text-black hover:bg-black hover:text-white">+</button>
-            <input className="mx-1 h-8 w-14 appearance-none rounded-2xl border border-gray-600 text-center outline-none" type="number" value={e.quantity}  /><button onClick={() => decrease(e.id)} className="h-8 w-8 rounded-full border border text-xl leading-none  hover:bg-black hover:text-white">-</button>
+            <input disabled className="mx-1 h-8 w-14 appearance-none rounded-2xl border border-gray-600 text-center outline-none" type="number" value={e.quantity}  /><button onClick={() => decrease(e.id)} className="h-8 w-8 rounded-full border border text-xl leading-none  hover:bg-black hover:text-white">-</button>
           </div>
           
 
