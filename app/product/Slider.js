@@ -18,6 +18,7 @@ return <>
 <Swiper 
 style={{
   "--swiper-pagination-color": "black ",
+"--swiper-pagination-bottom":"-10px",
   "--swiper-pagination-bullet-inactive-color": "#999999",
   "--swiper-pagination-bullet-inactive-opacity": "1",
   "--swiper-pagination-bullet-size": "10px",
