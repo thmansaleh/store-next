@@ -24,7 +24,7 @@ style={{
   "--swiper-pagination-bullet-horizontal-gap": "6px"
 }}
 
-className=' relative mb-12 product-swiper-container' modules={[Pagination]}
+className=' relative  product-swiper-container' modules={[Pagination]}
 spaceBetween={50}
 rewind={true}
 slidesPerView={1}
@@ -43,7 +43,7 @@ slidesPerView={1}
 
 {product.images?product.images.map(href=>{
 
-return <SwiperSlide style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
+return <SwiperSlide className="mb-8"  style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
   
     <img className="w-100 product-img-slider" src={href}  alt="My Image" />
   </SwiperSlide>
