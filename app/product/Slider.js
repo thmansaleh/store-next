@@ -18,14 +18,13 @@ return <>
 <Swiper 
 style={{
   "--swiper-pagination-color": "black ",
-"--swiper-pabgination-bottom":"-10px",
   "--swiper-pagination-bullet-inactive-color": "#999999",
   "--swiper-pagination-bullet-inactive-opacity": "1",
   "--swiper-pagination-bullet-size": "10px",
   "--swiper-pagination-bullet-horizontal-gap": "6px"
 }}
 
-className=' relative  product-swiper-container' modules={[Pagination]}
+className=' relative mb-12 product-swiper-container' modules={[Pagination]}
 spaceBetween={50}
 rewind={true}
 slidesPerView={1}
