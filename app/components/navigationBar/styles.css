@@ -9,3 +9,6 @@
 .navigationInput:checked+label>span {
   bottom: 2px
 }
+.navigationInput{
+display: none
+}
