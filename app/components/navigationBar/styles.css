@@ -1,11 +1,11 @@
-.navigation-input:checked + label >svg {
+.navigationInput:checked + label >svg {
   fill: black;
   margin-bottom: 10px
 }
-.navigation-input:checked +label > .othman{
+.navigationInput:checked +label > .othman{
   background: white 
 }
 
-.navigation-input:checked+label>span {
+.navigationInput:checked+label>span {
   bottom: 2px
 }
