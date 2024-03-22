@@ -56,7 +56,7 @@ return <SwiperSlide className="my-8">
     pathname: './product',
     query: { product_id: e},
   }} className=" relative overflow-hidden shadow-lg rounded-lg inline-block w-36">
-  <img className="w-full h-40 object-contain " src="https://www.sephora.ae/dw/image/v2/BCZG_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw8bfb7a5e/images/hi-res/SKU/SKU_2487/553961_swatch.jpg?sw=265&sh=265&sm=fit" alt />
+  <img className="w-full h-40 object-contain " src={e} alt />
   <span className=" line-clamp-2 text-sm my-2 px-2">SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...</span>
   <div className="p-2 space-x-px text-sm bg-zinc-100  "><span>899</span>
     <span className="text-green-600 mx-px">د.أ</span></div>
