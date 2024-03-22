@@ -9,7 +9,7 @@ export default function Home({products}){
     <SetNave name='/' show={true}/>
 <SearchInput/>
 <FristSlider/>
-<NavigationBar/>
+
 <div className="p-2 flex wrap justify-around bg-white  flex-wrap">
 <Products products={products}/>
 </div>
