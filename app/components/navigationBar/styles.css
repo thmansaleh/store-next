@@ -2,9 +2,6 @@
   fill: black;
   margin-bottom: 10px
 }
-.navigationInput:checked +label > .othman{
-  background: white 
-}
 
 .navigationInput:checked+label>span {
   bottom: 2px
