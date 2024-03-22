@@ -31,7 +31,7 @@ function Navigation() {
 
   return (
     
-    <nav>
+    <nav className="z-50">
         {
         icons.map(e=>{
            return e.iconName==pageName?<Icon name={e.iconName} svg={e.svg} dot={true} iconParent={true} />
