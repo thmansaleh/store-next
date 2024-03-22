@@ -6,7 +6,6 @@ import NavigationBar from "@/app/components/navigationBar/NavigationBar"
 function ProviderPage({children}) {
   return <Provider store={store}>{children}
 <NavigationBar/>
-<Navigation/>
 
 </Provider>
     
