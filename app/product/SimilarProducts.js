@@ -27,7 +27,7 @@ style={{
 className='' modules={[Pagination]}
 spaceBetween={20}
 rewind={true}
-slidesPerView={2}
+slidesPerView={2.5}
  pagination={{
  clickable: true ,
  dynamicBullets: true,
