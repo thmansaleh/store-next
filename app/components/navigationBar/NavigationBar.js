@@ -1,4 +1,6 @@
 "use client"
+import styles from './styles.css'
+ 
 import {icons} from "./NavigationIcons"
 export default function NavigationBar(){
 
