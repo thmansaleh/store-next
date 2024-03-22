@@ -43,7 +43,7 @@ slidesPerView={2.5}
 return <SwiperSlide className="my-8">
 
     <Link href={{
-    pathname: '/product',
+    pathname: './product',
     query: { product_id: e},
   }} className=" relative overflow-hidden shadow-lg rounded-lg inline-block w-36">
   <img className="w-full h-40 object-contain " src="https://www.sephora.ae/dw/image/v2/BCZG_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw8bfb7a5e/images/hi-res/SKU/SKU_2487/553961_swatch.jpg?sw=265&sh=265&sm=fit" alt />
