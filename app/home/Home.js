@@ -3,12 +3,13 @@ import SetNave from '@/app//components/SetNave'
 import SearchInput from "@/app/components/SearchInput"
 import FristSlider from './FristSlider'
 import Products from'@/app/home/Products'
+import NavigationBar from "@/app/components/navigationBar/NavigationBar" 
 export default function Home({products}){
   return <>
     <SetNave name='/' show={true}/>
 <SearchInput/>
 <FristSlider/>
-
+<NavigationBar/>
 <div className="p-2 flex wrap justify-around bg-white  flex-wrap">
 <Products products={products}/>
 </div>
