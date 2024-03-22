@@ -1,13 +1,11 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Pagination, A11y } from 'swiper';
 import Link from 'next/link'
 import './slider.css'
 import 'swiper/css';
 import 'swiper/css/autoplay'
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 export default function SimilarProducts() {
 
@@ -19,7 +17,7 @@ style={{
   "--swiper-pagination-bullet-inactive-color": "#999999",
   "--swiper-pagination-bullet-inactive-opacity": "1",
   "--swiper-pagination-bullet-size": "10px",
-  "--swiper-pagination-bullet-horizontal-gap": "6px"
+  "--swiper-pagination-bullet-horizontal-gap": "0px"
 }}
 
 className='' modules={[Pagination]}
@@ -27,8 +25,7 @@ spaceBetween={20}
 rewind={true}
 slidesPerView={2.5}
  pagination={{
- clickable: true ,
- dynamicBullets: true,
+ clickable: true 
 
 
 
