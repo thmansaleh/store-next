@@ -8,11 +8,9 @@ import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import ShareHeartIcons from "./ShareHeartIcons"
-import SliderLoading from "./SliderLoading"
 
-export default function SimilarProducts({product}) {
-console.log(product.images)
+export default function SimilarProducts() {
+
 return <>
 
 <Swiper 
