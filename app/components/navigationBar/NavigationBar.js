@@ -5,8 +5,8 @@ import styles from './styles.css'
 import {icons} from "./NavigationIcons"
 export default function NavigationBar(){
 const router = useRouter()
-const navigation = ()=>{
-router.push('/cart')
+const navigation = (page)=>{
+router.push('/{page}')
 }
 
 
@@ -14,7 +14,7 @@ router.push('/cart')
 return  <div  className=" border-solid border-t border-inherit  fixegd rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
   
   {icons.map((e,i)=>{
- return  <div onClick={navigation}
+ return  <div onClick={navigation(e.page)}
 className="flex items-center justify-center bg-grvay-500  h-10   overflow-hidden   relative">
     <input type="radio" id={e.page} className="navigationInput" name="nav"/>
     <label className="px-4"  for={e.page}>
