@@ -2,7 +2,7 @@
 
 const Description = () => {
 
-return <div className="flex max-w-sm mx-auto  bg-white ">
+return <div className="lg:flex max-w-sm mx-auto  bg-white ">
 <div>
   <h2 className="text-md font-bold mb-4">الوصف</h2>
   <p className="text-gray-700 mb-4 text-sm ">Your out-and-about look just took a classy turn with our roomy little Grydy crossbody. Two compartment storage and front zip pocket keeps all the essentials just where you need them.</p>
