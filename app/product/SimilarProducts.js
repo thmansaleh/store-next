@@ -13,6 +13,7 @@ return <>
 
 <Swiper 
 style={{
+"--swiper-pagination-bullet-border-radius":"0px",
 "--swiper-pagination-bullet-width":"25px",
 "--swiper-pagination-bullet-height":"5px",
   "--swiper-pagination-color": "black ",
