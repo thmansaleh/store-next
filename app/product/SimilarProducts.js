@@ -40,7 +40,7 @@ slidesPerView={2.5}
 
 {[1,2,3,4,5].map(e =>{
 
-return <SwiperSlide className="mb-8">
+return <SwiperSlide className="my-8">
 
     <Link href={{
     pathname: '/product',
