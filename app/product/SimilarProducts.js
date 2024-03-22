@@ -26,7 +26,7 @@ style={{
 className='' modules={[Pagination]}
 spaceBetween={20}
 rewind={true}
-slidesPerView={'auto'}
+slidesPerView={2.5}
  pagination={{
  clickable: true 
 
