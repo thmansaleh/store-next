@@ -38,13 +38,13 @@ slidesPerView={2.5}
 
 
 
-{[1,2,1,2,1].map(href=>{
+{[1,2,3,4,5].map(e =>{
 
 return <SwiperSlide className="">
 
     <Link href={{
     pathname: '/product',
-    query: { product_id: e.id},
+    query: { product_id: e},
   }} className=" relative overflow-hidden shadow-lg rounded-lg inline-block w-44">
   <img className="w-full h-48 object-contain " src="https://www.sephora.ae/dw/image/v2/BCZG_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw8bfb7a5e/images/hi-res/SKU/SKU_2487/553961_swatch.jpg?sw=265&sh=265&sm=fit" alt />
   <span className=" line-clamp-2 text-sm my-2 px-2">SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...</span>
