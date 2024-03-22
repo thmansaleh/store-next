@@ -8,7 +8,7 @@ export default function NavigationBar(){
 
 
 
-return  <div id="navs" className=" border-solid border-t border-inherit  fixegd rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
+return  <div  className=" border-solid border-t border-inherit  fixegd rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
   
   {icons.map((e,i)=>{
  return  <div className="flex items-center justify-center bg-grvay-500  h-10   overflow-hidden   relative">
