@@ -60,7 +60,8 @@ return <SwiperSlide className="">
   </SwiperSlide>
 
 
-}):<SliderLoading/>}
+})
+}
 
 
 
