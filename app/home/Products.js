@@ -8,7 +8,7 @@ return <Link href={{
     pathname: '/product',
     query: { product_id: e.id},
   }} className=" inline-block relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">
-    <span className=" bg-red-700 text-white top-0 right-0 text-center absolute rounded-bl-lg px-3 text-xs bg-blend-multiply line-height opacity-80 ">خصم 20%</span>
+    <span className=" bg-red-700 text-white top-0  text-center  absolute rounded-br-lg  rtl:rounded-bl-lg rtl:rounded-br-none  px-3 text-xs bg-blend-multiply line-height start-0 opacity-80 ">خصم 20%</span>
     <div className="  ">
       <img className="h-48 w-full object-contain " src={e.thumbnail} alt />
     </div>
