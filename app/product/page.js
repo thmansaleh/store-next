@@ -12,6 +12,7 @@ import Description from './description/Description'
 import FreeDelivery from '@/app/product/FreeDelivery'
 import Size from '@/app/product/Size'
 //import SetNave from '@/components/SetNave'
+import SimilarProducts from "./SimilarProducts"
 
 
 
@@ -51,6 +52,7 @@ setProduct(responseData)
 <FreeDelivery/>
     <Flip/>
     <Description/>
+<SimilarProducts/>
 
 </div>
 <AddToCartButton item={product}/>
