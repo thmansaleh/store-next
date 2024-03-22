@@ -38,7 +38,17 @@ slidesPerView={2.5}
 
 
 
-{[1,2,3,4,5].map(e =>{
+{[
+"https://cottonil.ae/cdn/shop/products/LwYrO69_87fe5f7f-7cd5-43b0-8153-4be98d524721.png?v=1703670623",
+
+
+"https://izelfashion.com/wp-content/uploads/2023/05/full-front-2.png",
+
+"https://uae.cottonmegastore.com/cdn/shop/products/tn0JH1P_8daf5004-72ff-42e2-91c9-42644c06a074.jpg?v=1709733827",
+
+"https://static.zara.net/photos///2023/I/0/1/p/3739/250/800/2/w/404/3739250800_6_21_1.jpg?ts=1695893759658"
+
+].map(e =>{
 
 return <SwiperSlide className="my-8">
 
