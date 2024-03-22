@@ -5,7 +5,7 @@ import styles from './styles.css'
 import {icons} from "./NavigationIcons"
 export default function NavigationBar(){
 const router = useRouter()
-const navigation = ()={
+const navigation = ()=>{
 router.push('/cart')
 }
 
