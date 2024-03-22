@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 export default function SimilarProducts() {
 
 return <>
-
+  <h2 className="text-md font-bold mt-4">منتجات قد تعجبك</h2>
 <Swiper 
 style={{
 "--swiper-pagination-bullet-border-radius":"0px",
