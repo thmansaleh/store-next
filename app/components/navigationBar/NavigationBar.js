@@ -12,7 +12,7 @@ return  <div id="navs" className=" nav fixegd rounded-t-lg bottom-0  w-screen py
   
   {icons.map((e,i)=>{
  return  <div className="navs flex items-center justify-center bg-grvay-500 px-4 h-10   overflow-hidden   relative">
-    <input type="radio" id={e.page} className="hidden" name="nav"/>
+    <input type="radio" id={e.page} className={styles.navigation-input} name="nav"/>
     <label  for={e.page}>
     
 {e.icon}
