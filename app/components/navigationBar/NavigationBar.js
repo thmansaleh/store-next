@@ -6,7 +6,7 @@ import {icons} from "./NavigationIcons"
 export default function NavigationBar(){
 const router = useRouter()
 const navigation = ()={
-router.push('./cart')
+router.push('/cart')
 }
 
 
