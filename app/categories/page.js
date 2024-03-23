@@ -3,6 +3,7 @@ import Category from './Category'
 import Sections  from "./Sections"
 //import Brands from './Brands'
 import SetNave from '../components/SetNave'
+import BottomSheet from "./BottomSheet"
 
 export default function Categories() {
 
@@ -17,5 +18,6 @@ export default function Categories() {
 
   
 </div>
+<BottomSheet/>
   </>
 }
