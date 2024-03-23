@@ -13,8 +13,6 @@ import FreeDelivery from '@/app/product/FreeDelivery'
 import Size from '@/app/product/Size'
 //import SetNave from '@/components/SetNave'
 import SimilarProducts from "./SimilarProducts"
-import Button from "./Button"
-
 
 
 export default  function ProductId() {
@@ -53,7 +51,6 @@ setProduct(responseData)
     <Flip/>
     <Description/>
 <SimilarProducts/>
-<Button/>
 
 </div>
 <AddToCartButton item={product}/>
