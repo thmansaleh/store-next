@@ -15,7 +15,7 @@ const addRef =useRef(null)
 
 return <>
 
- <div ref={addRef} onClick={() =>{ 
+ <div  onClick={() =>{ 
 addRef.current.innerHtml="loading..."
 dispatch(addItemToCart(item))
 setOpen(true)
@@ -23,7 +23,7 @@ setOpen(true)
 
 }
  className="w-full bg-white select-none p-3 sticky bottom-0">
-  <div className="focus:outline-none  rounded-lg w-full bg-black text-sm font-semibold text-white py-3 text-center  ">إضافة الى السلة</div>
+  <div ref={addRef} className="focus:outline-none  rounded-lg w-full bg-black text-sm font-semibold text-white py-3 text-center  ">إضافة الى السلة</div>
 </div>
 
       <BottomSheet
