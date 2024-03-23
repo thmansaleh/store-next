@@ -1,6 +1,6 @@
 
 //import Categories from './Categories'
-//import Sections from './Sections'
+import Sections from './Sections'
 //import Brands from './Brands'
 import SetNave from '../components/SetNave'
 
@@ -11,6 +11,8 @@ export default function Categories() {
 
      <div class="grid grid-cols-4 ">
 <Sections/>
+  <div class="bg-gray-100 p-2 col-span-3">
+</div>
 
   
 </div>
