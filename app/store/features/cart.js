@@ -8,22 +8,28 @@ items:[]
 },
   reducers: {
     addItemToCart: (state, action) => {
-const newItem = action.payload;
+//const newItem = action.payload;
+const newItem={
+    "id": action.payload.id,
+    "title": action.payload.title,
+    "description": action.payload.description,
+    "price": action.payload.price,
+    "thumbnail":action.payload.thumbnail,
+    "quantity": 1
+}
 if(state.items.length>0){
-newItem.quantity=1
 const exists = state.items.some(item => item.id === newItem.id);
 
 if (exists) {
 console.log("exists")
   
 } else {
-newItem.quantity=1
   state.items.push(newItem);
 console.log(state.items)
 }
 }
 else{
-newItem.quantity=1
+
 state.items.push(newItem);
 console.log(state.items)
 }
