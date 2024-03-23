@@ -11,7 +11,14 @@ export default function BottomSheett() {
   return (
     <>
       <button onClick={() => setOpen(true)}>Open</button>
-      <BottomSheet open={open}>My awesome content here</BottomSheet>
+      <BottomSheet
+onDismiss={()=>setOpen(false)}
+header={<h1 className="text-md font-semibold ">اللغة</h1>}
+ open={open}>
+
+يرجى اختيار  اللغة المفضة
+
+</BottomSheet>
     </>
   )
 }
