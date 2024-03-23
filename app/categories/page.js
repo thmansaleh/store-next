@@ -1,5 +1,5 @@
 
-//import Category from './Category'
+import Category from './Category'
 
 //import Brands from './Brands'
 import SetNave from '../components/SetNave'
