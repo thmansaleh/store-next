@@ -11,7 +11,7 @@ router.push('/cart')
 
 
 
-return  <div  className=" fixed border-solid border-t border-inherit  fixegd rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
+return  <div  className=" z-50 fixed border-solid border-t border-inherit  fixegd rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
   
   {icons.map((e,i)=>{
  return  <div onClick={()=>{
