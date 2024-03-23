@@ -13,10 +13,10 @@ const loadingRef =useRef(null)
     const dispatch = useDispatch()
   const [open, setOpen] = useState(false)
 const handleClick =()=>{
-loadingRef.current.style.dispaly="block"
+loadingRef.current.style.display="block"
 dispatch(addItemToCart(item))
 setTimeout(()=>{
-loadingRef.current.style.dispaly="none"
+loadingRef.current.style.display="none"
 addRef.current.innerText="تم الإضافة للسلة بنجاح"
 setOpen(true)
 
