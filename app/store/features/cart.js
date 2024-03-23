@@ -9,7 +9,6 @@ items:[]
   reducers: {
     addItemToCart: (state, action) => {
 const newItem = action.payload;
-newItem.quantity=1
 if(state.items.length>0){
 const exists = state.items.some(item => item.id === newItem.id);
 
@@ -17,6 +16,7 @@ if (exists) {
 console.log("exists")
   
 } else {
+newItem.quantity=1
   state.items.push(newItem);
 console.log(state.items)
 }
