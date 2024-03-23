@@ -1,0 +1,5 @@
+ .categoryInput:checked +label{
+      background: black;
+      color: white 
+      
+    }
