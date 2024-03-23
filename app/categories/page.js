@@ -1,5 +1,5 @@
 
-//import Categories from './Categories'
+//import Category from './Category'
 
 //import Brands from './Brands'
 import SetNave from '../components/SetNave'
@@ -12,6 +12,7 @@ export default function Categories() {
      <div class="grid grid-cols-4 ">
 
   <div class="bg-gray-100 p-2 col-span-3">
+<Category/>
 </div>
 
   
