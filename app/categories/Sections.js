@@ -1,22 +1,23 @@
 import styles from "./styles.css"
 export default function Sections(){
 const categories = [
-  "Electronics",
-  "Clothing",
-  "Books",
-  "Home ",
-  "Beauty ",
-  "Toys",
-  "Sports ",
-  "Wellness",
-  "Automotive",
-  "Grocery",
-  "Furniture",
-  "Jewelry",
-  "Pet Supplies",
-  "Tools ",
-  "Office"
+  "رجال",
+  "نساء",
+  "أطفال",
+  "داخلية",
+  "رياضية",
+  "عربية",
+  "فساتين",
+  "جينز",
+  "قمصان",
+  "تنانير",
+  "شتاء",
+  "صيف",
+  "موحدة",
+  "إكسسوارات",
+  "مناسبات"
 ];
+
   
 
 return <div>
