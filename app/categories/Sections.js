@@ -1,21 +1,21 @@
-import styles from "./style.css"
+import styles from "./styles.css"
 export default function Sections(){
 const categories = [
   "Electronics",
   "Clothing",
   "Books",
-  "Home & Kitchen",
-  "Beauty & Personal Care",
-  "Toys & Games",
-  "Sports & Outdoors",
-  "Health & Wellness",
+  "Home ",
+  "Beauty ",
+  "Toys",
+  "Sports ",
+  "Wellness",
   "Automotive",
   "Grocery",
   "Furniture",
   "Jewelry",
   "Pet Supplies",
-  "Tools & Home Improvement",
-  "Office Supplies"
+  "Tools ",
+  "Office"
 ];
   
 
