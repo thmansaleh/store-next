@@ -1,6 +1,10 @@
 "use client"
 import { useDispatch } from "react-redux";
 import { addItemToCart} from "@/app/store/features/cart";
+import { useState } from 'react'
+import { BottomSheet } from 'react-spring-bottom-sheet'
+import 'react-spring-bottom-sheet/dist/style.css'
+import SimilarProducts from"@/app/product/SimilarProducts"
 
 export default function AddToCartButton({item}){
     const dispatch = useDispatch()
