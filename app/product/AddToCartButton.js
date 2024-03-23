@@ -14,11 +14,11 @@ export default function AddToCartButton({item}){
 return <>
 
  <div onClick={() =>{ 
-dispatch(addItemToCart(item)
+dispatch(addItemToCart(item))
 setOpen(true)
 }
 
-)}
+}
  className="w-full bg-white select-none p-3 sticky bottom-0">
   <div className="focus:outline-none  rounded-lg w-full bg-black text-sm font-semibold text-white py-3 text-center  ">إضافة الى السلة</div>
 </div>
