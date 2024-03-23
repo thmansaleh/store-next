@@ -11,17 +11,15 @@ export default function AddToCartButton({item}){
 const addRef =useRef(null)
     const dispatch = useDispatch()
   const [open, setOpen] = useState(false)
-
-
-return <>
-
- <div  onClick={() =>{ 
-addRef.current.innerHtml="loading..."
+const handleClick =()=>{
+addRef.current.innerText="loading..."
 dispatch(addItemToCart(item))
 setOpen(true)
 }
 
-}
+return <>
+
+ <div  onClick={handleClick}
  className="w-full bg-white select-none p-3 sticky bottom-0">
   <div ref={addRef} className="focus:outline-none  rounded-lg w-full bg-black text-sm font-semibold text-white py-3 text-center  ">إضافة الى السلة</div>
 </div>
