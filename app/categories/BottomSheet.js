@@ -6,7 +6,7 @@ import { BottomSheet } from 'react-spring-bottom-sheet'
 // <link rel="stylesheet" href="https://unpkg.com/react-spring-bottom-sheet/dist/style.css" crossorigin="anonymous">
 import 'react-spring-bottom-sheet/dist/style.css'
 
-export default function BottomSheet() {
+export default function BottomSheett() {
   const [open, setOpen] = useState(false)
   return (
     <>
