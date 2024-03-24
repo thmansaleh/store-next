@@ -91,7 +91,7 @@ state.items[itemIndex].quantity -= 1;
 
 
 changeAlertStatus:(state, payload)=>{
-state.alert=flase
+state.alert=false 
 
 
 },
