@@ -14,7 +14,7 @@ router.push('/cart')
 
 useEffect(()=>{
 if(display){
-navigationRef. current.style.display="block"
+navigationRef. current.style.display="flex"
 }else{
 navigationRef. current.style.display="none"
 }
