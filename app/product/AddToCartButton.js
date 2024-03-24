@@ -5,7 +5,7 @@ import { addItemToCart} from "@/app/store/features/cart";
 import { useState , useRef} from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import 'react-spring-bottom-sheet/dist/style.css'
-import SimilarProducts from"@/app/product/SimilarProducts"
+import SuccessfullyContent from"@/app/product/addToCartBtnContent/SuccessfullyContent"
 
 export default function AddToCartButton({item}){
 const addRef =useRef(null)
@@ -42,10 +42,9 @@ return <>
 
       <BottomSheet
 onDismiss={()=>setOpen(false)}
-header={<h1 className="text-md font-semibold ">منتجات مشابهه</h1>}
  open={open}>
 
-<SimilarProducts/>
+<SuccessfullyContent/>
 
 </BottomSheet>
 </>
