@@ -40,7 +40,11 @@ return <>
 إضافة الى السلة</div>
 </div>
 
+
+
+
       <BottomSheet
+          defaultSnap={({ maxHeight }) => maxHeight / 2}
 onDismiss={()=>setOpen(false)}
  open={open}>
 
