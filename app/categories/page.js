@@ -2,13 +2,13 @@
 import Category from './Category'
 import Sections  from "./Sections"
 //import Brands from './Brands'
-import SetNave from '../components/SetNave'
+import SetNave from '@/app/components/SetNave'
 import BottomSheett from "./BottomSheet"
 
 export default function Categories() {
 
   return <>
-          <SetNave name='categories' show={true}/>
+          <SetNave name='categories' display={true}/>
 
      <div class="grid grid-cols-4 ">
 <Sections/>
