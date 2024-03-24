@@ -1,13 +1,11 @@
 "use client"
-import Image from 'next/image'
 import Link from 'next/link'
 export default function({img}){
 
 return <div className="text-center py-3
 flex items-center flex-col gap-4">
-  <Image
-width={90}
-      height={90}
+  <img
+className="h-24 h-24 rounded-lg object-cover shadow-lg"
       alt="cart"
 style={{objectFit: "cover",borderRadius:"10px"}}
 
