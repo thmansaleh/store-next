@@ -3,11 +3,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const navigationSlice= createSlice({
   name: 'navigation',
-  initialState: {name:'home',show:true},
+  initialState: {name:'/',display:true},
   reducers: {
     setNav: (state, action) => {
       state.name=action.payload.pageName;
-      state.show=action.payload.show;
+      state.show=action.payload.display;
     }
    
   },
