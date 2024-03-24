@@ -14,7 +14,7 @@ if(cartItems.length>0){
   return <div style={{"background-color":"#f7f7f7"}} className=" p-3">
   <div className="my-2">
 
-<SetNave name='cart' show={false}/>
+<SetNave name='cart' display={true}/>
 <Items cartItems={cartItems}/>
 <PromotionCode/>
 <OrderDetailes items={cartItems}/>
