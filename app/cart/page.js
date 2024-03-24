@@ -12,6 +12,11 @@ export default function Cart(){
     const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cart.items);
 console.log(cartItems)
+
+useEffect(()=>{
+
+dispatch(changeAlertStatus())
+},[])
 if(cartItems.length>0){
   return <div style={{"background-color":"#f7f7f7"}} className=" p-3">
   <div className="my-2">
