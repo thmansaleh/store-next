@@ -14,8 +14,9 @@ const loadingRef =useRef(null)
   const [open, setOpen] = useState(false)
 const handleClick =()=>{
 loadingRef.current.style.display="block"
-dispatch(addItemToCart(item))
+
 setTimeout(()=>{
+dispatch(addItemToCart(item))
 loadingRef.current.style.display="none"
 addRef.current.innerText="تم الإضافة للسلة بنجاح"
 setOpen(true)
