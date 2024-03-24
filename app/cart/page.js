@@ -1,13 +1,15 @@
 
 "use client"
-
+import {useEffect} from "react"
 import SetNave from '../components/SetNave'
 import OrderDetailes from './OrderDetailes'
 import PromotionCode from "./PromotionCode"
  import { useSelector } from 'react-redux';
-
+import { useDispatch } from "react-redux";
+import {changeAlertStatus} from "@/app/store/features/cart"
 import Items from "./Items"
 export default function Cart(){
+    const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cart.items);
 console.log(cartItems)
 if(cartItems.length>0){
