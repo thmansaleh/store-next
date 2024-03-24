@@ -4,11 +4,13 @@ import { createSlice } from '@reduxjs/toolkit';
 const cartSlice= createSlice({
   name: 'cart',
   initialState: {
-items:[]
+items:[],
+alert:false 
 },
   reducers: {
     addItemToCart: (state, action) => {
 //const newItem = action.payload;
+state.alert=true 
 const newItem={
     "id": action.payload.id,
     "title": action.payload.title,
@@ -25,7 +27,7 @@ console.log("exists")
   
 } else {
   state.items.push(newItem);
-console.log(state.items)
+
 }
 }
 else{
