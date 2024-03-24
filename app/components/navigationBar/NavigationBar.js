@@ -1,17 +1,29 @@
 "use client"
 import styles from './styles.css'
-
+ import { useSelector } from 'react-redux';
+import {useRef ,useEffect} from "react"
  import { useRouter } from 'next/navigation'
 import {icons} from "./NavigationIcons"
 export default function NavigationBar(){
+    const display = useSelector(state => state.navigation.display);
 const router = useRouter()
+const navigationRef =useRef(null)
 const navigation = (page)=>{
 router.push('/cart')
 }
 
+useEffect(()=>{
+if(display){
+navigationRef. current.style.display="block"
+}else{
+navigationRef. current.style.display="none"
+}
+
+},[display])
 
 
-return  <div  className=" z-50 fixed border-solid border-t border-inherit  fixegd rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
+
+return  <div ref={navigationRef}  className=" z-50 fixed border-solid border-t border-inherit  fixegd rounded-t-lg bottom-0  w-screen py-4 bg-white  flex items-center  justify-around ">
   
   {icons.map((e,i)=>{
  return  <div onClick={()=>{
