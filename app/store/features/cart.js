@@ -108,6 +108,6 @@ state.alert=flase
 
 });
 
-export const {addItemToCart,removeItemFromCart,increaseQuantity, decreaseQuantity} = cartSlice.actions;
+export const {addItemToCart,removeItemFromCart,increaseQuantity, decreaseQuantity, changeAlertStatus} = cartSlice.actions;
 
 export default cartSlice.reducer;
