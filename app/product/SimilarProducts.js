@@ -13,6 +13,7 @@ return <>
   <h2 className="text-md font-bold mt-4">منتجات قد تعجبك</h2>
 <Swiper 
 style={{
+zIndex:-1,
 "--swiper-pagination-bullet-border-radius":"0px",
 "--swiper-pagination-bullet-width":"25px",
 "--swiper-pagination-bullet-height":"5px",
