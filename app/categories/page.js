@@ -8,7 +8,7 @@ import BottomSheett from "./BottomSheet"
 export default function Categories() {
 
   return <>
-          <SetNave name='categories' display={true}/>
+          <SetNave name='categories' display={false}/>
 
      <div class="grid grid-cols-4 ">
 <Sections/>
