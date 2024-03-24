@@ -26,9 +26,9 @@ router.push(`/${e.page}`)
 }}
 
 className="flex items-center justify-center bg-grvay-500  h-10   overflow-hidden   relative">
-{alert&&  <span class="bg-red-500 flex items-center justify-center w-2 absolute top-0 left-1 scale-75 transition-all  h-2 p-2 text-white  text-xs rounded-full ">
+{e.page=="cart"? alert&&<span class="bg-red-500 flex items-center justify-center w-2 absolute top-0 left-1 scale-75 transition-all  h-2 p-2 text-white  text-xs rounded-full ">
       {cartItems.length}
-    </span>}
+    </span>:null}
     <input type="radio" id={e.page} className="navigationInput" name="nav"/>
     <label className="px-4"  for={e.page}>
     
