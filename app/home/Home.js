@@ -6,7 +6,7 @@ import Products from'@/app/home/Products'
 
 export default function Home({products}){
   return <>
-    <SetNave name='/' show={true}/>
+    <SetNave name='/' display={true}/>
 <SearchInput/>
 <FristSlider/>
 
