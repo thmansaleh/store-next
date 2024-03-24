@@ -1,5 +1,5 @@
 "use client"
-
+import Link from 'next/link'
 export default function({img}){
 
 return <div className="text-center py-3
@@ -12,8 +12,8 @@ flex items-center flex-col gap-4">
   </span>
   <h2 className="text-sm font-semibold text-gray-600">تمت الإضافة للسة بنجاح</h2>
   <div className="flex items-center justify-around gap-3">
-    <a className="bg-black text-white text-sm ring-black ring-2 py-2 rounded-sm w-28" href="#">عرض السلة</a>
-    <a className="ring-2  text-black text-sm ring-gray-500 py-2 rounded-sm w-28" href="#">مواصة التسوق</a>
+    <Link href="/cart" className="bg-black text-white text-sm ring-black ring-2 py-2 rounded-sm w-28" >عرض السلة</Link>
+    <Link href="/" className="ring-2  text-black text-sm ring-gray-500 py-2 rounded-sm w-28" >مواصة التسوق</Link>
   </div>
 </div>
 }
