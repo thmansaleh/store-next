@@ -44,7 +44,7 @@ return <>
 onDismiss={()=>setOpen(false)}
  open={open}>
 
-<SuccessfullyContent/>
+<SuccessfullyContent img={item.thumbnail}/>
 
 </BottomSheet>
 </>
