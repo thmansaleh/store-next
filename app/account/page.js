@@ -8,7 +8,7 @@ import LanguageModal from './LanguageModal'
 
  return (
     <>
-    <SetNave name='account' show={true}/>
+    <SetNave name='account' display={true}/>
  
 <div dir="rtl" className="bg-gray-100 p-3 h-f  dark:bg-gray-700">
   <div className="w-full   py-3 flex items-center mb-3 mt-1 justify-between ">
