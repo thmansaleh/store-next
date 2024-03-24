@@ -39,12 +39,18 @@ console.log(state.items)
     }, 
 
 
+
+
+
+
 removeItemFromCart:(state,action) =>{
 const idToRemove = action.payload;
 const newItems = state.items.filter(item => item.id !== idToRemove);
 
 state.items=newItems
 },
+
+
 
 
 
@@ -80,6 +86,15 @@ state.items[itemIndex].quantity -= 1;
 
 
 
+
+
+
+
+changeAlertStatus:(state, payload)=>{
+state.alert=flase
+
+
+},
 
 
 
