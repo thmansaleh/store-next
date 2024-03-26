@@ -85,6 +85,6 @@ state.items=newItems
 
 });
 
-export const { setItemCart } = navigationSlice.actions;
+export const { removeItemFromWishlist,addItemToWishlist } = wishlist.actions;
 
-export default cartSlice.reducer;
+export default wishlist.reducer;
