@@ -15,7 +15,7 @@ items:[]
 
 
 
-    addItemTo wishlist: (state, action) => {
+    addItemToWishlist: (state, action) => {
 
 
 
