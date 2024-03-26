@@ -40,7 +40,7 @@ if (exists) {
 else{
 
 state.items.push(newItem);
-//console.log(state.items)
+console.log(state.items)
 }
 
     },
