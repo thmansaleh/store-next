@@ -52,6 +52,22 @@ state.items.push(newItem);
 
 
 
+removeItemFromWishlist:(state,action) =>{
+const idToRemove = action.payload;
+const newItems = state.items.filter(item => item.id !== idToRemove);
+
+state.items=newItems
+},
+
+
+
+
+
+
+
+
+
+
 
 
 
