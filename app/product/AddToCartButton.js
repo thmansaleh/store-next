@@ -17,6 +17,7 @@ loadingRef.current.style.display="block"
 
 setTimeout(()=>{
 dispatch(addItemToCart(item))
+console.log(addItemToCart)
 loadingRef.current.style.display="none"
 addRef.current.innerText="تم الإضافة للسلة بنجاح"
 setOpen(true)
