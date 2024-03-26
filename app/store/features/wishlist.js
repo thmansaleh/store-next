@@ -13,10 +13,40 @@ items:[]
   reducers: {
 
 
+
+
     addItemTo wishlist: (state, action) => {
-      state.name=action.payload.pageName;
-      state.show=action.payload.show;
+
+
+
+const newItem={
+    "id": action.payload.id,
+    "title": action.payload.title,
+    "description": action.payload.description,
+    "price": action.payload.price,
+    "thumbnail":action.payload.thumbnail
+}
+if(state.items.length>0){
+const exists = state.items.some(item => item.id === newItem.id);
+
+if (exists) {
+//console.log("exists")
+
+} else {
+  state.items.push(newItem);
+
+}
+}
+else{
+
+state.items.push(newItem);
+//console.log(state.items)
+}
+
     },
+
+
+
 
 
 
