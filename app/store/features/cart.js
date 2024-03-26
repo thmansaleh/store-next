@@ -24,7 +24,7 @@ const exists = state.items.some(item => item.id === newItem.id);
 
 if (exists) {
 console.log("exists")
- return false 
+ 
   
 } else {
   state.items.push(newItem);
@@ -36,7 +36,7 @@ else{
 
 state.items.push(newItem);
 console.log(state.items)
-return true 
+
 }
      
     }, 
