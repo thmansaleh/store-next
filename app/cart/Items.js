@@ -32,6 +32,7 @@ dispatch(decreaseQuantity(id))
 }
 const addToWishlist =(newItem)=>{
 console.log("click")
+console.log(newItem)
 console.log(wishlistItems)
 
 
