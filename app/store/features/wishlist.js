@@ -34,6 +34,7 @@ if (exists) {
 
 } else {
   state.items.push(newItem);
+console.log(state.items)
 
 }
 }
