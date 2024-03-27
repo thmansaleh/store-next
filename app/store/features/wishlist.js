@@ -17,7 +17,7 @@ items:[]
 
  addItemToWishlist: (state, action) => {
 
-state.items.push(newItem);
+state.items.push(action.payload);
 console.log(state.items)
 
 
