@@ -26,6 +26,7 @@ const newItem={
     "price": action.payload.price,
     "thumbnail":action.payload.thumbnail
 }
+console.log(newItem)
 if(state.items.length>0){
 const exists = state.items.some(item => item.id === newItem.id);
 
