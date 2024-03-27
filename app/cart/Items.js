@@ -1,6 +1,6 @@
 "use client"
 
-import { useDispatch } from "react-redux";
+import { useDispatch , useSelector} from "react-redux";
 import { removeItemFromCart} from "@/app/store/features/cart";
 import { increaseQuantity} from "@/app/store/features/cart";
 
@@ -13,6 +13,7 @@ export default function Items({cartItems}){
     const cartItemss= cartItems 
 
     const dispatch = useDispatch()
+    const wishlistItems=useSelector(state=>state.wishlist.items)
 
 const remove =(id) =>{
 dispatch(removeItemFromCart(id))
@@ -29,9 +30,26 @@ const decrease = (id) =>
  { 
 dispatch(decreaseQuantity(id))
 }
-const addToWishlist =(item)=>{
+const addToWishlist =(newIitem)=>{
 console.log("click")
-dispatch(addItemToWishlist(item))
+console.log(wishlistItems)
+
+
+if(wishlistItems.length>0){
+const exists = wishlistItems.some(item => item.id === newIitem.id);
+
+if(exists){
+}else{
+dispatch(addItemToWishlist(newIitem))
+}
+}else{
+
+dispatch(addItemToWishlist(newIitem))
+}
+
+
+
+
 }
 
 
