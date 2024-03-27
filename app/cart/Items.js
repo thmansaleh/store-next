@@ -30,7 +30,7 @@ const decrease = (id) =>
  { 
 dispatch(decreaseQuantity(id))
 }
-const addToWishlist =(newIitem)=>{
+const addToWishlist =(newItem)=>{
 console.log("click")
 console.log(wishlistItems)
 
