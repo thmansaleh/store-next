@@ -36,15 +36,15 @@ console.log(wishlistItems)
 
 
 if(wishlistItems.length>0){
-const exists = wishlistItems.some(item => item.id === newIitem.id);
+const exists = wishlistItems.some(item => item.id === newItem.id);
 
 if(exists){
 }else{
-dispatch(addItemToWishlist(newIitem))
+dispatch(addItemToWishlist(newItem))
 }
 }else{
 
-dispatch(addItemToWishlist(newIitem))
+dispatch(addItemToWishlist(newItem))
 }
 
 
