@@ -10,7 +10,7 @@ import LanguageModal from './LanguageModal'
     <>
     <SetNave name='account' display={true}/>
  
-<div dir="rtl" className="bg-gray-100 p-3 h-f  dark:bg-gray-700">
+<div className="bg-gray-100 p-3 h-f  dark:bg-gray-700">
   <div className="w-full   py-3 flex items-center mb-3 mt-1 justify-between ">
     <svg className="w-10 h-10 rounded-full mx-2 fill-black-700 bg-white p-2 hover:bg-neutral-200" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={512} height={512}><path d="M9,12c3.309,0,6-2.691,6-6S12.309,0,9,0,3,2.691,3,6s2.691,6,6,6Zm0-10c2.206,0,4,1.794,4,4s-1.794,4-4,4-4-1.794-4-4,1.794-4,4-4Zm1.75,14.22c-.568-.146-1.157-.22-1.75-.22-3.86,0-7,3.14-7,7,0,.552-.448,1-1,1s-1-.448-1-1c0-4.962,4.038-9,9-9,.762,0,1.519,.095,2.25,.284,.535,.138,.856,.683,.719,1.218-.137,.535-.68,.856-1.218,.719Zm12.371-4.341c-1.134-1.134-3.11-1.134-4.243,0l-6.707,6.707c-.755,.755-1.172,1.76-1.172,2.829v1.586c0,.552,.448,1,1,1h1.586c1.069,0,2.073-.417,2.828-1.172l6.707-6.707c.567-.567,.879-1.32,.879-2.122s-.312-1.555-.878-2.121Zm-1.415,2.828l-6.708,6.707c-.377,.378-.879,.586-1.414,.586h-.586v-.586c0-.534,.208-1.036,.586-1.414l6.708-6.707c.377-.378,1.036-.378,1.414,0,.189,.188,.293,439,.293,.707s-.104,.518-.293,.707Z" /></svg>
     <div className="  flex items-center ">
@@ -19,11 +19,11 @@ import LanguageModal from './LanguageModal'
     </div>
   </div>
   <div className="w-full h-28  bg-white rounded-2xl  flex items-center justify-around">
-    <div className="w-24 rounded-lg text-center  py-1 hover:bg-neutral-200 ">
+    <Link href="./wishlist" className="w-24 inline-block rounded-lg text-center  py-1 hover:bg-neutral-200 ">
       <svg className="w-full h-7 fill-red-500" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width={512} height={512}><path d="M17.5.917a6.4,6.4,0,0,0-5.5,3.3A6.4,6.4,0,0,0,6.5.917,6.8,6.8,0,0,0,0,7.967c0,6.775,10.956,14.6,11.422,14.932l.578.409.578-.409C13.044,22.569,24,14.742,24,7.967A6.8,6.8,0,0,0,17.5.917Z" /></svg>
       <span className="text-sm text-black font-semibold select-none">المفضلة</span>
       <span className="block text-gray-400 text-sm select-none">10</span>
-    </div>
+    </Link>
     <div className="w-24 rounded-lg text-center  py-1 hover:bg-neutral-200 ">
       <svg className="w-full h-7 " xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style={{"enable-background":"new 0 0 24 24"}} xmlSpace="preserve" width={512} height={512}>
         <g>
