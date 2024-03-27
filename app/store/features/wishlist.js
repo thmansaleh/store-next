@@ -18,6 +18,7 @@ items:[]
     addItemToWishlist: (state, action) => {
 
 
+console.log(state.items)
 
 const newItem={
     "id": action.payload.id,
@@ -43,7 +44,6 @@ else{
 state.items.push(newItem);
 
 }
-console.log(state.items)
     },
 
 
