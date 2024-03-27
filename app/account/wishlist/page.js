@@ -1,9 +1,10 @@
 
 "use client"
 import Link from 'next/link'
+import {useSelector} from  "react-redux"
 export default function page() {
    
-const items = [1,2,3,4,5]
+const items = useSelector(state=>state.wishlist.items)
 return <div className="p-3 flex justify-around flex-wrap gap-y-6">
  
 
