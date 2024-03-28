@@ -38,7 +38,7 @@ route:""
 ]
 
 
-return <div class="w-full h-28  bg-white rounded-2xl  flex items-center justify-around" style="">
+return <div className="w-full h-28  bg-white rounded-2xl  flex items-center justify-around" >
 {icons.map((e,i)=>{
 
 
