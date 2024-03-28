@@ -24,7 +24,7 @@ const [product, setProduct]= useState(false)
 useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://dummyjson.com/products/${id}`,{ next: { revalidate: 3600} });
+        const response = await fetch(`https://dummyjson.com/products/${id}`,{ next: { revalidate: 0} });
         const responseData = await response.json();
 console.log(responseData)
 setProduct(responseData)
