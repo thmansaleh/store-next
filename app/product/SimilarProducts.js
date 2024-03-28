@@ -49,13 +49,13 @@ slidesPerView={2.5}
 
 "https://static.zara.net/photos///2023/I/0/1/p/3739/250/800/2/w/404/3739250800_6_21_1.jpg?ts=1695893759658"
 
-].map(e =>{
+].map((e,i) =>{
 
 return <SwiperSlide className="my-8">
 
     <Link href={{
     pathname: './product',
-    query: { product_id: e},
+    query: { product_id: i},
   }} className=" relative overflow-hidden shadow-lg rounded-lg inline-block w-36">
   <img className="w-full h-40 object-contain " src={e} alt />
   <span className=" line-clamp-2 text-sm my-2 px-2">SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...</span>
