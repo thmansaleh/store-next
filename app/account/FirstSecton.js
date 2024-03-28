@@ -45,7 +45,7 @@ return <div class="w-full h-28  bg-white rounded-2xl  flex items-center justify-
 
 return <Link className="w-24 inline-block rounded-lg text-center  py-1 hover:bg-neutral-200 " href="./account/wishlist">
 {e.icon}
-<span className="text-sm text-black font-semibold select-none">{e.name}</span><span class="block text-gray-400 text-sm select-none">{e.count}</span>
+<span className="text-sm text-black font-semibold select-none">{e.name}</span><span className="block text-gray-400 text-sm select-none">{e.count}</span>
 </Link>
 
 
