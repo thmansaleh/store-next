@@ -8,6 +8,7 @@ import PromotionCode from "./PromotionCode"
 import { useDispatch } from "react-redux";
 import {changeAlertStatus} from "@/app/store/features/cart"
 import Items from "./Items"
+import  EmptyCart from "./EmptyCart"
 export default function Cart(){
     const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cart.items);
@@ -28,7 +29,7 @@ if(cartItems.length>0){
 </div>
 </div>
 }else{
-return <h1 > no content </h1>
+return <EmptyCart/>
 }
 }
 
