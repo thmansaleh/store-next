@@ -13,6 +13,7 @@ import FreeDelivery from '@/app/product/FreeDelivery'
 import Size from '@/app/product/Size'
 //import SetNave from '@/components/SetNave'
 import SimilarProducts from "./SimilarProducts"
+import SliderLoading from "./SliderLoading"
 
 
 export default  function ProductId() {
@@ -41,8 +42,13 @@ setProduct(responseData)
 
 
   return <> 
+<Suspense fallback={<SliderLoading />}>
+
+
 
     <Slider product={product} />
+</Suspense>
+
 <div className="p-2">
 
     <ProductInformation product={product}/>
