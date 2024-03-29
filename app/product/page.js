@@ -14,6 +14,7 @@ import Size from '@/app/product/Size'
 //import SetNave from '@/components/SetNave'
 import SimilarProducts from "./SimilarProducts"
 import SliderLoading from "./SliderLoading"
+import { Suspense } from 'react';
 
 
 export default  function ProductId() {
