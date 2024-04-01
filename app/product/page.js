@@ -48,6 +48,7 @@ setProduct(responseData)
 
 
   return <> 
+{data?<h1>data</h1>:null}
 <Suspense fallback={<SliderLoading />}>
 
 
