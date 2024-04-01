@@ -48,7 +48,8 @@ setProduct(responseData)
 
 
   return <> 
-{data?<h1>data</h1>:null}
+
+
 <Suspense fallback={<SliderLoading />}>
 
 
@@ -57,7 +58,7 @@ setProduct(responseData)
 </Suspense>
 
 <div className="p-2">
-
+{data?<h1>data</h1>:null}
     <ProductInformation product={product}/>
     <Size/>
 <FreeDelivery/>
