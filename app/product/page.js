@@ -15,7 +15,7 @@ import Size from '@/app/product/Size'
 import SimilarProducts from "./SimilarProducts"
 import SliderLoading from "./SliderLoading"
 import { Suspense } from 'react';
-import {product as useProduct} from  "@/app/api/product"
+import {useProduct} from  "@/app/api/product"
 
 
 export default  function ProductId() {
