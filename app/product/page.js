@@ -15,12 +15,17 @@ import Size from '@/app/product/Size'
 import SimilarProducts from "./SimilarProducts"
 import SliderLoading from "./SliderLoading"
 import { Suspense } from 'react';
+import {product as useProduct} from  "@/app/api/product"
 
 
 export default  function ProductId() {
 const searchParams = useSearchParams()
  
   const id = searchParams.get('product_id')
+const url= 
+`https://dummyjson.com/products/${id}`
+const {data,isLoading, isError} = useProduct(url)
+console.log(data)
 const [product, setProduct]= useState(false)
  
 useEffect(() => {
@@ -28,7 +33,7 @@ useEffect(() => {
       try {
         const response = await fetch(`https://dummyjson.com/products/${id}`,{ next: { revalidate: 0} });
         const responseData = await response.json();
-console.log(responseData)
+
 setProduct(responseData)
      
       } catch (error) {
