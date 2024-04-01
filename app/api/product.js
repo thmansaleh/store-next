@@ -1,3 +1,4 @@
+import useSWR from 'swr'
 async function product(url) {
 const fetcher =fetch(url)
   .then(response => {
