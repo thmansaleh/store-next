@@ -59,6 +59,8 @@ setProduct(responseData)
 
 <div className="p-2">
 {data?<h1>data</h1>:null}
+{isLoading?<h1>loading....</h1>:null}
+{isError?<h1>error</h1>:null}
     <ProductInformation product={product}/>
     <Size/>
 <FreeDelivery/>
