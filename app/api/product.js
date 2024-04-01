@@ -2,7 +2,7 @@
 "use client"
 import useSWR from 'swr'
 export function useProduct() {
-const fetcher =fetch("https://mobapp.rcuae.ae/MOBAPP_V3_PROD/ERC_MOB_V2_WS.asmx/local_aids_file_info?p_user_id=139622&Lang=AR")
+const fetcher =fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => {
     if (!response.ok) {
       throw new Error("failed")
@@ -15,7 +15,7 @@ const fetcher =fetch("https://mobapp.rcuae.ae/MOBAPP_V3_PROD/ERC_MOB_V2_WS.asmx/
 
 
 
-  const { data, error, isLoading } = useSWR("https://mobapp.rcuae.ae/MOBAPP_V3_PROD/ERC_MOB_V2_WS.asmx/local_aids_file_info?p_user_id=139622&Lang=AR", fetcher)
+  const { data, error, isLoading } = useSWR('https://jsonplaceholder.typicode.com/todos/1', fetcher)
  
   return {
     data,
