@@ -13,7 +13,7 @@ const fetcher =fetch(url)
 
 
 
-  const { data, error, isLoading } = useSWR('url', fetcher)
+  const { data, error, isLoading } = useSWR(url, fetcher)
  
   return {
     data,
