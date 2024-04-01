@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-export function product(url) {
+export function useProduct(url) {
 const fetcher =fetch(url)
   .then(response => {
     if (!response.ok) {
