@@ -25,7 +25,7 @@ const searchParams = useSearchParams()
 const url= 
 `https://dummyjson.com/products/${id}`
 const {data,isLoading, isError} = useProduct(url)
-console.log(data)
+console.log(data,isLoading, isError)
 const [product, setProduct]= useState(false)
  
 useEffect(() => {
