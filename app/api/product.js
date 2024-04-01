@@ -14,7 +14,7 @@ const fetcher =fetch(url)
 
 
   const { data, error, isLoading } = useSWR('url', fetcher)
- console.log(data)
+ 
   return {
     data,
     isLoading,
