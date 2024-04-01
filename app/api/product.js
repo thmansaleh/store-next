@@ -21,3 +21,4 @@ const fetcher =fetch(url)
     isError: error 
   }
 }
+export product 
