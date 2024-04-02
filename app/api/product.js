@@ -1,25 +1,29 @@
 
-"use client"
+'use client'
+
+import axios from 'axios';
+
 import useSWR from 'swr'
-export function useProduct() {
-const fetcher =fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("failed")
-    }
-    return response.json();
-  })
-  .catch(error => {
-    throw new Error("false")
-  });
+//  import { fetchProduct } from '@/app/api/product';
 
+export function useProduct (){
+ const url ='https://jsonplaceholder.typicode.com/todos/1'
+  const fetchProduct = async () => {
+   const response = await axios.get(url);
 
-
-  const { data, error, isLoading } = useSWR('https://jsonplaceholder.typicode.com/todos/1', fetcher)
- 
-  return {
-    data,
-    isLoading,
-    isError: error 
-  }
+   return response.data;
+ };
+const { data , error, isLoading } = useSWR(url, fetchProduct)
+return {
+  data,
+  isLoading,
+   error
 }
+//  if (error) return <div>failed to load</div>
+//  if (isLoading) return <div>loading...</div>
+
+//  // render data
+//  return <div> {data.title}</div>
+
+}
+ 

@@ -12,7 +12,7 @@ import ShareHeartIcons from "./ShareHeartIcons"
 import SliderLoading from "./SliderLoading"
 
 export default function Slider({product}) {
-console.log(product.images)
+// console.log(product.images)
 return <>
 
 <Swiper 
@@ -41,9 +41,9 @@ slidesPerView={1}
 
 <ShareHeartIcons/>
 
-{product.images?product.images.map(href=>{
+{product.images?product.images.map((href,i)=>{
 
-return <SwiperSlide className="mb-8"  style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
+return <SwiperSlide key={i} className="mb-8"  style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
   
     <img className="w-100 product-img-slider" src={href}  alt="My Image" />
   </SwiperSlide>

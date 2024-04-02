@@ -51,13 +51,13 @@ slidesPerView={2.5}
 
 ].map((e,i) =>{
 
-return <SwiperSlide className="my-8">
+return <SwiperSlide key={i} className="my-8">
 
     <Link href={{
     pathname: './product',
     query: { product_id: i},
   }} className=" relative overflow-hidden shadow-lg rounded-lg inline-block w-36">
-  <img className="w-full h-40 object-contain " src={e} alt />
+  <img className="w-full h-40 object-contain " src={e} alt={e} />
   <span className=" line-clamp-2 text-sm my-2 px-2">SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...</span>
   <div className="p-2 space-x-px text-sm bg-zinc-100  "><span>899</span>
     <span className=" inline-block text-green-600 mx-px">د.أ</span></div>
