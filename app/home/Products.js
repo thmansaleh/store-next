@@ -6,7 +6,9 @@ export default function Products(){
   const {data,error,isLoading} =useProducts()
   if(error) return <h1>error</h1>
   if(isLoading) return <ProductsLoading/>
-return data.products.map((e,i) => {
+return <div className="p-2 flex  justify-around bg-white  flex-wrap">
+
+{data.products.map((e,i) => {
 const url =`product/${e.id}`
 return <Link href={{
     pathname: url,
@@ -23,7 +25,7 @@ return <Link href={{
     </div>
   </Link>
 
-})
-
+})}
+</div>
 
 }
