@@ -3,30 +3,36 @@
 import { useDispatch } from "react-redux";
 import { addItemToCart} from "@/app/store/features/cart";
 import { useState , useRef} from 'react'
-import { BottomSheet } from 'react-spring-bottom-sheet'
-import 'react-spring-bottom-sheet/dist/style.css'
-import SuccessfullyContent from"@/app/product/addToCartBtnContent/SuccessfullyContent"
+// import 'react-spring-bottom-sheet/dist/style.css'
+import SuccessfullyContent from"@/app/product/[id]/addToCartBtnContent/SuccessfullyContent"
+import { useProduct } from '@/app/api/product';
+import { BottomSheet } from "react-spring-bottom-sheet";
 
-export default function AddToCartButton({item}){
+export default function AddToCartButton({id}){
+  const [open, setOpen] = useState(true)
+  const {data,error,isLoading} =useProduct(id)
+  // console.log(data)
+
 const addRef =useRef(null)
 const loadingRef =useRef(null)
     const dispatch = useDispatch()
-  const [open, setOpen] = useState(false)
 const handleClick =()=>{
 loadingRef.current.style.display="block"
+// setOpen(true)
 
 setTimeout(()=>{
-dispatch(addItemToCart(item))
-console.log(addItemToCart)
+dispatch(addItemToCart(data))
+// console.log(addItemToCart)
 loadingRef.current.style.display="none"
 addRef.current.innerText="تم الإضافة للسلة بنجاح"
-setOpen(true)
 
 }, 1000)
 
 
 }  
 
+
+// if(isLoading) return <h1>loading</h1>
 
 return <>
 
@@ -44,15 +50,13 @@ return <>
 
 
 
-
-      <BottomSheet
-          defaultSnap={({ maxHeight }) => maxHeight / 2}
+  {/* <BottomSheet      defaultSnap={({ maxHeight }) => maxHeight / 2}
 onDismiss={()=>setOpen(false)}
- open={open}>
+ open={true}>
+<h1>ujhygt</h1>
+<SuccessfullyContent />
 
-<SuccessfullyContent img={item.thumbnail}/>
-
-</BottomSheet>
+</BottomSheet> */}
 </>
 
 }

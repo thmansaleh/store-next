@@ -6,14 +6,14 @@ import axios from 'axios';
 import useSWR from 'swr'
 //  import { fetchProduct } from '@/app/api/product';
 
-export function useProduct (){
- const url ='https://jsonplaceholder.typicode.com/todos/1'
+export function useProduct (id){
+ const url =`https://dummyjson.com/products/${id}`
   const fetchProduct = async () => {
    const response = await axios.get(url);
 
    return response.data;
  };
-const { data , error, isLoading } = useSWR(url, fetchProduct)
+const { data , error, isLoading } = useSWR(url, fetchProduct,{ refreshInterval: 100000 })
 return {
   data,
   isLoading,

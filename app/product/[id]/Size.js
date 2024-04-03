@@ -1,3 +1,4 @@
+'use client'
 export default function Size(){
   return <div className="select-none py-2 bg-grbay-200">
   <div className="flex py-1 

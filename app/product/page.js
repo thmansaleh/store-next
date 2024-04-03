@@ -6,13 +6,13 @@ import { useSearchParams } from 'next/navigation'
  
 import Flip from '@/app/components/flip/Flip'
 import Slider from './Slider'
-import ProductInformation from '@/app/product/information/ProductInformation'
-import AddToCartButton from '@/app/product/AddToCartButton'
-import Description from './description/Description'
-import FreeDelivery from '@/app/product/FreeDelivery'
-import Size from '@/app/product/Size'
+import ProductInformation from '@/app/product/[id]/ProductInformation'
+import AddToCartButton from '@/app/product/[id]/AddToCartButton'
+import Description from './[id]/Description'
+import FreeDelivery from '@/app/product/[id]/FreeDelivery'
+import Size from '@/app/product/[id]/Size'
 //import SetNave from '@/components/SetNave'
-import SimilarProducts from "./SimilarProducts"
+import SimilarProducts from "./[id]/SimilarProducts"
 import SliderLoading from "./SliderLoading"
 import { Suspense } from 'react';
 

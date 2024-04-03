@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import 'react-spring-bottom-sheet/dist/style.css'
-import SimilarProducts from"@/app/product/SimilarProducts"
+import SimilarProducts from"@/app/product/[id]/SimilarProducts"
 export default function BottomSheett() {
   const [open, setOpen] = useState(false)
   return (

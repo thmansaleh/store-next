@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-export default function({img}){
+export default function(){
 
 return <div className="text-center py-3
 flex items-center flex-col gap-4">
@@ -9,7 +9,7 @@ className="h-24 h-24 rounded-lg object-contain shadow-lg"
       alt="cart"
 style={{objectFit: "cover",borderRadius:"10px"}}
 
-  src={img}  />
+  src='jh'  />
   <span className="circle flex items-center  justify-center h-5 w-5 transition-all  inline-block  rounded-full bg-green-400">
     <svg xmlns="http://www.w3.org/2000/svg" className=" stroke-inherit transition-all size-4 fill-white" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" strokeWidth={1}>
       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

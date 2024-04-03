@@ -54,8 +54,8 @@ slidesPerView={2.5}
 return <SwiperSlide key={i} className="my-8">
 
     <Link href={{
-    pathname: './product',
-    query: { product_id: i},
+    pathname: `/product/${i+1}`
+ 
   }} className=" relative overflow-hidden shadow-lg rounded-lg inline-block w-36">
   <img className="w-full h-40 object-contain " src={e} alt={e} />
   <span className=" line-clamp-2 text-sm my-2 px-2">SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...</span>

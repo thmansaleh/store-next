@@ -10,7 +10,7 @@ export default function Home({products}){
 <SearchInput/>
 <FristSlider/>
 
-<div className="p-2 flex wrap justify-around bg-white  flex-wrap">
+<div className="p-2 flex  justify-around bg-white  flex-wrap">
 <Products products={products}/>
 </div>
 

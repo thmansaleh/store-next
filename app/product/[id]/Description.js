@@ -1,5 +1,6 @@
 
 
+'use client'
 const Description = () => {
 
 return <div className="lg:flex max-w-sm mx-auto  bg-white ">
