@@ -114,11 +114,11 @@ export default function StoresSwiper() {
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 5,
+            spaceBetween: 30,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 6,
             spaceBetween: 30,
           },
         }}
