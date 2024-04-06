@@ -6,7 +6,7 @@ import useSWR from "swr";
 import Suggestion from "./Suggestion";
 
 export default function SearchInput() {
-    const [search, setSearch] = useState('me');
+    const [search, setSearch] = useState('');
 
     const url =`https://sugg.theluxurycloset.com/index/get?q=${search}&pro_sugg=1`
     const fetcher = async () => {

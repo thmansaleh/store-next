@@ -11,7 +11,7 @@ export default function Home({products}){
   return <>
     <SetNave name='/' display={true}/>
 <SearchInput/>
-{/* <FristSlider/> */}
+<FristSlider/>
 <StoresSwiper/>
 <SwiperFreemodeSection/>
 
