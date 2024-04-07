@@ -1,9 +1,9 @@
 
+import Brands from './Brands'
 import Category from './Category'
 import Sections  from "./Sections"
 //import Brands from './Brands'
 import SetNave from '@/app/components/SetNave'
-import BottomSheett from "./BottomSheet"
 
 export default function Categories() {
 
@@ -14,10 +14,10 @@ export default function Categories() {
 <Sections/>
   <div class="bg-white p-2 col-span-3">
 <Category/>
+<Brands/>
 </div>
 
   
 </div>
-<BottomSheett/>
   </>
 }
