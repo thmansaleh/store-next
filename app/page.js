@@ -9,6 +9,7 @@ const productss= async () => {
     return products.products
 
     }
+    
 export default async function Page() {
 const products = await productss()
 // console.log(products)

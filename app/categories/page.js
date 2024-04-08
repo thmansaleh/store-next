@@ -12,7 +12,7 @@ export default function Categories() {
 
      <div class="grid grid-cols-4 ">
 <Sections/>
-  <div class="bg-white p-2 col-span-3">
+  <div class="bg-white p-2 space-y-4 col-span-3">
 <Category/>
 <Brands/>
 </div>

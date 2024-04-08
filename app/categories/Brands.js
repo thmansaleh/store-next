@@ -41,7 +41,7 @@ import Link from 'next/link'
   
    return <div>      
   <h1 className="block text-sm font-semibold p-2">تسوق حسب البراندات</h1>
-  <div className="flex justify-around gap-4 bg-white flex-wrap py-2 ">
+  <div className="flex justify-start gap-y-4 gap-x-5 bg-white flex-wrap py-2 ">
    { data.map((e,i)=>{
     return <Link href='iuyt'
     className='flex flex-col items-center space-y-2 inline-block  '>
