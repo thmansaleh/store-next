@@ -135,7 +135,7 @@ export default function StoresSwiper() {
         return  <SwiperSlide key={i}>  <Link href={e.route} 
         className='flex flex-col items-center space-y-2 inline-block  '>
        <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 object-contain'>
-        <img src={e.img} className='' />
+        <img src={e.img} alt='frnij' />
        </div>
        <div className='text-sm font-semibold text-black'>{e.title}</div>
 
