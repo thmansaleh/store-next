@@ -1,5 +1,4 @@
-
-
+import styles from "./styles.css"
 export default function Sections(){
 const categories = [
   "رجال",
@@ -16,8 +15,7 @@ const categories = [
   "صيف",
   "موحدة",
   "إكسسوارات",
-  "مناسبات",
-  "othman"
+  "مناسبات"
 ];
 
   
