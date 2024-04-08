@@ -21,8 +21,8 @@ const categories = [
   
 
 return <div>
-  {categories. map(e=>{
-return <div className=" bg-gray-100  ">
+  {categories. map((e,i)=>{
+return <div key={i+43}  className=" bg-gray-100  ">
     <input className="hidden categoryInput" type="radio" id={e} name="category" />
     <label className=" w-full p-2 block" htmlFor={e}>
       {e}

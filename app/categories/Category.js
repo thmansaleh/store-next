@@ -50,7 +50,7 @@ import Link from 'next/link'
   <h1 className="block text-sm font-semibold p-2">تسوق حسب الفئة</h1>
   <div className="flex justify-start gap-y-4  gap-x-5 bg-white flex-wrap py-2 ">
    { data.map((e,i)=>{
-    return <Link href='iuyt'
+    return <Link key={i+12} href='iuyt'
     className='flex flex-col items-center space-y-2 inline-block  '>
    <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 '>
     <img src={e.img} className='object-cover ' />

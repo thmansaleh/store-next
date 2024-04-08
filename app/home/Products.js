@@ -10,7 +10,7 @@ return <div className="p-2 flex  justify-around bg-white  flex-wrap">
 
 {data.products.map((e,i) => {
 const url =`product/${e.id}`
-return <Link href={{
+return <Link key={e.id} href={{
     pathname: url,
     
   }} className=" inline-block relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">

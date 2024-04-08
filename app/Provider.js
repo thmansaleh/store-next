@@ -8,8 +8,7 @@ function ProviderPage({children}) {
 <NavigationBar/>
 
 </Provider>
-    
-  
+
 }
 
 export default ProviderPage
