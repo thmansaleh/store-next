@@ -1,4 +1,5 @@
-import styles from "./styles.css"
+
+
 export default function Sections(){
 const categories = [
   "رجال",
