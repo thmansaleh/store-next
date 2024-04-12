@@ -51,6 +51,15 @@ return <SwiperSlide key={i} className="mb-8"  style={{ textAlign: 'center', heig
 
 }):<SliderLoading/>}
 
+
+
+
+
+
+
+
+
+
 </Swiper>
 
 </>
