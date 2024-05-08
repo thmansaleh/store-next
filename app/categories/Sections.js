@@ -6,7 +6,7 @@ export default function Sections(){
 
 
   
-if(error) console.log(error)
+if(error) "error"
 if(isLoading) return "loading"
 if(data) return <div>
   {data.map((e,i)=>{
