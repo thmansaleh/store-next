@@ -1,4 +1,4 @@
-
+"use client"
 import axios from 'axios';
 
  const url ="https://dull-plum-antelope-tutu.cyclic.cloud/sections"
