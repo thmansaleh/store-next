@@ -9,7 +9,7 @@ export function swrSections(){
   const fetcher = async () => {
    const response = await fetchSections()
  };
-const { data , error, isLoading } = useSWR(url, fetcher)
+const { data , error, isLoading } = useSWR(url, fetcher())
 return {
   data,
   isLoading,
