@@ -1,7 +1,7 @@
 'use client'
 
 import axios from 'axios';
-import fetchSections from "@/app/libs/services/fetchSections"
+import {fetchSections} from "@/app/libs/services/fetchSections"
 import useSWR from 'swr'
 
 export function swrSections(){
