@@ -6,7 +6,7 @@ export default function Sections(){
 
 
   
-if(error) console.log("errore",error)
+if(error) return <h1>errore</h1>
 if(isLoading) return "loading"
 if(data) console.log("data is ",data)
  return <div>
