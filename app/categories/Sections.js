@@ -9,15 +9,14 @@ export default async function Sections(){
   
 if(error) return <h1>errore</h1>
 if(isLoading) return "loading"
-console.log("data is ",data)
  return <div>
 
-  {["هلا"].map((e,i)=>{
+  {data.map(e=>{
 
-return <div key={i+43}  className=" bg-gray-100  ">
-    <input className="hidden categoryInput" type="radio" id={e} name="category" />
-    <label className=" w-full p-2 block" htmlFor={e}>
-      {e}
+return <div key={e.id}  className=" bg-gray-100  ">
+    <input className="hidden categoryInput" type="radio" id={e.id} name="category" />
+    <label className=" w-full p-2 block" htmlFor={e.id}>
+      {e.ar}
     </label>
   </div>
 
