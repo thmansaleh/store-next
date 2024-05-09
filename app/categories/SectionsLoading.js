@@ -1,6 +1,6 @@
 
 "use client"
-import styles from  "./styles.css"
+import  "./styles.css"
 export default function SectionsLoading(){
 
 return <div className="animate-pulse  flex flex-col gap-y-2">
