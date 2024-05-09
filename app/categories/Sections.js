@@ -1,5 +1,5 @@
 "use client"
-import styles from "./styles.css"
+
 import {swrSections} from "@/app/swr/sections" 
 import SectionsLoading from ="./SectionsLoading"
 
