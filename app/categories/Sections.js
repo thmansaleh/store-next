@@ -3,7 +3,7 @@
 import {swrSections} from "@/app/swr/sections" 
 import SectionsLoading from ="./SectionsLoading"
 
-export default async function Sections(){
+export default function Sections(){
   const {data,error,isLoading} =swrSections()
 
 
