@@ -1,10 +1,12 @@
 "use client"
 import styles from "./styles.css"
-import {swrSections} from "@/app/swr/sections"
-export default function Sections(){
+import {swrSections} from "@/app/swr/sections" 
+import {fetchSections} from "@/app/libs/services/fetchSections"
+export default async function Sections(){
   const {data,error,isLoading} =swrSections()
 
-
+const mydata = await fetchSections()
+console.log(mydata)
   
 if(error) return <h1>errore</h1>
 if(isLoading) return "loading"
