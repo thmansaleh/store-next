@@ -6,12 +6,12 @@ import useSWR from 'swr'
 
 export function swrSections (){
  const url ="https://dull-plum-antelope-tutu.cyclic.cloud/sections"
-  const fetchProduct = async () => {
+  const fetcher = async () => {
    const response = await axios.get(url);
 
    return response.data;
  };
-const { data , error, isLoading } = useSWR(url, fetchProduct,{ refreshInterval: 100000 })
+const { data , error, isLoading } = useSWR(url, fetcher,{ refreshInterval: 10000000 })
 return {
   data,
   isLoading,
