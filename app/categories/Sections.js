@@ -1,7 +1,7 @@
 "use client"
 
 import {swrSections} from "@/app/swr/sections" 
-import SectionsLoading from ="./SectionsLoading"
+import SectionsLoading from "./SectionsLoading"
 
 export default function Sections(){
   const {data,error,isLoading} =swrSections()
