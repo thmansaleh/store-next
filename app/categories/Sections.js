@@ -1,6 +1,6 @@
 "use client"
 
-import {swrSections} from "@/app/swr/sections" 
+import {swrSections} from "@/app/libs/swr/sections" 
 import SectionsLoading from "./SectionsLoading"
 
 export default function Sections(){

@@ -21,13 +21,7 @@ export default function Slider() {
         subTitle:'تصفح قائمة العطور',
         route:'/'
     },
-    {
-        img:'https://cdn.arabsstock.com/uploads/images/92903/image-92903-fashion-elegance-beauty-models-gulf-abayas-dresses-jalabiy-thumbnail.webp',
-        title:'عبايات',
-        subTitle:'جميع انواع العبايات',
-        route:'/'
-
-    },
+   
     {
         img:'https://img.pikbest.com/ai/illus_our/20230423/ceca83011ac0d00aaad5085ee820d4ed.jpg!w700wp',
         title:'ساعات ',
@@ -92,7 +86,7 @@ style={{
 
 {images.map((e,i)=>{
 
-return <SwiperSlide key={i} className="mb-8"  style={{ textAlign: 'centenr', height: '40vh', width: ' ', margin: 0 }}>
+return <SwiperSlide key={i} className="mb-8 h-64 w-64 "  style={{ textAlign: 'centenr',}}>
   
     <img className="w-full h-full object-cover" src={e.img}  alt="My Image" />
   </SwiperSlide>
