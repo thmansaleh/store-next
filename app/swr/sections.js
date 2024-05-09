@@ -1,12 +1,20 @@
 'use client'
 
 import axios from 'axios';
-import {fetchSections} from "@/app/libs/services/fetchSections"
-
 import useSWR from 'swr'
 
 export function swrSections(){
- const url ="https://dull-plum-antelope-tutu.cyclic.cloud/sections"
+
+
+const url ="https://dull-plum-antelope-tutu.cyclic.cloud/sections"
+
+ const fetchSections= async () => {
+   const response = await axios.get(url);
+
+   return response.data;
+ };
+
+
   const fetcher = async () => {
    const response = await fetchSections()
  };
