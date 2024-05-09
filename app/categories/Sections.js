@@ -1,6 +1,7 @@
 "use client"
 import styles from "./styles.css"
 import {swrSections} from "@/app/swr/sections" 
+import SectionsLoading from ="./SectionsLoading"
 
 export default async function Sections(){
   const {data,error,isLoading} =swrSections()
@@ -8,7 +9,7 @@ export default async function Sections(){
 
   
 if(error) return <h1>errore</h1>
-if(isLoading) return "loading"
+if(isLoading) return <SectionsLoading/>
  return <div>
 
   {data.map(e=>{
