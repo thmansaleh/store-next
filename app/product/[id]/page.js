@@ -22,6 +22,10 @@ import SimilarProducts from './SimilarProducts';
 //   // render data
 return <>
  <Slider id={id}/>
+
+
+
+<div className="px-2">
  <ProductInformation id={id}/>
     <Size id={id}/>
 <FreeDelivery id={id}/>
@@ -29,6 +33,7 @@ return <>
     <Description id={id}/>
 <SimilarProducts id={id}/>
  <AddToCartButton id={id}/>
+</div>
 
 </>
   
