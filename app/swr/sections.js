@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import useSWR from 'swr'
 
-export function swrSections (id){
+export function swrSections (){
  const url ="https://dull-plum-antelope-tutu.cyclic.cloud/sections"
   const fetchProduct = async () => {
    const response = await axios.get(url);
@@ -16,4 +16,5 @@ return {
   data,
   isLoading,
    error
+}
 }
