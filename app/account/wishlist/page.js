@@ -6,10 +6,12 @@ import {useSelector} from  "react-redux"
 export default function page() {
    
 const items = useSelector(state=>state.wishlist.items)
+
+if(items.length>0) { 
 return <div className="p-3 flex justify-around flex-wrap gap-y-6">
  
 
- {items.length>0?items.map((e,i)=>{
+ {items.map((e,i)=>{
 
 
 return <Link key={i} href="/product?product_id=1" className=" inline-block relative rounded-lg   shadow-md overflow-hidden  w-36 bg-white   h-fit " >
@@ -23,11 +25,10 @@ return <Link key={i} href="/product?product_id=1" className=" inline-block relat
   </Link>
 
 })
-:<Empty />}
-
-
+}
 
 
 </div>
+}
 
 }
