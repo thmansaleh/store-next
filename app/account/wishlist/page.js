@@ -1,6 +1,7 @@
 
 "use client"
 import Link from 'next/link'
+import Empty from  "./Empty"
 import {useSelector} from  "react-redux"
 export default function page() {
    
@@ -22,7 +23,7 @@ return <Link key={i} href="/product?product_id=1" className=" inline-block relat
   </Link>
 
 })
-:<h1>no content</h1>}
+:<Empty/>}
 
 
 
