@@ -1,3 +1,5 @@
+
+"use client"
 import Link from 'next/link'
 export default function Empty (){
 return <div className=" mt-6  flex flex-col items-center justify-center space-y-4">
