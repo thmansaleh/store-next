@@ -1,5 +1,6 @@
+import Empty from "./Empty"
 export default function page(){
 
-return <h1 >Coupons</h1>
+return <Empty/>
 
 }
