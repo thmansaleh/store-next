@@ -7,7 +7,7 @@ export default function BackArrowBtn(){
 
 const router = useRouter()
 
-const back = (e) => {
+const back = () => {
     
     router.push("./")
   }
