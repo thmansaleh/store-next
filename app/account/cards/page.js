@@ -1,5 +1,6 @@
+import Empty from "./Empty"
+export default function page(){
 
+return <Empty/>
 
-export default function(){
- return 'content'
 }
