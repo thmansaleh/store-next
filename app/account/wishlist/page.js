@@ -31,4 +31,5 @@ return <Link key={i} href="/product?product_id=1" className=" inline-block relat
 </div>
 }
 
+return <Empty/>
 }
