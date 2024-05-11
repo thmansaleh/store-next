@@ -23,7 +23,7 @@ return <Link key={i} href="/product?product_id=1" className=" inline-block relat
   </Link>
 
 })
-:<Empty/>}
+:<h1>no content</h1>}
 
 
 
