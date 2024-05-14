@@ -1,5 +1,5 @@
 "use client"
-import Link from "link"
+import Link from "next-link"
 export default function SingleProduct({data}){
 
 
