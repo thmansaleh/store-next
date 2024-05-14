@@ -9,7 +9,20 @@ export default function Products(){
 return <div className="grid grid-cols-2 gap-2 bg-white">
 
    <div class=" bg-white  flex justify-around flex-wrap">
+{
 
+
+data.products.map((product,i) => {
+
+if(i%2 !=0)
+return <SingleProduct data={product}/>
+
+
+
+})
+
+
+}
 </div>
       
 
