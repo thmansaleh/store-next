@@ -15,7 +15,7 @@ return <Link key={data.id} href={{
     <span className=" line-clamp-2 text-sm my-2 px-2">{data.description}</span>
     <div className="p-2 text-sm bg-zinc-100  ">
       <span>{data.price}</span>
-      <span className="text-green-600 mx-px. inline-block">د.أ</span>
+      <span className="text-green-600 mx-px inline-block">د.أ</span>
     </div>
   </Link>
 }
