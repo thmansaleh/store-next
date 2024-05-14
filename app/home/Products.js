@@ -6,12 +6,46 @@ export default function Products(){
   const {data,error,isLoading} =useProducts()
   if(error) return <h1>error</h1>
   if(isLoading) return <ProductsLoading/>
-return <div className="p-2 flex  justify-around bg-white  flex-wrap">
+return <div className="grid grid-cols-2 gap-2 bg-white">
 
-{data.products.map((product,i) => {
+   <div class=" bg-white  flex justify-around flex-wrap">
+
+</div>
+      
+
+
+
+
+
+   
+
+
+ <div class=" bg-white  flex justify-around flex-wrap">
+
+{
+
+
+data.products.map((product,i) => {
+
+if(i%2===0)
 return <SingleProduct data={product}/>
 
-})}
+
+
+})
+
+
+}
+
+
+</div>
+
+
+
+
+
+
+
 </div>
 
 }
