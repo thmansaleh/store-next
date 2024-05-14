@@ -11,9 +11,10 @@ import 'swiper/css/scrollbar';
 import ShareHeartIcons from "./ShareHeartIcons"
 import SliderLoading from "./SliderLoading"
 import { useProduct } from '@/app/api/product';
+import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 
 export default function Slider({id}) {
-   const {data,error,isLoading} =useProduct(id)
+   const {data,error,isLoading} =swrSingleProduct(id)
    if(isLoading) return <SliderLoading/>
    if(error) return <h1>err</h1>
 return <>
