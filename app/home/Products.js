@@ -9,7 +9,7 @@ export default function Products(){
 return <div className="p-2 flex  justify-around bg-white  flex-wrap">
 
 {data.products.map((product,i) => {
-<SingleProduct data={product}/>
+return <SingleProduct data={product}/>
 
 })}
 </div>
