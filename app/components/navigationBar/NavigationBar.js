@@ -33,7 +33,7 @@ className="flex items-center justify-center bg-grvay-500  h-10   overflow-hidden
     <label className="px-4"  htmlFor={e.page}>
     
 {e.icon}
-      <span className="bg-black  -bottom-2 inset-x-1/2    translate-x-1/2 absolute  h-1.5 w-1.5  rounded-full  transition-all duration-150"></span>
+      <span className="bg-black  -bottom-2 inset-x-1/2    translate-x-1/2 absolute  h-1.5 w-1.5  rounded-full  transition-all duration-300"></span>
     </label>
   
   </div>
