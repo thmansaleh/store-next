@@ -1,11 +1,12 @@
 
 'use client'
 import { useProduct } from '@/app/api/product';
+import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 
 export default function ProductInformation({id}){
 
-  const {data,error,isLoading} =useProduct(id)
-if(isLoading) return <div className="  w-full ">
+  const {data,error,isLoading} =swrSingleProduct(id)
+  if(isLoading) return <div className="  w-full ">
 <div className="animate-pulse my-4 ">
 
   <div className="w-full space-y-3 ">

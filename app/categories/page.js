@@ -10,7 +10,7 @@ export default function Categories() {
   return <>
           <SetNave name='categories' display={false}/>
 
-     <div className="grid grid-cols-4 ">
+     <div className=" ">
 <Sections/>
   <div className="bg-white p-2 space-y-4 col-span-3">
 <Category/>

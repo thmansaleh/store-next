@@ -20,76 +20,75 @@ export default function StoresSwiper() {
             img:'https://img.tamara.co/dXh_QHsAD1IEwbrg9vjG8-kYJUxCDT8CUGV6HOTx828/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2YxZThkZjhmLWUzMGYtNDMxMS1hYjVmLTFmNTBkMzJlMWEyZC0xNjg5NzgxMTkxLnBuZw.jpg',
             title:'لاكوست',
             subTitle:'تصفح قائمة العطور',
-            route:'/'
+            route:'/brands/1'
         },
         {
             img:'https://img.tamara.co/sM1I2Ym48J6_bg4Y7O5zlokABYDRJ5Nx6utBy55SEcI/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50LzQ0OWI3M2YzLWZjNTItNGE3ZS1iMWI5LTQyNTI4YzA3ZmNkYy0xNjg5NzgyMzc3LnBuZw.jpg',
             title:'بوما',
             subTitle:'جميع انواع العبايات',
-            route:'/'
+            route:'/brands/1'
 
         },
         {
             img:'https://img.tamara.co/liWiD59Vb0av-KsX21aMJap1bLH8KMHVTmNCVhWSRaA/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2NjYjkwMjdiLWMzYzUtNGNiNi1iZWZiLWMxMmQ0YzRkNTA0OS0xNjk1NzE4NTY0LnBuZw.jpg',
             title:'نمشي ',
             subTitle:'ساعات ذكية',
-            route:'/'
+            route:'/brands/1'
 
         },
         {
             img:'https://img.tamara.co/IxsyrD3UIMkl81ArNCo3gorHyKR6HfNMJgjaZ-xU78o/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50LzQzNzY1ZDQ3LTYxNTUtNGU5MS05MzcxLTE5MWQzZGNhMjM0Yy0xNjg5NzgwMDg2LnBuZw.jpg',
             title:' نكست',
             subTitle:'',
-            route:'/'
+            route:'/brands/1'
 
         },
         {
             img:'https://img.tamara.co/aYoLQb7qD2hxQ3ytz9HBFtecK0zvLjQxDygIt-5nRxA/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2M5OTFhMGNkLThkZDUtNGViZS05ZmIxLWNmOWVmMmRmZDgzZi0xNjg5NzgwNDcwLnBuZw.jpg',
             title:' ستايلي',
             subTitle:'',
-            route:'/'
+            route:'/brands/1'
 
         },
         {
             img:'https://img.tamara.co/aYoLQb7qD2hxQ3ytz9HBFtecK0zvLjQxDygIt-5nRxA/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2M5OTFhMGNkLThkZDUtNGViZS05ZmIxLWNmOWVmMmRmZDgzZi0xNjg5NzgwNDcwLnBuZw.jpg',
             title:' ستايلي',
             subTitle:'',
-            route:'/'
+            route:'/brands/1'
 
         },
         {
             img:'https://img.tamara.co/aYoLQb7qD2hxQ3ytz9HBFtecK0zvLjQxDygIt-5nRxA/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2M5OTFhMGNkLThkZDUtNGViZS05ZmIxLWNmOWVmMmRmZDgzZi0xNjg5NzgwNDcwLnBuZw.jpg',
             title:' ستايلي',
             subTitle:'',
-            route:'/'
+            route:'/brands/1'
 
         },
         {
             img:'https://img.tamara.co/aYoLQb7qD2hxQ3ytz9HBFtecK0zvLjQxDygIt-5nRxA/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2M5OTFhMGNkLThkZDUtNGViZS05ZmIxLWNmOWVmMmRmZDgzZi0xNjg5NzgwNDcwLnBuZw.jpg',
             title:' ستايلي',
             subTitle:'',
-            route:'/'
+            route:'/brands/1'
 
         },
         {
             img:'https://img.tamara.co/aYoLQb7qD2hxQ3ytz9HBFtecK0zvLjQxDygIt-5nRxA/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2M5OTFhMGNkLThkZDUtNGViZS05ZmIxLWNmOWVmMmRmZDgzZi0xNjg5NzgwNDcwLnBuZw.jpg',
             title:' ستايلي',
             subTitle:'',
-            route:'/'
+            route:'/brands/1'
 
         },
         {
             img:'https://img.tamara.co/aYoLQb7qD2hxQ3ytz9HBFtecK0zvLjQxDygIt-5nRxA/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2M5OTFhMGNkLThkZDUtNGViZS05ZmIxLWNmOWVmMmRmZDgzZi0xNjg5NzgwNDcwLnBuZw.jpg',
             title:' ستايلي',
             subTitle:'',
-            route:'/'
-
+            route:'/brands/1'
         },
         {
             img:'https://img.tamara.co/aYoLQb7qD2hxQ3ytz9HBFtecK0zvLjQxDygIt-5nRxA/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2M5OTFhMGNkLThkZDUtNGViZS05ZmIxLWNmOWVmMmRmZDgzZi0xNjg5NzgwNDcwLnBuZw.jpg',
             title:' ستايلي',
             subTitle:'',
-            route:'/'
+            route:'/brands/1'
 
         },
         {

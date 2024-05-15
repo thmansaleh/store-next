@@ -12,10 +12,11 @@ import Slider from './Slider';
  import { useProduct } from '@/app/api/product';
 import Description from './Description';
 import SimilarProducts from './SimilarProducts';
+import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 
  export default function ({params}){
   const id = params.id
-   const {data,error,isLoading} =useProduct(id)
+  const {data,error,isLoading} =swrSingleProduct(id)
   if (error) return <div>failed to load</div>
   // if (isLoading) return <div>loading...</div>
  
