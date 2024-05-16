@@ -7,7 +7,6 @@ import Size from './Size';
 //  import axios from 'axios';
 import Slider from './Slider';
 
- import { useProduct } from '@/app/api/product';
 import Description from './Description';
 import SimilarProducts from './SimilarProducts';
 import { swrSingleProduct } from '@/app/libs/swr/singleProduct';

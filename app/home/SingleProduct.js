@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import SwiperPrice from "./SwiperPrice"
 export default function SingleProduct({data}){
 
 
@@ -13,6 +14,7 @@ return <Link key={data.id} href={{
       <img className="h-48 w-full object-contain " src={data.thumbnail} alt={data.title} />
     </div>
     <span className=" line-clamp-2 text-sm my-2 px-2">{data.description}</span>
+    <SwiperPrice/>
     <div className="p-2 text-sm bg-zinc-100  ">
       <span>{data.price}</span>
       <span className="text-green-600 mx-px inline-block">د.أ</span>
