@@ -1,3 +1,5 @@
+"use client"
+
 export default function FreeDelivery(){
 return <div className="w'full border border-gray-300 rounded-lg flex my-2 flex-wrap leading-3">
   <div className="flex  inline-block w-fit rounded-lg py-1 text-sm text-zinc-400 items-center    my-2 mx-3 ">
