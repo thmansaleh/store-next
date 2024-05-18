@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Autoplay,Pagination } from 'swiper';
 
-export default function Swiper() {
+export default function SwiperCommitments() {
   return (
     <>
       <Swiper
