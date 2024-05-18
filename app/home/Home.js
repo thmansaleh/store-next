@@ -5,18 +5,18 @@ import FristSlider from './FristSlider'
 import Products from'@/app/home/Products'
 import SwiperFreemodeSection from './SwiperFreemodeSection'
 import StoresSwiper from './StoresSwiper'
-
+import Commitments from "./commitments/Commitments"
 export default function Home({products}){
   return <>
     <SetNave name='/' display={true}/>
 <SearchInput/>
 <FristSlider/>
+<Commitments/>
 <StoresSwiper/>
 <SwiperFreemodeSection/>
 
 
 <Products />
-{/* <MenProducts/> */}
 
 
 
