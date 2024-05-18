@@ -1,6 +1,6 @@
 "use client"
 
-import Swiper from "./Swiper"
+import SwiperCommitments from "./Swiper"
 export default function Commitments(){
 
 
@@ -11,7 +11,7 @@ return <div className="w-full bg-green-600 text-white h-10 rounded-md flex items
   </div>
 
 
-  
+  <SwiperCommitments/>
  
 
 </div>
