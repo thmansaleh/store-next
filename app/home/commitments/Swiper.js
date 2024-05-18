@@ -26,15 +26,15 @@ export default function SwiperCommitments() {
         }}
         loop={2}
             modules={[Pagination,Autoplay]}
-        className="h-full w-fit"
+        className="h-full w-20"
 
       >
         
 
-     <SwiperSlide>
+     <SwiperSlide className="flex items-center justify-center">
 <div className="flex items-center justify-center">خصوصية آمنة</div>
 </SwiperSlide>
- <SwiperSlide>
+ <SwiperSlide className="flex items-center justify-center">
 <div className="flex items-center justify-center">دفع آمن</div>
 </SwiperSlide>
 
