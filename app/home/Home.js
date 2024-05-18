@@ -11,7 +11,9 @@ export default function Home({products}){
     <SetNave name='/' display={true}/>
 <SearchInput/>
 <FristSlider/>
-<Commitments/>
+
+
+<div className="px-2 my-4"><Commitments/></div>
 <StoresSwiper/>
 <SwiperFreemodeSection/>
 
