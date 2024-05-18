@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 // import './styles.css';
 
 // import required modules
-import { Autoplay,Pagination } from 'swiper';
+import { Autoplay } from 'swiper';
 
 export default function SwiperCommitments() {
   return (
@@ -21,22 +21,29 @@ export default function SwiperCommitments() {
         //   clickable: true,
         // }}
         autoplay={{
-            delay: 4000,
+            delay: 4100,
             disableOnInteraction: false,
         }}
         loop={2}
-            modules={[Pagination,Autoplay]}
-        className="h-full w-20"
-
+            modules={[Autoplay]}
+        className="h-full flex items-center justify-center w-fit "
+style={{display:'flex'}}
       >
         
 
-     <SwiperSlide className="flex items-center justify-center">
-<div className="flex items-center justify-center">خصوصية آمنة</div>
+     <SwiperSlide className='flex items-center flex-col justify-center w-fit' style={{display:'flex'}} ><span>دفع آمن</span>
 </SwiperSlide>
- <SwiperSlide className="flex items-center justify-center">
+
+     <SwiperSlide className='flex items-center flex-col justify-center w-fit' style={{display:'flex'}} ><span>خصوصية آمنة</span>
+</SwiperSlide>
+
+
+   
+
+
+ {/* <SwiperSlide className="flex items-center justify-center">
 <div className="flex items-center justify-center">دفع آمن</div>
-</SwiperSlide>
+</SwiperSlide> */}
 
       </Swiper>
     </>
