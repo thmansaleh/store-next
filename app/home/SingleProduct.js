@@ -5,7 +5,8 @@ export default function SingleProduct({data}){
 
 
 const url =`product/${data.id}`
-return <Link key={data.id} href={{
+return <Link key={data.id} scroll={false}
+prefetch={true} href={{
     pathname: url,
 
   }} className=" inline-block relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">
