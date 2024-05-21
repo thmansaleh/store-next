@@ -1,25 +1,25 @@
-
 "use client"
-import { useEffect } from 'react';
 
-const FullScreen= () => {
+import { useRef, useEffect } from 'react';
+
+const FullScreen = () => {
+  const fullscreenRef = useRef(null);
+
+  const handleFullscreen = () => {
+    const element = fullscreenRef.current || document.documentElement;
+
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) { // Firefox
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) { // IE/Edge
+      element.msRequestFullscreen();
+    }
+  };
+
   useEffect(() => {
-    const handleFullscreen = () => {
-      const element = document.documentElement;
-
-      if (element.requestFullscreen) {
-        element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) { // Firefox
-        element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-        element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) { // IE/Edge
-        element.msRequestFullscreen();
-      }
-    };
-
-    handleFullscreen();
-
     const handleFullscreenChange = () => {
       if (!document.fullscreenElement) {
         console.log('Exited fullscreen mode');
@@ -34,7 +34,12 @@ const FullScreen= () => {
     };
   }, []);
 
-  return null
+  return (
+    <div ref={fullscreenRef}>
+      <button onClick={handleFullscreen}>Go Fullscreen</button>
+      {/* Your content goes here */}
+    </div>
+  );
 };
 
 export default FullScreen;
