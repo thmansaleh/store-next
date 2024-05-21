@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+
+"use client"
+import { useRef } from 'react';
 
 const FullscreenComponent = () => {
   const fullscreenRef = useRef(null);
