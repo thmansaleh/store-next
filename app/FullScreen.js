@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-const FullscreenButton = () => {
+const FullScreen = () => {
   const handleFullscreen = () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen().catch((err) => {
@@ -22,4 +22,4 @@ const FullscreenButton = () => {
   );
 };
 
-export default FullscreenButton;
+export default FullScreen;
