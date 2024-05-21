@@ -1,43 +1,40 @@
-"use client"
-
-import React, { useEffect } from 'react';
+import React, { useRef } from 'react';
 
 const FullscreenComponent = () => {
-  useEffect(() => {
-    const handleFullscreen = () => {
-      const element = document.documentElement;
+  const fullscreenRef = useRef(null);
 
-      if (element.requestFullscreen) {
-        element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) { // Firefox
-        element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-        element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) { // IE/Edge
-        element.msRequestFullscreen();
-      }
-    };
+  const handleFullscreen = () => {
+    const element = fullscreenRef.current || document.documentElement;
 
-    const fullscreenTimeout = setTimeout(handleFullscreen, 1000); // Delay of 1 second
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) { // Firefox
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) { // IE/Edge
+      element.msRequestFullscreen();
+    }
+  };
 
-    const handleFullscreenChange = () => {
-      if (!document.fullscreenElement) {
-        console.log('Exited fullscreen mode');
-      } else {
-        console.log('Entered fullscreen mode');
-      }
-    };
+  const handleFullscreenChange = () => {
+    if (!document.fullscreenElement) {
+      console.log('Exited fullscreen mode');
+    } else {
+      console.log('Entered fullscreen mode');
+    }
+  };
 
+  React.useEffect(() => {
     document.addEventListener('fullscreenchange', handleFullscreenChange);
-
     return () => {
-      clearTimeout(fullscreenTimeout);
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
     };
   }, []);
 
   return (
-    <div>
+    <div ref={fullscreenRef}>
+      <button onClick={handleFullscreen}>Go Fullscreen</button>
       {/* Your content goes here */}
     </div>
   );
