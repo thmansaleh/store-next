@@ -1,45 +1,25 @@
 
 "use client"
-import { useRef } from 'react';
 
-const FullscreenComponent = () => {
-  const fullscreenRef = useRef(null);
 
+import React from 'react';
+
+const FullscreenButton = () => {
   const handleFullscreen = () => {
-    const element = fullscreenRef.current || document.documentElement;
-
-    if (element.requestFullscreen) {
-      element.requestFullscreen();
-    } else if (element.mozRequestFullScreen) { // Firefox
-      element.mozRequestFullScreen();
-    } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-      element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) { // IE/Edge
-      element.msRequestFullscreen();
-    }
-  };
-
-  const handleFullscreenChange = () => {
     if (!document.fullscreenElement) {
-      console.log('Exited fullscreen mode');
+      document.documentElement.requestFullscreen().catch((err) => {
+        console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
     } else {
-      console.log('Entered fullscreen mode');
+      document.exitFullscreen();
     }
   };
-
-  React.useEffect(() => {
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => {
-      document.removeEventListener('fullscreenchange', handleFullscreenChange);
-    };
-  }, []);
 
   return (
-    <div ref={fullscreenRef}>
-      <button onClick={handleFullscreen}>Go Fullscreen</button>
-      {/* Your content goes here */}
-    </div>
+    <button onClick={handleFullscreen} style={{ position: 'fixed', top: 10, right: 10 }}>
+      Toggle Fullscreen
+    </button>
   );
 };
 
-export default FullscreenComponent;
+export default FullscreenButton;
