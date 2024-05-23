@@ -16,6 +16,7 @@ export default function SwiperPrice() {
   return (
     <>
       <Swiper
+allowTouchMove={false}
         direction={'vertical'}
         // pagination={{
         //   clickable: true,
