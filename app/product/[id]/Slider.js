@@ -21,6 +21,7 @@ return <>
 
 
 <Swiper 
+loop={data.images.length}
 style={{
   "--swiper-pagination-color": "black ",
   "--swiper-pagination-bullet-inactive-color": "#999999",
