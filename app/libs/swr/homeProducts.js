@@ -5,7 +5,7 @@ import axios from 'axios';
 import useSWR from 'swr'
 
 export function swrHomeProducts (){
-    const url ="https://dummyjson.com/products"
+    const url ="https://dummyjson.com/products?limit=194"
   const fetcher = async () => {
    const response = await axios.get(url);
 
