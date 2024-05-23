@@ -16,6 +16,7 @@ export default function SwiperCommitments() {
   return (
     <>
       <Swiper
+allowTouchMove={false}
         direction={'vertical'}
         // pagination={{
         //   clickable: true,
