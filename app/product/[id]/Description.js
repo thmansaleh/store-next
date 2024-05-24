@@ -1,6 +1,7 @@
 
 
 'use client'
+import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 const Description = ({id}) => {
   const {data,error,isLoading} =swrSingleProduct(id)
 if(data) return <div className="md:flex md:justify-around px-2 gap-x-3 bg-white ">
