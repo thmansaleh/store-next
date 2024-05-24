@@ -5,6 +5,11 @@ import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 
 export default function ProductInformation({id}){
 
+function calculateOriginalPrice(finalPrice, discountPercentage) {
+    return finalPrice / (1 - discountPercentage / 100);
+}
+
+
   const {data,error,isLoading} =swrSingleProduct(id)
   if(isLoading) return <div className="  w-full ">
 <div className="animate-pulse my-4 ">
@@ -24,7 +29,7 @@ export default function ProductInformation({id}){
   <div className="text-sm text-gray-500">{data.title}</div>
   <div className="flex items-baseline mt-2">
     <div className="text-xl font-bold text-red-600">{data.price} د.إ</div>
-    <div className="text-sm text-gray-500 line-through ml-2">{data.price} د.إ</div>
+    <div className="text-sm text-gray-500 line-through ml-2">{calculateOriginalPrice(data.price,data.discountPercentage)} د.إ</div>
     <div className="text-sm font-semibold text-red-500 ml-2">تخفيض  {data.discountPercentage}%</div>
   </div>
   <div className="text-sm text-gray-500 mt-1">توصيل في  <span className="text-green-400">16 نوفمبر, الثلاثاء</span></div>
