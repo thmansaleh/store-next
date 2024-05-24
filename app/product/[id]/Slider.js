@@ -49,9 +49,16 @@ slidesPerView={1}
 
 {data.images.map((href,i)=>{
 
-return <SwiperSlide key={i} className="mb-8"  style={{ textAlign: 'center', height: '50vh', width: '100%', margin: 0 }}>
+return <SwiperSlide key={i} 
+style={{height:'50vh',width: '100%', position:'relative',margin: '0'}} 
+
+className="mb-8"  >
   
-    <img className="w-100 product-img-slider" src={href}  alt="My Image" />
+    <img 
+
+className="w-full h-full object-contain absolute top-0 left-0 "
+
+ src={href}  alt="My Image" />
   </SwiperSlide>
 
 
