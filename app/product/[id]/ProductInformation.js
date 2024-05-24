@@ -6,7 +6,10 @@ import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 export default function ProductInformation({id}){
 
 function calculateOriginalPrice(finalPrice, discountPercentage) {
-    return finalPrice / (1 - discountPercentage / 100);
+   let number=finalPrice / (1 - discountPercentage / 100)
+ return Math.round(number * 10) / 10;
+
+
 }
 
 
