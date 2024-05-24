@@ -1,12 +1,12 @@
 
 
 'use client'
-const Description = () => {
-
-return <div className="md:flex md:justify-around px-2 gap-x-3 bg-white ">
+const Description = ({id}) => {
+  const {data,error,isLoading} =swrSingleProduct(id)
+if(data) return <div className="md:flex md:justify-around px-2 gap-x-3 bg-white ">
 <div className="">
   <h2 className="text-md font-bold mb-4">الوصف</h2>
-  <p className="text-gray-700 mb-4 text-sm ">Your out-and-about look just took a classy turn with our roomy little Grydy crossbody. Two compartment storage and front zip pocket keeps all the essentials just where you need them.</p>
+  <p className="text-gray-700 mb-4 text-sm ">{data.description}</p>
 
 </div>
 <div>
