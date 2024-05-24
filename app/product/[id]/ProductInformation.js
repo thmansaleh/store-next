@@ -23,7 +23,7 @@ export default function ProductInformation({id}){
   <div className="text-lg font-bold text-gray-800">{data.brand}</div>
   <div className="text-sm text-gray-500">{data.title}</div>
   <div className="flex items-baseline mt-2">
-    <div className="text-xl font-bold text-red-600">149 د.إ</div>
+    <div className="text-xl font-bold text-red-600">{data.price} د.إ</div>
     <div className="text-sm text-gray-500 line-through ml-2">{data.price} د.إ</div>
     <div className="text-sm font-semibold text-red-500 ml-2">تخفيض -60% عند الشراء </div>
   </div>
