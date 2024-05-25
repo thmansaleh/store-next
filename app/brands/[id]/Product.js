@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import ProductSwiper from './ProductSwiper';
-
+ import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 function Product({ id }) {
   const url = `../product/${id}`;
+
+  const { data, error, isLoading } = swrSingleProduct(id);
+
+ 
   return (
     <Link
       key={id}
@@ -15,7 +19,7 @@ function Product({ id }) {
       </span>
       <ProductSwiper id={id} />
       <span className="line-clamp-2 text-sm my-2 px-2">
-        OPPO F19 is officially announced on April 2021.
+        {data?data.description:"...loading"}
       </span>
       <div className="p-2 text-sm bg-zinc-100">
         <span>280</span>
