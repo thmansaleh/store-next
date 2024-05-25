@@ -63,7 +63,7 @@ dispatch(addItemToWishlist(newItem))
 return <div key={i} className=" transition-all  my-1.5 rounded-lg   border w-full flex border-gray-300 justify-between items-center bg-white p-3">
 
 
-<div className="h-24 w-full relative mx-2">
+<div className="h-24 w-1/4 relative mx-2">
       <img 
 className="w-full h-full object-contain absolute top-0 left-0" loading="lazy" src={item.thumbnail} />
 
