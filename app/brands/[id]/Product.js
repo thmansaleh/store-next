@@ -19,10 +19,12 @@ function Product({ id }) {
       </span>
       <ProductSwiper id={id} />
       <span className="line-clamp-2 text-sm my-2 px-2">
-        {data?data.description:"...loading"}
+        {
+data?data.description:"...loading"}
       </span>
       <div className="p-2 text-sm bg-zinc-100">
-        <span>280</span>
+        <span> {
+data?data.price:"...loading"}</span>
         <span className="text-green-600 mx-px inline-block">د.أ</span>
       </div>
     </Link>
