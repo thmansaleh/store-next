@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
@@ -54,11 +55,18 @@ style={{height:'50vh',width: '100%', position:'relative',margin: '0'}}
 
 className="mb-8"  >
   
-    <img 
+   
 
-className="w-full h-full object-contain absolute top-0 left-0 "
+<Image
+      src={href}
+      
+      alt="Picture of the author"
+    />
 
- src={href}  alt="My Image" />
+
+
+
+
   </SwiperSlide>
 
 
