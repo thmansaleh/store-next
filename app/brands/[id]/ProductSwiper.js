@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 
@@ -34,7 +35,17 @@ export default function ProductSwiper({ id }) {
       {data.images.map((href, i) => (
         <SwiperSlide key={i}  style={{height:'192px',position:'relative', width:'full'}}   className="w-full h-48  relative">
         
-          <img className="w-full h-full object-contain absolute top-0 left-0" src={href} alt="Product Image" />
+         
+
+<Image
+      src={href}
+      fill={true}
+      alt="Picture of th"
+    />
+
+
+
+
         </SwiperSlide>
       ))}
     </Swiper>
