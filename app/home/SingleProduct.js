@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import Image from 'next/image'
 import SwiperPrice from "./SwiperPrice"
 export default function SingleProduct({data}){
 
@@ -12,7 +13,23 @@ prefetch={true} href={{
   }} className=" inline-block relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">
     <span className=" bg-red-700 text-white top-0  text-center z-20 absolute rounded-br-lg  rtl:rounded-bl-lg rtl:rounded-br-none  px-3 text-xs bg-blend-multiply line-height start-0 opacity-80 ">خصم 20%</span>
     <div className=" w-full h-48 overflow-hidden relative ">
-      <img className="w-full h-full object-contain absolute top-0 left-0" src={data.thumbnail} alt={data.title} />
+
+
+
+     
+
+<Image
+      src={data.thumbnail.}
+      fill={true}
+      alt={data.title}
+    />
+
+
+
+
+
+
+
     </div>
     <span className=" line-clamp-2 text-sm my-2 px-2">{data.description}</span>
     <SwiperPrice/>
