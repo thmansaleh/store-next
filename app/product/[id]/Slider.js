@@ -58,8 +58,9 @@ className="mb-8"  >
    
 
 <Image
+style={{objectFit:"contain"}}
       src={href}
-      
+      fill={true}
       alt="Picture of the author"
     />
 
