@@ -19,7 +19,7 @@ prefetch={true} href={{
      
 
 <Image
-      src={data.thumbnail.}
+      src={data.thumbnail}
       fill={true}
       alt={data.title}
     />
