@@ -22,6 +22,7 @@ prefetch={true} href={{
       src={data.thumbnail}
       fill={true}
       alt={data.title}
+
     />
 
 
