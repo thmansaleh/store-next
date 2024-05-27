@@ -41,6 +41,7 @@ export default function ProductSwiper({ id }) {
       src={href}
       fill={true}
       alt="Picture of th"
+style={{objectFit:"contain"}}
     />
 
 
