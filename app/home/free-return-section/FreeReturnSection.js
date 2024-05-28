@@ -1,6 +1,6 @@
 "use client"
 
-import ReturnSwiper from "./free-return-section"
+import ReturnSwiper from "./Swiper"
 export default function FreeReturnSection(){
 
 return 
