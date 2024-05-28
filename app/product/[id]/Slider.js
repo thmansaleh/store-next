@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import SwiperImageComponent from "./MyImageComponent"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
@@ -51,18 +52,13 @@ slidesPerView={1}
 {data.images.map((href,i)=>{
 
 return <SwiperSlide key={i} 
-style={{height:'50vh',width: '100%', position:'relative',margin: '0'}} 
+
 
 className="mb-8"  >
   
    
 
-<Image
-style={{objectFit:"contain"}}
-      src={href}
-      fill={true}
-      alt="Picture of the author"
-    />
+<SwiperImageComponent src={href}/>
 
 
 
