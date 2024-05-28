@@ -7,17 +7,19 @@ const SwiperImageComponent = ({ src }) => {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
 
   return (
-    <div className="relative w-40 h-40">
+    <div style={{height:'50vh',width: '100%', position:'relative',margin: '0'}} 
+
+>
       {isLoading && (
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span>Loading...</span> {/* You can replace this with a spinner component */}
+          <span>Loading...</span> 
         </div>
       )}
       <Image
-        src={src}
-        alt="jjhfff"
-        fill={true}
-        style={{ objectFit: 'cover' }} // Using style prop for object-fit
+      style={{objectFit:"contain"}}
+      src={src}
+      fill={true}
+      alt="Picture of the author"
         onLoadingComplete={() => setIsLoading(false)}
       />
     </div>
