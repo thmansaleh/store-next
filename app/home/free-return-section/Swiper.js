@@ -27,6 +27,9 @@ allowTouchMove={false}
         }}
         loop={2}
             modules={[Autoplay]}
+
+className="h-full flex items-center justify-center w-fit "
+style={{display:'flex'}}
         
       >
 
