@@ -1,4 +1,4 @@
-
+"use client"
 import SetNave from '@/app//components/SetNave'
 import SearchInput from "@/app/components/SearchInput"
 import FristSlider from './FristSlider'
