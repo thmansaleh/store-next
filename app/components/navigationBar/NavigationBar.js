@@ -22,7 +22,7 @@ return  <div ref={navigationRef}  className=" z-50 fixed border-solid border-t b
   
   {icons.map((e,i)=>{
  return  <div key={i} onClick={()=>{
-router.push(`/${e.page}`,{ scroll: false })
+router.prefetch(`/${e.page}`,{ scroll: false })
 }}
 
 className="flex items-center justify-center bg-grvay-500  h-10   overflow-hidden   relative">
