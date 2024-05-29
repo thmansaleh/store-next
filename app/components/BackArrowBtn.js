@@ -9,7 +9,7 @@ const router = useRouter()
 
 const back = () => {
     
-    router.push("./")
+    router.back()
   }
 return <div className="sticky top-0 w-full h-10 bg-white">
   <svg onClick={back}   className="h-5 w-5 absolute top-1/2 start-4
