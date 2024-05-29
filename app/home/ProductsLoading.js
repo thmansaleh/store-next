@@ -1,5 +1,4 @@
-
-// 'use client'
+'use client'
 export default function ProductsLoading(){
 
     return <div className="  w-full ">
