@@ -15,8 +15,8 @@ export default function Home({products}){
 
 
 <div className="px-2 my-4"><Commitments/></div>
-<StoresSwiper/>
 <FreeReturnSection/>
+<StoresSwiper/>
 <SwiperFreemodeSection/>
 
 
