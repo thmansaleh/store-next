@@ -3,9 +3,7 @@
 import ReturnSwiper from "./Swiper"
 export default function FreeReturnSection(){
 
-return <div class="bg-white my-3 p-2">
-
-    <div class="bg-white text-sm p-4 rounded-lg shadow-md flex justify-between items-center w-full max-w-lg">
+return  <div class="bg-white my-3 text-sm px-4 rounded-lg flex justify-between items-center w-full max-w-lg">
     
         <div class="flex items-center gap-x-2">
             <svg class="h-6 w-6 fill-gray-600" >
@@ -34,5 +32,5 @@ return <div class="bg-white my-3 p-2">
       
     </div>
     
-</div>
+
 }
