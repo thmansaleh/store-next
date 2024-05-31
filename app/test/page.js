@@ -1,11 +1,12 @@
+export default function page(props) {
+  const qs = props.searchParams;
 
-"use client"
-import MyImageComponent from "./MyImageComponent"
-import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
-export default function(){
- 
-  const {data,error,isLoading} =swrSingleProduct(43)
-  if (error) return <div>failed to load</div>
-if(data) return data.images.map(e=>{
-return  <MyImageComponent src={e} />})
+  return (
+    <main>
+      <div>
+        <h1>test</h1>
+        <p>Search Params are {qs.myParam}</p>
+      </div>
+    </main>
+  );
 }
