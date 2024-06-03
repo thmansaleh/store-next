@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { swrSections } from '../libs/swr/sections'
  export default function Categories(){ 
   const data =[
     {

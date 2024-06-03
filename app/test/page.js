@@ -1,11 +1,43 @@
+'use client'
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-"use client"
-import MyImageComponent from "./MyImageComponent"
-import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
-export default function(){
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/scrollbar';
+
+// import './styles.css';
+
+// import required modules
+import { Scrollbar } from 'swiper';
+
+export default function page() {
+  return (
+    <>
+      <Swiper
+        scrollbar={{
+          hide: false,
+        }}
+        modules={[Scrollbar]}
+        className="mySwiper w-full bg-slate-500 my-9"
+      >
+        <SwiperSlide style={{
+          height:'100px ',
+          background:'red ',
+          marginBottom:'50px'
+        }} 
+      >Slide 1</SwiperSlide>
  
-  const {data,error,isLoading} =swrSingleProduct(43)
-  if (error) return <div>failed to load</div>
-if(data) return data.images.map(e=>{
-return  <MyImageComponent src={e} />})
+        <SwiperSlide style={{
+          height:'100px ',
+          background:'red ',
+          marginBottom:'50px'
+        }} 
+      >Slide 1</SwiperSlide>
+ 
+
+      </Swiper>
+    </>
+  );
 }

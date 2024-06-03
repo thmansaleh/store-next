@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     </Head>
       <body className="font-sans pb-16">
-<FullScreen/>
+{/* <FullScreen/> */}
         <ProviderPage children={children}/>
        
         </body>

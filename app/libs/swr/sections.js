@@ -5,7 +5,7 @@ import axios from 'axios';
 import useSWR from 'swr'
 
 export function swrSections (){
- const url ="https://dull-plum-antelope-tutu.cyclic.cloud/sections"
+ const url ="https://dummyjson.com/products/categories"
   const fetcher = async () => {
    const response = await axios.get(url);
 

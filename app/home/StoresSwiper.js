@@ -13,9 +13,11 @@ import 'swiper/css/free-mode';
 // import required modules
 import { FreeMode } from 'swiper';
 import Link from 'next/link';
+import { swrSections } from '../libs/swr/sections';
+import StoriesLoading from './StoriesLoading';
 
 export default function StoresSwiper() {
-    const data =[
+    const stories =[
         {
             img:'https://img.tamara.co/dXh_QHsAD1IEwbrg9vjG8-kYJUxCDT8CUGV6HOTx828/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2YxZThkZjhmLWUzMGYtNDMxMS1hYjVmLTFmNTBkMzJlMWEyZC0xNjg5NzgxMTkxLnBuZw.jpg',
             title:'لاكوست',
@@ -99,6 +101,10 @@ export default function StoresSwiper() {
 
         },
     ]
+    const {data,error,isLoading} =swrSections()
+if(isLoading) return <StoriesLoading/>
+// if(data) return <StoriesLoading/>
+
   return (
     <>
     <div className='text-lg text-black font-semibold my-4 px-2'>متاجر مختارة</div>
@@ -130,7 +136,7 @@ export default function StoresSwiper() {
 
 
 
-      {data.map((e,i)=>{
+      {stories.map((e,i)=>{
         return  <SwiperSlide key={i}>  <Link href={e.route} 
         className='flex flex-col items-center space-y-2 inline-block  '>
        <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 object-contain'>
