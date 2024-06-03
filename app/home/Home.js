@@ -1,4 +1,4 @@
-
+"use client"
 import SetNave from '@/app//components/SetNave'
 import SearchInput from "@/app/components/SearchInput"
 import FristSlider from './FristSlider'
@@ -15,8 +15,8 @@ export default function Home({products}){
 
 
 <div className="px-2 my-4"><Commitments/></div>
-<StoresSwiper/>
 <FreeReturnSection/>
+<StoresSwiper/>
 <SwiperFreemodeSection/>
 
 

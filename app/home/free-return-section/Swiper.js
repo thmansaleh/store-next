@@ -28,7 +28,7 @@ allowTouchMove={false}
         loop={2}
             modules={[Autoplay]}
 
-className="h-20"
+className="h-16"
 style={{marginLeft:'0',marginRight:'0'}}
         
       >
