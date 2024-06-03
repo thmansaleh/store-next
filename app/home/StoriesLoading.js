@@ -2,7 +2,7 @@
 'use client'
 export default function StoriesLoading(){
 
-    return <div className="  w-full px-2  ">
+    return <div className="  w-full px-2 mt-4 mb-6 ">
     <div className="animate-pulse ">
 <h1 className="w-16 h-5 rounded-lg bg-gray-200 my-4"></h1>
       <div className="w-full  justify-around  flex  items-center ">
