@@ -12,7 +12,7 @@ prefetch={true} href={{
 
   }} className=" inline-block relative rounded-lg  my-2 shadow-md overflow-hidden  w-44 bg-white   h-fit ">
     <span className=" bg-red-700 text-white top-0  text-center z-20 absolute rounded-br-lg  rtl:rounded-bl-lg rtl:rounded-br-none  px-3 text-xs bg-blend-multiply line-height start-0 opacity-80 ">خصم 20%</span>
-    <div className=" w-full   relative ">
+    <div className=" h-44 overflow-hidden  relative ">
 
 
 
@@ -26,7 +26,9 @@ style={{
 objectFit:"contain",
 position:"absolute", 
 top:"0",
-left:"0"
+left:"0", 
+right:"0",
+bottom:"0"
 
 }}
 
