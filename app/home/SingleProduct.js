@@ -22,7 +22,13 @@ prefetch={true} href={{
       src={data.thumbnail}
       fill={true}
       alt={data.title}
-style={{objectFit:"contain"}}
+style={{
+objectFit:"contain",
+position:"absolute", 
+top:"0",
+left:"0"
+
+}}
 
     />
 
