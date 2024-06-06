@@ -6,7 +6,7 @@ export default function SingleProduct({data}){
 
 
 const url =`product/${data.id}`
-return <Link key={data.id} scroll={true}
+return <Link  scroll={true}
 prefetch={true} href={{
     pathname: url,
 

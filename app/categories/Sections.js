@@ -2,9 +2,11 @@
 
 import {swrSections} from "@/app/libs/swr/sections" 
 import SectionsLoading from "./SectionsLoading"
-
+import { useDispatch } from "react-redux"
+import { updateSectionId } from "../store/features/categories"
 export default function Sections(){
   const {data,error,isLoading} =swrSections()
+  const dispatch =useDispatch()
 
 
   
@@ -16,14 +18,26 @@ if(isLoading) return <SectionsLoading/>
    data.slice(0,4).map((e,i)=>{
 
 if (i==0) {
-  return <div key={e.id}  className=" ">
+  return <div onClick={
+
+    ()=>
+    {
+      dispatch(updateSectionId(e.name))
+  }
+  } key={e.id}  className=" ">
     <input  defaultChecked className="hidden categoryInput" type="radio" id={e.name} name="category" />
     <label className=" w-full p-2 block" htmlFor={e.name}>
       {e.name}
     </label>
   </div>
 } else {
-  return <div key={e.name}  className="    ">
+  return <div  onClick={
+
+    ()=>
+    {
+      dispatch(updateSectionId(e.name))
+  }
+  }  key={e.name}  >
     <input  className="hidden categoryInput" type="radio" id={e.name} name="category" />
     <label className=" w-full p-2 block" htmlFor={e.name}>
       {e.name}

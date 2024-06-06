@@ -8,7 +8,7 @@ export default function StoriesLoading(){
       <div className="w-full  justify-around  flex  items-center ">
 {
     [1,1,1,,1].map((e,i)=>{
-        return       <div
+        return       <div key={i}
         className='flex flex-col items-center gap-y-3  '>
        <div className='bg-gray-200 flex  items-center rounded-full w-14 h-14 '>
         

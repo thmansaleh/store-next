@@ -1,7 +1,7 @@
 "use client"
 import styles from './styles.css'
  import { useSelector } from 'react-redux';
-import {useRef ,useEffect} from "react"
+import {useRef } from "react"
  import { useRouter } from 'next/navigation'
 import {icons} from "./NavigationIcons"
 export default function NavigationBar(){

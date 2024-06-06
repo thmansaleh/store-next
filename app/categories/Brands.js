@@ -1,7 +1,11 @@
 'use client'
 import Link from 'next/link'
+import { swrSectionCategory } from '../libs/swr/sectionCategory'
+import StoriesLoading from '../home/StoriesLoading'
  export default function Brands(){ 
-  const data =[
+    const {data,error,isLoading} =swrSectionCategory()
+
+  const fakeData =[
     {
         img:'https://img.tamara.co/dXh_QHsAD1IEwbrg9vjG8-kYJUxCDT8CUGV6HOTx828/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2YxZThkZjhmLWUzMGYtNDMxMS1hYjVmLTFmNTBkMzJlMWEyZC0xNjg5NzgxMTkxLnBuZw.jpg',
         title:'لاكوست',
@@ -38,11 +42,13 @@ import Link from 'next/link'
     },
  
 ]
+if(isLoading) return <StoriesLoading/>
+if(error) return 'error........'
   
    return <div>      
   <h1 className="block text-sm font-semibold p-2">تسوق حسب البراندات</h1>
   <div className="flex justify-start gap-y-4 gap-x-5 bg-white flex-wrap py-2 ">
-   { data.map((e,i)=>{
+   { fakeData.map((e,i)=>{
     return <Link key={i}  href='iuyt'
     className='flex flex-col items-center space-y-2 inline-block  '>
    <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 '>

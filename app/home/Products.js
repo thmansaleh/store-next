@@ -9,13 +9,13 @@ export default function Products(){
   if(isLoading) return <ProductsLoading/>
 return <div className="grid grid-cols-2 gap-2 bg-white">
 
-   <div class=" bg-white  flex justify-around flex-wrap">
+   <div className=" bg-white  flex justify-around flex-wrap">
 {
 
 
 data.products.map((product,i) => {
 if(i%2 !=0)
-return <SingleProduct data={product}/>
+return <SingleProduct key={product.id} data={product}/>
 })
 
 }
@@ -23,25 +23,14 @@ return <SingleProduct data={product}/>
       
 
 
-
-
-
-   
-
-
- <div class=" bg-white  flex justify-around flex-wrap">
+ <div className=" bg-white  flex justify-around flex-wrap">
 {
 data.products.map((product,i) => {
 if(i%2===0)
-return <SingleProduct data={product}/>
+return <SingleProduct key={product.id}  data={product}/>
 })
 }
 </div>
-
-
-
-
-
 
 
 </div>
