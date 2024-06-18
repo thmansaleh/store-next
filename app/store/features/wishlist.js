@@ -16,17 +16,8 @@ items:[]
 
 
  addItemToWishlist: (state, action) => {
-
 state.items.push(action.payload);
-console.log(state.items)
-
-
-
-    },
-
-
-
-
+ },
 
 
 
@@ -41,23 +32,7 @@ state.items=newItems
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   },
-
-
-
-
 
 
 

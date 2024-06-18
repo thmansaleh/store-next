@@ -64,7 +64,7 @@ console.log(data)
 <FreeDelivery/>
     <Flip/>
     <Description/>
-<SimilarProducts/>
+<SimilarProducts id={id}/>
 
 </div>
 <AddToCartButton item={product}/>

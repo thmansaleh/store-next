@@ -10,7 +10,7 @@ import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import ShareHeartIcons from "./ShareHeartIcons"
+import ShareHeartIcons from "./share-heart/ShareHeartIcons"
 import SliderLoading from "./SliderLoading"
 import { useProduct } from '@/app/api/product';
 import { swrSingleProduct } from '@/app/libs/swr/singleProduct';

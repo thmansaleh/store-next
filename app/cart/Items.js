@@ -31,9 +31,6 @@ const decrease = (id) =>
 dispatch(decreaseQuantity(id))
 }
 const addToWishlist =(newItem)=>{
-console.log("click")
-console.log(newItem)
-console.log(wishlistItems)
 
 
 if(wishlistItems.length>0){

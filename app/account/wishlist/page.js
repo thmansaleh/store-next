@@ -14,7 +14,7 @@ return <div className="p-3 flex justify-around flex-wrap gap-y-6">
  {items.map((e,i)=>{
 
 
-return <Link key={i} href="/product?product_id=1" className=" inline-block relative rounded-lg   shadow-md overflow-hidden  w-36 bg-white   h-fit " >
+return <Link key={i} href={`/product/${e.id}`} className=" inline-block relative rounded-lg   shadow-md overflow-hidden  w-36 bg-white   h-fit " >
     <div className="  "><img className="h-40 w-full object-contain " src={e.thumbnail}/></div><span className=" line-clamp-2 text-sm my-2 px-2">{e.description}</span>
     <div className="p-2 text-sm bg-zinc-100  flex justify-between items-center"><span>
         {e.price}

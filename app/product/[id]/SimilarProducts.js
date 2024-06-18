@@ -6,10 +6,14 @@ import './slider.css'
 import 'swiper/css';
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination';
+import { swrHomeProducts } from '@/app/libs/swr/homeProducts';
 
-export default function SimilarProducts() {
+export default function SimilarProducts({id}) {
+  const {data,error,isLoading} =swrHomeProducts(10,id)
+if(error) return 'error'
+if(isLoading) return 'loading....'
 
-return <>
+return <div className='p-3'>
   <h2 className="text-md font-bold mt-4">منتجات قد تعجبك</h2>
 <Swiper 
 style={{
@@ -30,36 +34,22 @@ rewind={true}
 slidesPerView={2.5}
  pagination={{
  clickable: true 
-
-
-
 }}
 
 >
 
+{
+data.products.map((product) =>{
 
-
-{[
-"https://cottonil.ae/cdn/shop/products/LwYrO69_87fe5f7f-7cd5-43b0-8153-4be98d524721.png?v=1703670623",
-
-
-"https://izelfashion.com/wp-content/uploads/2023/05/full-front-2.png",
-
-"https://uae.cottonmegastore.com/cdn/shop/products/tn0JH1P_8daf5004-72ff-42e2-91c9-42644c06a074.jpg?v=1709733827",
-
-"https://static.zara.net/photos///2023/I/0/1/p/3739/250/800/2/w/404/3739250800_6_21_1.jpg?ts=1695893759658"
-
-].map((e,i) =>{
-
-return <SwiperSlide key={i} className="my-8">
+return <SwiperSlide key={product.id} className="my-8">
 
     <Link href={{
-    pathname: `/product/${i+1}`
+    pathname: `/product/${product.id}`
  
   }} className=" relative overflow-hidden shadow-lg rounded-lg inline-block w-36">
-  <img className="w-full h-40 object-contain " src={e} alt={e} />
-  <span className=" line-clamp-2 text-sm my-2 px-2">SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...</span>
-  <div className="p-2 space-x-px text-sm bg-zinc-100  "><span>899</span>
+  <img className="w-full h-40 object-contain " src={product.thumbnail} alt={product.title} />
+  <span className=" line-clamp-2 text-sm my-2 px-2">{product.description}</span>
+  <div className="p-2 space-x-px text-sm bg-zinc-100  "><span>{product.price}</span>
     <span className=" inline-block text-green-600 mx-px">د.أ</span></div>
   <span className=" bg-red-700 text-white top-0  text-center  absolute rounded-br-lg  rtl:rounded-bl-lg rtl:rounded-br-none  px-3 text-xs bg-blend-multiply line-height start-0 opacity-80 ">خصم 20%</span>
 </Link>
@@ -83,6 +73,6 @@ return <SwiperSlide key={i} className="my-8">
 
 </Swiper>
 
-</>
+</div>
 
 };
