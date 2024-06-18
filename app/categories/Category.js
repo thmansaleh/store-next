@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { swrSectionCategory } from '../libs/swr/sectionCategory'
 import StoriesLoading from '../home/StoriesLoading'
  export default function Categories(){ 
-   
     const {data,error,isLoading} =swrSectionCategory()
 
 
@@ -58,13 +57,13 @@ if(error) return '............errore'
    return <div>      
   <h1 className="block text-sm font-semibold p-2">تسوق حسب الفئة</h1>
   <div className="flex justify-start gap-y-4  gap-x-5 bg-white flex-wrap py-2 ">
-   { fakeData.map((e,i)=>{
-    return <Link key={i+12} href='iuyt'
-    className='flex flex-col items-center space-y-2 inline-block  '>
+   { data.products.map((product,i)=>{
+    return <Link key={product.id} href='./brands/1'
+    className='flex flex-col items-center space-y-2   '>
    <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 '>
-    <img src={e.img} className='object-cover ' />
+    <img src={product.thumbnail} className='object-cover ' />
    </div>
-   <div className='text-sm font-semibold text-black'>{e.title}</div>
+   <div className='text-sm font-semibold text-black'>{product.brand}</div>
 
    
     </Link>

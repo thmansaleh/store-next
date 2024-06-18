@@ -11,6 +11,7 @@ import SimilarProducts from './SimilarProducts';
 import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 import { useDispatch } from 'react-redux';
 import { setProduct } from '@/app/store/features/productPage';
+import { ToastContainer } from 'react-toastify';
 
  export default function ({params}){
     const dispatch=useDispatch()
@@ -33,6 +34,7 @@ return <>
 <SimilarProducts id={id}/>
  <AddToCartButton id={id}/>
 </div>
+
 
 </>
   

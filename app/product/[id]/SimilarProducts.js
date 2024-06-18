@@ -40,6 +40,7 @@ slidesPerView={2.5}
 
 {
 data.products.map((product) =>{
+  let random = Math.floor(Math.random() * 101)
 
 return <SwiperSlide key={product.id} className="my-8">
 
@@ -51,7 +52,8 @@ return <SwiperSlide key={product.id} className="my-8">
   <span className=" line-clamp-2 text-sm my-2 px-2">{product.description}</span>
   <div className="p-2 space-x-px text-sm bg-zinc-100  "><span>{product.price}</span>
     <span className=" inline-block text-green-600 mx-px">د.أ</span></div>
-  <span className=" bg-red-700 text-white top-0  text-center  absolute rounded-br-lg  rtl:rounded-bl-lg rtl:rounded-br-none  px-3 text-xs bg-blend-multiply line-height start-0 opacity-80 ">خصم 20%</span>
+    {random>50&&  <span className=" bg-red-700 text-white top-0  text-center  absolute rounded-br-lg  rtl:rounded-bl-lg rtl:rounded-br-none  px-3 text-xs bg-blend-multiply line-height start-0 opacity-80 ">خصم {product.discountPercentage}%</span>
+    }
 </Link>
 
 

@@ -7,7 +7,7 @@ import StoriesLoading from '../home/StoriesLoading'
 
   const fakeData =[
     {
-        img:'https://img.tamara.co/dXh_QHsAD1IEwbrg9vjG8-kYJUxCDT8CUGV6HOTx828/rs:fill:55:55:0:sm/dpr:2//aHR0cHM6Ly9jZG4udGFtYXJhLmNvL21lcmNoYW50L2YxZThkZjhmLWUzMGYtNDMxMS1hYjVmLTFmNTBkMzJlMWEyZC0xNjg5NzgxMTkxLnBuZw.jpg',
+        img:'http://localhost:3000/_next/image?url=https%3A%2F%2Fcdn.dummyjson.com%2Fproducts%2Fimages%2Fwomens-dresses%2FCorset%2520Leather%2520With%2520Skirt%2F4.png&w=1200&q=75',
         title:'لاكوست',
         subTitle:'تصفح قائمة العطور',
         route:'/'
@@ -49,8 +49,8 @@ if(error) return 'error........'
   <h1 className="block text-sm font-semibold p-2">تسوق حسب البراندات</h1>
   <div className="flex justify-start gap-y-4 gap-x-5 bg-white flex-wrap py-2 ">
    { fakeData.map((e,i)=>{
-    return <Link key={i}  href='iuyt'
-    className='flex flex-col items-center space-y-2 inline-block  '>
+    return <Link key={i}  href='./brands/2'
+    className='flex flex-col items-center space-y-2   '>
    <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 '>
     <img src={e.img} className='object-contain h-full ' />
    </div>

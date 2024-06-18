@@ -2,8 +2,6 @@
 import Brands from './Brands'
 import Category from './Category'
 import Sections  from "./Sections"
-//import Brands from './Brands'
-import SetNave from '@/app/components/SetNave'
 
 export default function Categories() {
 
