@@ -7,7 +7,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
-import SliderLoading from '@/app/product/SliderLoading';
+import SliderLoading from '@/app/product/[id]/SliderLoading';
+import SwiperImageComponent from '@/app/product/[id]/MyImageComponent';
 
 export default function ProductSwiper({ id }) {
   const { data, error, isLoading } = swrSingleProduct(id);
@@ -33,15 +34,16 @@ export default function ProductSwiper({ id }) {
       pagination={{ clickable: true }}
     >
       {data.images.map((href, i) => (
-        <SwiperSlide key={i}  style={{height:'192px',position:'relative', width:'full'}}   className="w-full h-48  relative">
+        <SwiperSlide key={i}    >
         
          
 
-<Image
+<SwiperImageComponent
       src={href}
-      fill={true}
-      alt="Picture of th"
-style={{objectFit:"contain"}}
+      height='170px'
+//       fill={true}
+//       alt="Picture of th"
+// style={{objectFit:"contain"}}
     />
 
 

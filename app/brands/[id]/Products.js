@@ -1,11 +1,12 @@
 'use client'
 
-import ProductsLoading from "@/app/home/ProductsLoading"
+// import ProductsLoading from "@/app/home/ProductsLoading"
 import { swrHomeProducts } from "@/app/libs/swr/homeProducts"
 import Product from "./Product"
+import ProductsLoading from "@/app/home/ProductsLoading"
 
 export default function Products(){
-  const {data,error,isLoading} =swrHomeProducts(20)
+  const {data,error,isLoading} =swrHomeProducts(20,20)
   if(error) return <h1>error</h1>
   if(isLoading) return <ProductsLoading/>
 return <div className="grid grid-cols-2 gap-2 bg-white mt-7">

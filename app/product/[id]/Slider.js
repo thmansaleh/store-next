@@ -58,7 +58,8 @@ className="mb-8"  >
   
    
 
-<SwiperImageComponent src={href}/>
+<SwiperImageComponent src={href}       height='50vh'
+/>
 
 
 

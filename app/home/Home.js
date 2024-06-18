@@ -9,12 +9,13 @@ import Commitments from "./commitments/Commitments"
 import FreeReturnSection from "./free-return-section/FreeReturnSection"
 export default function Home({products}){
   return <>
-    <SetNave name='/' display={true}/>
+    {/* <SetNave name='/' display={true}/> */}
 <SearchInput/>
 <FristSlider/>
 
 
-<div className="px-2 my-4"><Commitments/></div>
+
+  <Commitments/>
 <FreeReturnSection/>
 <StoresSwiper/>
 <SwiperFreemodeSection/>

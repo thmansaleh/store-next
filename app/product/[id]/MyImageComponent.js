@@ -3,11 +3,11 @@
 import { useState } from 'react';
 import Image from 'next/image'
 
-const SwiperImageComponent = ({ src }) => {
+const SwiperImageComponent = ({ src,height }) => {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
 
   return (
-    <div style={{height:'50vh',width: '100%', position:'relative',margin: '0'}} 
+    <div style={{height:height,width: '100%', position:'relative',margin: '0'}} 
 
 >
       {isLoading && (

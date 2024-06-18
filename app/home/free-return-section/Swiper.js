@@ -22,7 +22,7 @@ allowTouchMove={false}
         //   clickable: true,
         // }}
         autoplay={{
-            delay: 4100,
+            delay: 3000,
             disableOnInteraction: false,
         }}
         loop={2}
