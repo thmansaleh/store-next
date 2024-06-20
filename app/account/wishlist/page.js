@@ -2,13 +2,16 @@
 "use client"
 import Link from 'next/link'
 import Empty from  "./Empty"
+import Header from "@/app/components/header/Header"
 import {useSelector} from  "react-redux"
 export default function page() {
    
 const items = useSelector(state=>state.wishlist.items)
 
 if(items.length>0) { 
-return <div className="p-3 flex justify-around flex-wrap gap-y-6">
+return <>
+<Header/>
+ <div className="p-3 flex justify-around flex-wrap gap-y-6">
  
 
  {items.map((e,i)=>{
@@ -29,6 +32,8 @@ return <Link key={i} href={`/product/${e.id}`} className=" inline-block relative
 
 
 </div>
+
+</>
 }
 
 return <Empty/>
