@@ -47,7 +47,7 @@ return <SwiperSlide key={product.id} className="my-8">
     <Link href={{
     pathname: `/product/${product.id}`
  
-  }} className=" relative overflow-hidden shadow-lg rounded-lg inline-block w-36">
+  }} className=" cursor-none relative overflow-hidden shadow-lg rounded-lg inline-block w-36">
   <img className="w-full h-40 object-contain " src={product.thumbnail} alt={product.title} />
   <span className=" line-clamp-2 text-sm my-2 px-2">{product.description}</span>
   <div className="p-2 space-x-px text-sm bg-zinc-100  "><span>{product.price}</span>
