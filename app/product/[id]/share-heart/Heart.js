@@ -48,7 +48,7 @@ if(!check){
   
 
   return  <>
-   <div className="  rounded-full bg-white flex  items-center  justify-center  h-8 w-8 ring-2 ring-gray-500">
+   <div className=" cursor-none rounded-full bg-white flex  items-center  justify-center  h-8 w-8 ring-2 ring-gray-500">
 
     <svg
       onClick={toggleFavorite}
