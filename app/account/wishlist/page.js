@@ -4,13 +4,14 @@ import Link from 'next/link'
 import Empty from  "./Empty"
 import Header from "@/app/components/header/Header"
 import {useSelector} from  "react-redux"
+import BackArrowBtn from "@/app/components/BackArrowBtn"
 export default function page() {
    
 const items = useSelector(state=>state.wishlist.items)
 
 if(items.length>0) { 
 return <>
-<Header/>
+<BackArrowBtn/>
  <div className="p-3 flex justify-around flex-wrap gap-y-6">
  
 
