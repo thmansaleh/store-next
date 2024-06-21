@@ -51,8 +51,8 @@ export default function Slider() {
       autoplay={{ delay: 3000, disableOnInteraction: true }}
     >
       {images.map((e, i) => (
-        <SwiperSlide key={i} className="mb-8 h-64 w-64">
-          <img className="w-full h-full object-cover" src={e.img} alt={e.title} />
+        <SwiperSlide key={i} className="mb-8 h-64 w-64  ">
+          <img className="w-full h-full object-contain rounded-md  " src={e.img} alt={e.title} />
         </SwiperSlide>
       ))}
     </Swiper>

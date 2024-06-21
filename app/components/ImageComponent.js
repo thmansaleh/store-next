@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image'
 
-const SwiperImageComponent = ({ src,height }) => {
+const ImageComponent = ({ src,height }) => {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
 
   return (
@@ -46,4 +46,4 @@ const SwiperImageComponent = ({ src,height }) => {
   );
 };
 
-export default SwiperImageComponent
+export default ImageComponent

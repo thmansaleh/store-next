@@ -6,6 +6,7 @@ import  cart from "./features/cart"
 import wishlist from "./features/wishlist"
 import categories from './features/categories';
 import productPage from './features/productPage';
+import home from './features/home';
 const store = configureStore({
     reducer: {
         navigation: navigationReducer,
@@ -14,6 +15,7 @@ const store = configureStore({
         wishlist:wishlist,
         categories:categories,
         productPage:productPage,
+        home:home,
 
     },
   });

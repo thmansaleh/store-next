@@ -1,6 +1,5 @@
 "use client"
-import Image from 'next/image'
-import SwiperImageComponent from "./MyImageComponent"
+import ImageComponent from "../../components/ImageComponent"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
@@ -58,7 +57,7 @@ className="mb-8"  >
   
    
 
-<SwiperImageComponent src={href}       height='50vh'
+<ImageComponent src={href}       height='50vh'
 />
 
 

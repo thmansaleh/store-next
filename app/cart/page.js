@@ -23,8 +23,9 @@ dispatch(changeAlertStatus())
 
 if(cartItems.length>0){
   return <>
-<BackArrowBtn/>
- <div style={{"background-color":"#f7f7f7"}} className=" p-3">
+   <div style={{"background-color":"#f7f7f7"}} className=" p-3">
+   <BackArrowBtn/>
+
   <div className="my-2">
 
 <SetNave name='cart' display={true}/>

@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 import SliderLoading from '@/app/product/[id]/SliderLoading';
-import SwiperImageComponent from '@/app/product/[id]/MyImageComponent';
+import SwiperImageComponent from '@/app/components/ImageComponent';
 
 export default function ProductSwiper({ id }) {
   const { data, error, isLoading } = swrSingleProduct(id);

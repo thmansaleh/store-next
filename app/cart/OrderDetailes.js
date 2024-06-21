@@ -15,7 +15,7 @@ return  <div className=" my-2 overflow-hidden rounded-xl border border-gray-300 
     <div className="my-4 flex justify-between">
       <span className="text-md font-bold text-gray-500">المجموع</span><span className="text-md font-bold">{totalPrice} د.أ</span>
     </div>
-    <Link href="checkout" className>
+    <Link href="checkout" >
       <button className="md:w-24 w-full bg-black text-white text-md font-semibold rounded-lg py-2 my-2">
         الدفع 
       </button>
