@@ -43,7 +43,7 @@ route:"./account/coupons"
 ]
 
 
-return <div className="w-full h-28  bg-white rounded-2xl  flex items-center justify-around" >
+return <div className="w-full h-28  bg-gray-50 rounded-2xl  flex items-center justify-around" >
 {icons.map((e,i)=>{
 
 

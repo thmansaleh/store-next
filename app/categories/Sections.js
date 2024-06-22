@@ -4,6 +4,7 @@ import {swrSections} from "@/app/libs/swr/sections"
 import SectionsLoading from "./SectionsLoading"
 import { useDispatch } from "react-redux"
 import { updateSectionId } from "../store/features/categories"
+import { swrSectionCategory } from "../libs/swr/sectionCategory"
 export default function Sections(){
   const {data,error,isLoading} =swrSections()
   const dispatch =useDispatch()
@@ -23,6 +24,7 @@ if (i==0) {
     ()=>
     {
       dispatch(updateSectionId(e.name))
+
   }
   } key={e.id}  className=" ">
     <input  defaultChecked className="hidden categoryInput" type="radio" id={e.name} name="category" />

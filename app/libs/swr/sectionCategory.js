@@ -14,10 +14,11 @@ export function swrSectionCategory (){
 
    return response.data;
  };
-const { data , error, isLoading } = useSWR(url, fetcher,{ refreshInterval: 10000000 })
+const { data , error, isLoading } = useSWR(url, fetcher)
 return {
   data,
   isLoading,
-   error
+   error,
+  
 }
 }
