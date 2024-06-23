@@ -7,6 +7,7 @@ import wishlist from "./features/wishlist"
 import categories from './features/categories';
 import productPage from './features/productPage';
 import home from './features/home';
+import search from './features/search';
 const store = configureStore({
     reducer: {
         navigation: navigationReducer,
@@ -16,6 +17,7 @@ const store = configureStore({
         categories:categories,
         productPage:productPage,
         home:home,
+        search:search
 
     },
   });
