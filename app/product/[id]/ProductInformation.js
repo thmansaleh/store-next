@@ -16,20 +16,20 @@ function calculateOriginalPrice(finalPrice, discountPercentage) {
   const {data,error,isLoading} =swrSingleProduct(id)
 
 
-  function getArabicDate() {
+  
+    function getArabicDate() {
       const days = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
     
      const months = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
   const today = new Date();
-     const dayName = days[today.getDay()];
+     const dayName = days[today.getDay() +1];
     const monthName = months[today.getMonth()];
     
     // تنسيق التاريخ
-    const arabicDate = `${dayName}، ${today.getDate()} ${monthName}`;
+    const arabicDate = `${dayName}، ${today.getDate()+1} ${monthName}`;
     
     return arabicDate;
 }
-
 
 
   if(isLoading) return <div className="  w-full ">
