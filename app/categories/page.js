@@ -2,11 +2,12 @@
 import Brands from './Brands'
 import Category from './Category'
 import Sections  from "./Sections"
+import Header from "@/app/components/header/Header"
 
 export default function Categories() {
 
   return <>
-          {/* <SetNave name='categories' display={false}/> */}
+          <Header/>
 
      <div >
 <Sections/>
