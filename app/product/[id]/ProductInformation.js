@@ -14,6 +14,24 @@ function calculateOriginalPrice(finalPrice, discountPercentage) {
 
 
   const {data,error,isLoading} =swrSingleProduct(id)
+
+
+  function getArabicDate() {
+      const days = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+    
+     const months = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+  const today = new Date();
+     const dayName = days[today.getDay()];
+    const monthName = months[today.getMonth()];
+    
+    // تنسيق التاريخ
+    const arabicDate = `${dayName}، ${today.getDate()} ${monthName}`;
+    
+    return arabicDate;
+}
+
+
+
   if(isLoading) return <div className="  w-full ">
 <div className="animate-pulse my-4 ">
 
@@ -35,7 +53,7 @@ function calculateOriginalPrice(finalPrice, discountPercentage) {
     <div className="text-sm text-gray-500 line-through ml-2">{calculateOriginalPrice(data.price,data.discountPercentage)} د.إ</div>
     <div className="text-sm font-semibold text-red-500 ml-2">تخفيض  {data.discountPercentage}%</div>
   </div>
-  <div className="text-sm text-gray-500 mt-1">توصيل في  <span className="text-green-400">16 نوفمبر, الثلاثاء</span></div>
+  <div className="text-sm text-gray-500 mt-1">توصيل في  <span className="text-green-400">{getArabicDate()}</span></div>
 
 </div>
 }
