@@ -1,8 +1,15 @@
 "use client"
 
-export default function Card(){
+import { useSelector } from "react-redux"
 
-return <div className="mx-auto max-w-lg mt-10 ring-2 rounded-lg ring-gray-500 ">
+export default function Card(){
+  const paymentMethod=useSelector(state=>state.checkout.paymentMethod)
+  
+if(paymentMethod=='card') return <>
+  <h3 className="text-md font-semibold my-5">الدفع عبر بطاقتك البنكية</h3>
+
+<div className="mx-auto max-w-lg mt-10 ring-2 rounded-lg ring-gray-500 ">
+
   <div className="bg-white rounded-lg overflow-hidden shadow-lg">
     <div className="px-6 py-4">
       <div className="flex justify-between items-center">
@@ -22,4 +29,5 @@ return <div className="mx-auto max-w-lg mt-10 ring-2 rounded-lg ring-gray-500 ">
     </div>
   </div>
 </div>
+</>
 }

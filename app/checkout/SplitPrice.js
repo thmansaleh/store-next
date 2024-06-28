@@ -3,7 +3,7 @@
 
 export default function SpiltPrice(){
 
-return <div class="w-full flex items-center justify-around py-6 ">
+return <div class="w-full flex items-center justify-center gap-x-8 py-6 ">
      
       <div class="text-center gap-y-2 flex  items-center justify-center flex-col">
         

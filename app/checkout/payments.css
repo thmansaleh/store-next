@@ -1,0 +1,6 @@
+.payments:checked + label >div >img{
+    filter: grayscale(0%);
+}
+.payments:checked + label >div {
+    box-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) rgb(0 0 0)
+}
