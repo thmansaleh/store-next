@@ -14,7 +14,6 @@ ccv:0,
 },
   reducers: {
     changePaymentMethod: (state, action) => {
-      console.log(action.payload)
       state.paymentMethod=action.payload;
     }
 
