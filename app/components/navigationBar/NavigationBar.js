@@ -30,7 +30,7 @@ className="flex items-center justify-center bg-grvay-500  h-10   overflow-hidden
       {cartItems.length}
     </span>:null}
     <input
-defaultChecked={e.page =="home" }
+defaultChecked={e.page =="/" }
  type="radio" id={e.page} className="navigationInput" name="nav"/>
     <label className="px-4"   htmlFor={e.page}>
     
