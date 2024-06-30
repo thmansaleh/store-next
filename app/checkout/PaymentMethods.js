@@ -35,7 +35,7 @@ export default function(){
 defaultChecked={payment.value =="card" }
 id={payment.value} name="payment" className="hidden payments" type="radio" />
       <label htmlFor={payment.value}>
-        <div className="w-20 h-20 overflow-hidden flex flex-wrap p-2  items-center justify-center bg-white rounded-lg ">
+        <div className="w-20 h-20 overflow-hidden flex flex-wrap p-2  items-center transition-all justify-center bg-white rounded-lg ">
         <img className=" transition-all grayscale w-full h-12   object-contain" src={payment.img} alt={payment.value}/>
           <span className="text-sm   inline-block ">{payment.name}</span>
         </div>
