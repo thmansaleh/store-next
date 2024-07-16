@@ -28,7 +28,7 @@ export default function(){
       img:'cash.webp'
     },
   ]
-  if( true) return <div className="w-full p-2 border border-gray-300 rounded-lg flex items-center  justify-center gap-x-6 ">
+  if( true) return <div className="w-full p-2 border border-gray-300 rounded-lg flex items-center  md:justify-center gap-x-6 ">
     {data.map(payment=>{
       return  <div  key={payment.value} onClick={()=>dispatch(changePaymentMethod(payment.value))} className=" inline-block text-center  ">
       <input id={payment.value} name="payment" className="hidden payments" type="radio" />
