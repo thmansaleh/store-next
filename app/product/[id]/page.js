@@ -12,6 +12,7 @@ import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 import { useDispatch } from 'react-redux';
 import { setProduct } from '@/app/store/features/productPage';
 import { ToastContainer } from 'react-toastify';
+import Advantages from './Advantages';
 
  export default function ({params}){
     const dispatch=useDispatch()
@@ -24,13 +25,21 @@ dispatch(setProduct(data))
   }
   
 return <>
+<div className='md:flex lg:flex lg:p-3 md:p-3'>
+  
  <Slider id={id}/>
-<div className="px-2">
  <ProductInformation id={id}/>
+</div>
+
+<div className="px-2">
     <Size id={id}/>
 <FreeDelivery id={id}/>
     <Flip id={id}/>
+    <div className='lg:flex justify-around gap-x-3'>
+      
     <Description id={id}/>
+    <Advantages/>
+    </div>
 <SimilarProducts id={id}/>
  <AddToCartButton id={id}/>
 </div>
