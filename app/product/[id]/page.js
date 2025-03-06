@@ -24,7 +24,7 @@ import Advantages from './Advantages';
 dispatch(setProduct(data))
   }
   
-return <>
+return <div className="pb-20">
 <div className='md:flex lg:flex lg:p-3 md:p-3'>
   
  <Slider id={id}/>
@@ -45,7 +45,7 @@ return <>
 </div>
 
 
-</>
+<div/>
   
 
 
