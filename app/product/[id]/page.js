@@ -41,7 +41,7 @@ return <div className="pb-20">
     <Advantages/>
     </div>
 <SimilarProducts id={id}/>
- //<AddToCartButton id={id}/>
+ <AddToCartButton id={id}/>
 </div>
 
 
