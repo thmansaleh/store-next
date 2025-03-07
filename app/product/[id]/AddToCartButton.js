@@ -37,7 +37,7 @@ addRef.current.innerText="تم الإضافة للسلة بنجاح"
 return <>
 
  <div  onClick={handleClick}
- className="w-full fixed bottom-4 left-1/2 transform -translate-x-1/2  bg-white select-none p-3  ">
+ className="w-full fixed bottom-10 left-1/2 transform -translate-x-1/2  bg-white select-none p-3  ">
   <div ref={addRef}  className="flex items-center justify-center  gap-4 focus:outline-none  rounded-lg w-full bg-black text-sm font-semibold text-white py-3 text-center  ">
 
 
