@@ -8,7 +8,7 @@ export default function Card(){
 if(paymentMethod=='card') return <>
   
       
-      <div className="mb-8">
+      <div className="mb-8 mt-6">
   <h2 className="text-xl font-semibold text-gray-700 mb-4">معلومات الدفع</h2>
   <form className="space-y-4">
     <div>
