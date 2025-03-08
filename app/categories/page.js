@@ -8,7 +8,7 @@ import CategoriesItems from "./Categories"
 export default function Categories() {
 
 
-return <Categories/>
+return <CategoriesItems/>
   return <>
           <Header/>
 
