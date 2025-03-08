@@ -107,7 +107,7 @@ if(isLoading) return <StoriesLoading/>
 
   return (
     <>
-    <div className='text-lg text-black font-semibold my-4 px-2'>متاجر مختارة</div>
+    <div className='text-lg text-black font-semibold my-4 px-2'> الفئات</div>
       <Swiper
           
         slidesPerView={4}
