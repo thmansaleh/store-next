@@ -3,9 +3,12 @@ import Brands from './Brands'
 import Category from './Category'
 import Sections  from "./Sections"
 import Header from "@/app/components/header/Header"
+import Categories from "./Categories"
 
 export default function Categories() {
 
+
+return <Categories/>
   return <>
           <Header/>
 
