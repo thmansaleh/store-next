@@ -1,26 +1,27 @@
-"use client"
+
 import { createSlice } from '@reduxjs/toolkit';
 
-const checkoutSlice= createSlice({
+const initialState = {
+  paymentMethod: 'card', // default payment method
+  cardDetails: {
+    cardNumber: '',
+    expiryDate: '',
+    cvv: '',
+  },
+};
+
+const checkoutSlice = createSlice({
   name: 'checkout',
-  initialState: {
-paymentMethod:'nnjnjn',
-name:"",
-cardHolderName:"",
-cardNumber:0,
-ccv:0,
-
-
-},
+  initialState,
   reducers: {
-    changePaymentMethod: (state, action) => {
-      console.log(action.payload)
-      state.paymentMethod=action.payload;
-    }
-
+    setPaymentMethod: (state, action) => {
+      state.paymentMethod = action.payload;
+    },
+    setCardDetails: (state, action) => {
+      state.cardDetails = { ...state.cardDetails, ...action.payload };
+    },
   },
 });
 
-export const { changePaymentMethod } = checkoutSlice.actions;
-
+export const { setPaymentMethod, setCardDetails } = checkoutSlice.actions;
 export default checkoutSlice.reducer;
