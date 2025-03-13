@@ -8,6 +8,7 @@ import categories from './features/categories';
 import productPage from './features/productPage';
 import home from './features/home';
 import search from './features/search';
+import addressSlice from './features/address'
 const store = configureStore({
     reducer: {
         navigation: navigationReducer,
@@ -17,7 +18,9 @@ const store = configureStore({
         categories:categories,
         productPage:productPage,
         home:home,
-        search:search
+        search:search,
+address:addressSlice,
+
 
     },
   });
