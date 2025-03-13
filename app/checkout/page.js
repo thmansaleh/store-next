@@ -5,6 +5,7 @@ import PaymentMethods from "./PaymentMethods"
 import Tabby from "./Tabby"
 import Tamara from "./Tamara"
 import Address from "./Address"
+import PayButton from "./PayButton"
 export default function page(){
 
 return <div  className=" p-3">
@@ -15,5 +16,6 @@ return <div  className=" p-3">
 <Tabby/>
 <Cash/>
 <Address/>
+<PayButton/>
 </div>
 }
