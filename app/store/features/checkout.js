@@ -10,7 +10,7 @@ const initialState = {
   },
 };
 
-const checkoutSlice = createSlice({
+const checkout = createSlice({
   name: 'checkout',
   initialState,
   reducers: {
@@ -23,5 +23,5 @@ const checkoutSlice = createSlice({
   },
 });
 
-export const { setPaymentMethod, setCardDetails } = checkoutSlice.actions;
-export default checkoutSlice.reducer;
+export const { setPaymentMethod, setCardDetails } = checkout.actions;
+export default checkout.reducer;
