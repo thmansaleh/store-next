@@ -1,7 +1,7 @@
 "use client";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setCardDetails } from "../redux/checkoutSlice";
+import { setCardDetails } from "@/store/features/checkoutSlice";
 
 export default function Card() {
   const dispatch = useDispatch();
