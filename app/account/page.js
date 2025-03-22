@@ -5,6 +5,7 @@ import SetNave from "../components/SetNave"
 import FirstSecton from "./FirstSecton"
 import Section from './Section'
 import Header from './header/Header'
+import Footer from '../components/footer/Footer'
  export default function page() {
 
  return (
@@ -20,6 +21,7 @@ import Header from './header/Header'
  
 
 </div>
+<Footer/>
 
     </>
  )

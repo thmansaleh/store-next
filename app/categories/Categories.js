@@ -1,5 +1,4 @@
 export default function Categories(){
-
 return <div className="p-5">
   <div className="flex gap-x-6 gap-y-8 font-bold text-base  flex-wrap">
     <div>
