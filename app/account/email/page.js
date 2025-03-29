@@ -1,6 +1,6 @@
 'use client'
 
-import EmailVerification from "../EmailVerifaction"
+import EmailVerification from "../login/EmailVerifaction"
 
 function page() {
   return (

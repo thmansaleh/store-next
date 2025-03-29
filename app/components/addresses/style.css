@@ -1,0 +1,8 @@
+.address-item {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* For proper accent-color support (checkbox color) */
+  input[type="radio"] {
+    accent-color: #2ecc71;
+  }
