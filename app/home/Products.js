@@ -13,9 +13,9 @@ return <div className="grid grid-cols-2 gap-2 bg-white">
 {
 
 
-data.products.map((product,i) => {
+data.map((product,i) => {
 if(i%2 !=0)
-return <SingleProduct key={product.id} data={product}/>
+return <SingleProduct key={product.product_id} data={product}/>
 })
 
 }
@@ -25,9 +25,9 @@ return <SingleProduct key={product.id} data={product}/>
 
  <div className=" bg-white  flex justify-around flex-wrap">
 {
-data.products.map((product,i) => {
+data.map((product,i) => {
 if(i%2===0)
-return <SingleProduct key={product.id}  data={product}/>
+return <SingleProduct key={product.product_id}  data={product}/>
 })
 }
 </div>

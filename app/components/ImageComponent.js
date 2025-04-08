@@ -4,6 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image'
 
 const ImageComponent = ({ src,height }) => {
+console.table(src)
+if(src===0) return null
+if(src==='0') return null
+  // return null
   const [isLoading, setIsLoading] = useState(true); // State to track loading
 
   return (
@@ -36,7 +40,7 @@ const ImageComponent = ({ src,height }) => {
         </div>
       )}
       <Image
-      style={{objectFit:"contain"}}
+      // style={{objectFit:"contain"}}
       src={src}
       fill={true}
       alt="Picture of the author"

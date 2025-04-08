@@ -14,15 +14,14 @@ import SliderLoading from "./SliderLoading"
 import { useProduct } from '@/app/api/product';
 import { swrSingleProduct } from '@/app/libs/swr/singleProduct';
 
-export default function Slider({id}) {
-   const {data,error,isLoading} =swrSingleProduct(id)
-   if(isLoading) return <SliderLoading/>
-   if(error) return <h1>err</h1>
+export default function Slider({images}) {
+  // console.log(images[0])
+  // return null
 return <>
 
 
 <Swiper 
-loop={data.images.length}
+// loop={images.length}
 style={{
   "--swiper-pagination-color": "black ",
   "--swiper-pagination-bullet-inactive-color": "#999999",
@@ -46,18 +45,18 @@ slidesPerView={1}
 >
 
 
-<ShareHeartIcons/>
+{/* <ShareHeartIcons/> */}
 
-{data.images.map((href,i)=>{
+{images.map((href,i)=>{
 
-return <SwiperSlide key={i} 
+return <SwiperSlide key={href.image_id} 
 
 
 className="mb-8"  >
   
    
 
-<ImageComponent src={href}       height='50vh'
+<ImageComponent src={href.image_url}       height='50vh'
 />
 
 

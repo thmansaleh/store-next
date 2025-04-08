@@ -6,14 +6,16 @@ export default function SingleProduct({data}){
   let random = Math.floor(Math.random() * 101)
 
  
-const url =`product/${data.id}`
+const url =`product/${data.product_id}`
 return <Link  scroll={true}
 prefetch={true} href={{
     pathname: url,
 
   }} className="  inline-block relative rounded-lg  my-2  overflow-hidden  w-52 bg-white   h-fit ">
 
-    {random<=20&&<span className=" bg-red-700 text-white top-0  text-center z-20 absolute rounded-br-lg  rtl:rounded-bl-lg rtl:rounded-br-none  px-3 text-xs bg-blend-multiply line-height start-0 opacity-80 ">{data.discountPercentage} %</span>}
+    {random<=20&&<span className=" bg-red-700 text-white top-0  text-center z-20 absolute rounded-br-lg  rtl:rounded-bl-lg rtl:rounded-br-none  px-3 text-xs bg-blend-multiply line-height start-0 opacity-80 ">
+      {/* {data.discountPercentage} */}
+       %</span>}
 
     <div className=" h-44 overflow-hidden  relative ">
 
@@ -22,11 +24,11 @@ prefetch={true} href={{
      
 
 <Image
-      src={data.thumbnail}
+      src={data.img_url}
       fill={true}
-      alt={data.title}
+      alt={data.name}
 style={{
-objectFit:"contain",
+// objectFit:"contain",
 position:"absolute", 
 top:"0",
 left:"0", 

@@ -44,7 +44,9 @@ allowTouchMove={false}
       >
 
 {price>15&&<SwiperSlide><div className='text-green-500 text-xs px-2 '>
-            <span>احصل عليه بسعر  {price.toFixed(1) - 10 } د.إ عند الطلب لأول مرة</span>
+            <span>احصل عليه بسعر 
+               {Number(price).toFixed(1) - 10 } د.إ عند الطلب لأول مرة
+               </span>
             </div>  </SwiperSlide>
 }
 
