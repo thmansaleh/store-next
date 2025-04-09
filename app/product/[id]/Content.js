@@ -27,8 +27,9 @@ import Product from '@/app/components/product/Product';
 <div className='p-3'>
   
  <ProductInformation product={product}/>
-<Description discretion={product.description} />
-<FreeDelivery />
+<Description   discretion={product.description}/>
+
+<FreeDelivery/>
 </div>
 
 </>
