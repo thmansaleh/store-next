@@ -28,6 +28,7 @@ import Product from '@/app/components/product/Product';
   
  <ProductInformation product={product}/>
 <Description discretion={product.description}
+<FreeDelivery />
 </div>
 
 </>
@@ -37,12 +38,11 @@ import Product from '@/app/components/product/Product';
 return <div className="pb-20">
 <div className='md:flex lg:flex lg:p-3 md:p-3'>
   
- <ProductInformation product={product}/>
-</div>
+ 
 
 <div className="px-2">
     <Size id={id}/>
-<FreeDelivery id={id}/>
+
     <Flip id={id}/>
     <div className='lg:flex justify-around gap-x-3'>
       
