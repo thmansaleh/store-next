@@ -20,6 +20,8 @@ import Advantages from './Advantages';
   
  <ProductInformation product={product}/>
 <Description   description={product.description}/>
+<FreeDelivery/>
+
 
 </div>
 
