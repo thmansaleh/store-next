@@ -49,7 +49,7 @@ slidesPerView={1}
 
 {images.map((href,i)=>{
 
-return <SwiperSlide key={href.image_id} 
+if(href.image_url.length>3) <SwiperSlide key={href.image_id} 
 
 
 className="mb-8"  >
