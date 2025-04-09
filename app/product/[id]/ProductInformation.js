@@ -32,17 +32,7 @@ function calculateOriginalPrice(price) {
 
 
  
-<div className="animate-pulse my-4 ">
 
-  <div className="w-full space-y-3 ">
-    <div className="h-8 bg-gray-200  rounded-md w-20"></div>
-    <div className="h-6 bg-gray-200 rounded-md w-12"></div>
-    <div className="h-6 bg-gray-200 rounded-md w-1/3"></div>
-    <div className="h-4 bg-gray-200 rounded-md w-20"></div>
-
-  </div>
-</div>
-</div>
 
   return <div className="bg-white py-4 ">
   <div className="text-lg font-bold text-gray-800">{product.name}</div>
