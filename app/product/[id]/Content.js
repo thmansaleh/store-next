@@ -24,9 +24,10 @@ import Product from '@/app/components/product/Product';
   return <>
 <Slider images={product.images}/>
 
-<div className='md:flex lg:flex lg:p-3 md:p-3'>
+<div className='p-3'>
   
  <ProductInformation product={product}/>
+<Description discretion={product.description}
 </div>
 
 </>
@@ -45,7 +46,7 @@ return <div className="pb-20">
     <Flip id={id}/>
     <div className='lg:flex justify-around gap-x-3'>
       
-    <Description id={id}/>
+    
     <Advantages/>
     </div>
 <SimilarProducts id={id}/>
