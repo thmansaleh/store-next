@@ -29,7 +29,6 @@ import Product from '@/app/components/product/Product';
  <ProductInformation product={product}/>
 <Description   description={product.description}/>
 
-<FreeDelivery/>
 </div>
 
 </>
