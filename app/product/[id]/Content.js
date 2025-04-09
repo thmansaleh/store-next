@@ -21,12 +21,22 @@ import Product from '@/app/components/product/Product';
 //   if (product) {
 // dispatch(setProduct(data))
 //   }
-  return <Slider images={product.images}/>
+  return <>
+<Slider images={product.images}/>
+
+<div className='md:flex lg:flex lg:p-3 md:p-3'>
+  
+ <ProductInformation product={product}/>
+</div>
+
+</>
+
+
+
 return <div className="pb-20">
 <div className='md:flex lg:flex lg:p-3 md:p-3'>
   
- <Slider id={id}/>
- <ProductInformation id={id}/>
+ <ProductInformation product={product}/>
 </div>
 
 <div className="px-2">
