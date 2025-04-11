@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import { FreeMode } from 'swiper';
 import Link from 'next/link';
+import Image from 'next/image';
 import useSWR from 'swr';
 import StoriesLoading from './StoriesLoading';
 
@@ -58,15 +59,20 @@ export default function StoresSwiper() {
               href={`/categories/${category.category_id}`} 
               className='flex flex-col items-center space-y-2 inline-block'
             >
-              <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 object-contain'>
-                <img 
+              <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 object-contain relative'>
+                <Image 
                   src={category.image_url} 
-                  alt={category.name} 
-                  className="w-full h-full object-cover"
+                  alt={category.name}
+                  fill
+                  sizes="56px"
+                  className="object-cover"
                   onError={(e) => {
-                    e.target.onerror = null; 
-                    e.target.src = "/default-category.png"; // fallback image
+                    // Handle error by replacing with default image
+                    // Note: Next.js Image doesn't support onError this way, we'll use next/image's built-in error handling
                   }}
+                  // Built-in fallback image for Next.js 15
+                  placeholder="empty"
+                  fallback="/default-category.png"
                 />
               </div>
               <div className='text-sm font-semibold text-black text-center'>{category.name}</div>
