@@ -1,20 +1,28 @@
-import React from 'react'
 
-function Advantages() {
+
+const Advantages = ({ advantages }) => {
+  // Don't render anything if no advantages
+  if (!advantages || advantages.length === 0) {
+    return null;
+  }
+
   return (
-<div>
-  <h3 className="text-md font-semibold mb-2">المميزات</h3>
-  <ul className="list-disc pl-5 mb-4 text-sm text-gray-600">
-    <li>الاسم: GRYDY Quilted Crossbody Bag</li>
-    <li>اللون: أصفر</li>
-    <li>اسم البراند: Aldo</li>
-    {/* Add more list items here */}
-  </ul>
-  <div className="pt-4 border-t">
-    <p className="text-sm text-gray-500">SKU: 23GRYDY-740-YELLOW</p>
-  </div>
+    <div className="max-w-md mx-auto bg-white rounded p-3 shadow-sm">
+      <h3 className="text-gray-800 font-bold mb-2 text-sm">مميزات المنتج</h3>
+      <div className="space-y-2 text-sm">
+        {advantages.map((item, index) => (
+          <div key={index} className="flex flex-col">
+            <span className="text-blue-600 font-medium whitespace-nowrap">
+              {item.name}:
+            </span>
+            <span className="text-gray-700 text-xs mt-1">
+              {item.value}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-</div>  )
-}
-
-export default Advantages
+export default Advantages;
