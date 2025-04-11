@@ -133,3 +133,119 @@
   background-color: #ff5500;
   box-shadow: 0 0 5px rgba(255, 85, 0, 0.7);
 }
+
+
+/* Similar Products Styles */
+.similar-products-container {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+/* Product Card Styles */
+.product-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transform: translateY(0);
+  transition: all 0.3s ease-out;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover .view-btn {
+  opacity: 1;
+}
+
+.product-image-container {
+  padding: 12px;
+  background: linear-gradient(to bottom, rgba(249, 250, 251, 0.5), transparent);
+}
+
+/* Custom Pagination Bullets */
+.similar-product-bullet {
+  width: 25px !important;
+  height: 5px !important;
+  border-radius: 2px !important;
+  background: rgba(0, 0, 0, 0.14) !important;
+  transition: all 0.3s ease;
+  margin: 0 2px !important;
+}
+
+.similar-product-bullet.swiper-pagination-bullet-active {
+  background: #000 !important;
+  width: 35px !important;
+}
+
+/* Loading Spinner */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-bottom-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Navigation Arrows */
+.navigation-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.navigation-arrow:hover {
+  background: #f8f8f8;
+  opacity: 1;
+}
+
+.navigation-arrow svg {
+  transition: transform 0.2s ease;
+}
+
+.swiper-button-next-custom:hover svg {
+  transform: translateX(2px);
+}
+
+.swiper-button-prev-custom:hover svg {
+  transform: translateX(-2px);
+}
+
+/* Discount Badge */
+.discount-badge {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 85%);
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+}
+
+/* Fix for RTL layout if needed */
+[dir="rtl"] .discount-badge {
+  left: auto;
+  right: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+
+[dir="rtl"] .swiper-button-next-custom svg,
+[dir="rtl"] .swiper-button-prev-custom svg {
+  transform: rotate(180deg);
+}
