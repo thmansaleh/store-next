@@ -4,7 +4,7 @@ import AddToCartButton from './AddToCartButton';
 import FreeDelivery from './FreeDelivery';
 import ProductInformation from './ProductInformation';
 
-import SimilarProducts from './SimilarProducts'
+import SimilarProducts from './SimilarProducts';
 
 import Slider from './Slider';
 
