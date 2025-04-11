@@ -1,95 +1,152 @@
+const API_BASE_URL = 'http://your-api-base-url'; // Replace with your actual API base URL
 
-const BASE_URL = 'http://localhost:3000/api/email';  // Replace with your actual base URL
+/**
+ * Handles API errors
+ * @param {Response} response - The fetch response object
+ * @returns {Promise} - The JSON response or throws an error
+ */
+const handleResponse = async (response) => {
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message || 'Something went wrong');
+  }
+  return response.json();
+};
 
-export async function getCartById(cartId) {
-    try {
-      const response = await fetch(`/api/cart/${cartId}`);
-      if (!response.ok) {
-        throw new Error('Cart not found');
-      }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error(`Error fetching cart with ID ${cartId}:`, error);
-    }
-  }
-  export async function getCartItems(cartId) {
-    try {
-      const response = await fetch(`/api/cart/${cartId}/items`);
-      if (!response.ok) {
-        throw new Error('Failed to fetch cart items');
-      }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error(`Error fetching items for cart ${cartId}:`, error);
-    }
-  }
-    
-  export async function addItemToCart(cartId, productId, variantId, quantity) {
-    try {
-      const response = await fetch(`/api/cart/${cartId}/items`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ product_id: productId, variant_id: variantId, quantity: quantity }),
-      });
-      if (!response.ok) {
-        throw new Error('Failed to add item to cart');
-      }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error('Error adding item to cart:', error);
-    }
-  }
+/**
+ * Creates a new cart
+ * @param {number|null} userId - User ID (null for guests)
+ * @param {string|null} sessionId - Session ID (null for logged-in users)
+ * @returns {Promise<Object>} - The created cart data
+ */
+export const createCart = async (userId = null, sessionId = null) => {
+  const response = await fetch(`${API_BASE_URL}/carts`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ user_id: userId, session_id: sessionId }),
+  });
+  return handleResponse(response);
+};
 
-  export async function updateCartItemQuantity(cartId, itemId, quantity) {
-    try {
-      const response = await fetch(`/api/cart/${cartId}/items/${itemId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ quantity: quantity }),
-      });
-      if (!response.ok) {
-        throw new Error('Failed to update cart item');
-      }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error(`Error updating item ${itemId} in cart ${cartId}:`, error);
-    }
-  }
-  export async function deleteCartItem(cartId, itemId) {
-    try {
-      const response = await fetch(`/api/cart/${cartId}/items/${itemId}`, {
-        method: 'DELETE',
-      });
-      if (!response.ok) {
-        throw new Error('Failed to delete cart item');
-      }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error(`Error deleting item ${itemId} from cart ${cartId}:`, error);
-    }
-  }
-  
-  export async function deleteCart(cartId) {
-    try {
-      const response = await fetch(`/api/cart/${cartId}`, {
-        method: 'DELETE',
-      });
-      if (!response.ok) {
-        throw new Error('Failed to delete cart');
-      }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error(`Error deleting cart ${cartId}:`, error);
-    }
-  }
-  
+/**
+ * Gets cart by user ID or session ID
+ * @param {number|null} userId - User ID
+ * @param {string|null} sessionId - Session ID
+ * @returns {Promise<Object>} - The cart data
+ */
+export const getCartByUserOrSession = async (userId = null, sessionId = null) => {
+  const queryParams = new URLSearchParams();
+  if (userId) queryParams.append('user_id', userId);
+  if (sessionId) queryParams.append('session_id', sessionId);
+
+  const response = await fetch(`${API_BASE_URL}/carts/user-cart?${queryParams.toString()}`);
+  return handleResponse(response);
+};
+
+/**
+ * Gets cart by cart ID
+ * @param {number} cartId - Cart ID
+ * @returns {Promise<Object>} - The cart data
+ */
+export const getCartById = async (cartId) => {
+  const response = await fetch(`${API_BASE_URL}/carts/${cartId}`);
+  return handleResponse(response);
+};
+
+/**
+ * Gets all items in a cart
+ * @param {number} cartId - Cart ID
+ * @returns {Promise<Array>} - Array of cart items
+ */
+export const getCartItems = async (cartId) => {
+  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items`);
+  return handleResponse(response);
+};
+
+/**
+ * Adds or updates an item in the cart
+ * @param {number} cartId - Cart ID
+ * @param {number} productId - Product ID
+ * @param {number} quantity - Quantity to add/update
+ * @returns {Promise<Object>} - Operation result
+ */
+export const addOrUpdateCartItem = async (cartId, productId, quantity) => {
+  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ product_id: productId, quantity }),
+  });
+  return handleResponse(response);
+};
+
+/**
+ * Updates cart item quantity
+ * @param {number} cartId - Cart ID
+ * @param {number} itemId - Cart item ID
+ * @param {number} quantity - New quantity
+ * @returns {Promise<Object>} - Update result
+ */
+export const updateCartItemQuantity = async (cartId, itemId, quantity) => {
+  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items/${itemId}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ quantity }),
+  });
+  return handleResponse(response);
+};
+
+/**
+ * Removes an item from the cart
+ * @param {number} cartId - Cart ID
+ * @param {number} itemId - Cart item ID
+ * @returns {Promise<Object>} - Deletion result
+ */
+export const removeCartItem = async (cartId, itemId) => {
+  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items/${itemId}`, {
+    method: 'DELETE',
+  });
+  return handleResponse(response);
+};
+
+/**
+ * Clears all items from the cart
+ * @param {number} cartId - Cart ID
+ * @returns {Promise<Object>} - Clear operation result
+ */
+export const clearCart = async (cartId) => {
+  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items`, {
+    method: 'DELETE',
+  });
+  return handleResponse(response);
+};
+
+/**
+ * Calculates cart totals
+ * @param {Array} items - Cart items
+ * @returns {Object} - Totals object {totalItems, totalQuantity, totalPrice}
+ */
+export const calculateCartTotals = (items) => {
+  return items.reduce(
+    (totals, item) => {
+      return {
+        totalItems: totals.totalItems + 1,
+        totalQuantity: totals.totalQuantity + item.quantity,
+        totalPrice: totals.totalPrice + item.price * item.quantity,
+      };
+    },
+    { totalItems: 0, totalQuantity: 0, totalPrice: 0 }
+  );
+};
+
+// Utility function to manage cart in localStorage for guest users
+export const cartLocalStorage = {
+  getSessionId: () => localStorage.getItem('cart_session_id'),
+  setSessionId: (sessionId) => localStorage.setItem('cart_session_id', sessionId),
+  clearSessionId: () => localStorage.removeItem('cart_session_id'),
+};
