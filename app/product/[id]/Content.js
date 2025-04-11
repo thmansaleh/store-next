@@ -24,6 +24,7 @@ import Advantages from './Advantages';
 <Description   description={product.description}/>
 <FreeDelivery/>
 <SimilarProducts id={product.product_id}/>
+<Advantages advantages={product.advantages}/>
 
 </div>
 
