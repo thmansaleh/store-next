@@ -1,6 +1,6 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper';
 import Link from 'next/link'
 import useSWR from 'swr'
 import './slider.css'
