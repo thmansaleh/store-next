@@ -4,6 +4,8 @@ import AddToCartButton from './AddToCartButton';
 import FreeDelivery from './FreeDelivery';
 import ProductInformation from './ProductInformation';
 
+import SimilarProducts from './SimilarProducts'
+
 import Slider from './Slider';
 
 import Description from './Description';
@@ -21,7 +23,7 @@ import Advantages from './Advantages';
  <ProductInformation product={product}/>
 <Description   description={product.description}/>
 <FreeDelivery/>
-
+<SimilarProducts id={product.product_id}/>
 
 </div>
 
