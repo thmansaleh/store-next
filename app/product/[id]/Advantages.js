@@ -8,11 +8,11 @@ const Advantages = ({ advantages }) => {
 
   return (
     <div className="max-w-md mx-auto bg-white rounded p-3 shadow-sm">
-      <h3 className="text-gray-800 font-bold mb-2 text-sm">مميزات المنتج</h3>
+      <h3 className="text-gray-800 font-semibold mb-2 text-sm">مميزات المنتج</h3>
       <div className="space-y-2 text-sm">
         {advantages.map((item, index) => (
           <div key={index} className="flex flex-col">
-            <span className="text-blue-600 font-medium whitespace-nowrap">
+            <span className="text-gray-900 font-medium whitespace-nowrap">
               {item.name}:
             </span>
             <span className="text-gray-700 text-xs mt-1">
