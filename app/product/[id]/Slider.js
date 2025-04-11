@@ -67,7 +67,7 @@ export default function Slider({images}) {
                   <div className="soldier-thumbnail">
                     <ImageComponent 
                       src={href.image_url} 
-                      height='60px'
+                      height='100%'
                       className="thumbnail-image"
                     />
                     <div className="soldier-overlay">

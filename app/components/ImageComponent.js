@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Image from 'next/image'
 
 const ImageComponent = ({ src,height }) => {
-console.table(src)
 if(src===0) return null
 if(src==='0') return null
   // return null

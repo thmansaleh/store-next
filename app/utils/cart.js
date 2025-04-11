@@ -1,4 +1,6 @@
-const API_BASE_URL = 'http://your-api-base-url'; // Replace with your actual API base URL
+// const API_BASE_URL = 'http://your-api-base-url'; // Replace with your actual API base URL
+
+import { API_BASE_URL } from "../urls";
 
 /**
  * Handles API errors
@@ -20,7 +22,7 @@ const handleResponse = async (response) => {
  * @returns {Promise<Object>} - The created cart data
  */
 export const createCart = async (userId = null, sessionId = null) => {
-  const response = await fetch(`${API_BASE_URL}/carts`, {
+  const response = await fetch(`${API_BASE_URL}/cart`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -41,7 +43,7 @@ export const getCartByUserOrSession = async (userId = null, sessionId = null) =>
   if (userId) queryParams.append('user_id', userId);
   if (sessionId) queryParams.append('session_id', sessionId);
 
-  const response = await fetch(`${API_BASE_URL}/carts/user-cart?${queryParams.toString()}`);
+  const response = await fetch(`${API_BASE_URL}/cart/user-cart?${queryParams.toString()}`);
   return handleResponse(response);
 };
 
@@ -51,7 +53,7 @@ export const getCartByUserOrSession = async (userId = null, sessionId = null) =>
  * @returns {Promise<Object>} - The cart data
  */
 export const getCartById = async (cartId) => {
-  const response = await fetch(`${API_BASE_URL}/carts/${cartId}`);
+  const response = await fetch(`${API_BASE_URL}/cart/${cartId}`);
   return handleResponse(response);
 };
 
@@ -61,7 +63,7 @@ export const getCartById = async (cartId) => {
  * @returns {Promise<Array>} - Array of cart items
  */
 export const getCartItems = async (cartId) => {
-  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items`);
+  const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items`);
   return handleResponse(response);
 };
 
@@ -73,7 +75,7 @@ export const getCartItems = async (cartId) => {
  * @returns {Promise<Object>} - Operation result
  */
 export const addOrUpdateCartItem = async (cartId, productId, quantity) => {
-  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items`, {
+  const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -91,7 +93,7 @@ export const addOrUpdateCartItem = async (cartId, productId, quantity) => {
  * @returns {Promise<Object>} - Update result
  */
 export const updateCartItemQuantity = async (cartId, itemId, quantity) => {
-  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items/${itemId}`, {
+  const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items/${itemId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -108,7 +110,7 @@ export const updateCartItemQuantity = async (cartId, itemId, quantity) => {
  * @returns {Promise<Object>} - Deletion result
  */
 export const removeCartItem = async (cartId, itemId) => {
-  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items/${itemId}`, {
+  const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items/${itemId}`, {
     method: 'DELETE',
   });
   return handleResponse(response);
@@ -120,7 +122,7 @@ export const removeCartItem = async (cartId, itemId) => {
  * @returns {Promise<Object>} - Clear operation result
  */
 export const clearCart = async (cartId) => {
-  const response = await fetch(`${API_BASE_URL}/carts/${cartId}/items`, {
+  const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items`, {
     method: 'DELETE',
   });
   return handleResponse(response);

@@ -7,8 +7,8 @@ const Advantages = ({ advantages }) => {
   }
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded p-3 shadow-sm">
-      <h3 className="text-gray-800 font-semibold mb-2 text-sm">مميزات المنتج</h3>
+    <div className="">
+      <h2 className="text-md font-bold mb-4">المميزات</h2>
       <div className="space-y-2 text-sm">
         {advantages.map((item, index) => (
           <div key={index} className="flex flex-col">

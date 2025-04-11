@@ -70,11 +70,11 @@
 
 .thumbnail-slide.swiper-slide-thumb-active {
   opacity: 1;
-  border-color: #000;
+  border-color: #575757;
   position: relative;
 }
 
-.thumbnail-slide.swiper-slide-thumb-active:after {
+/* .thumbnail-slide.swiper-slide-thumb-active:after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -85,7 +85,7 @@
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 8px solid #000;
-}
+} */
 
 .soldier-thumbnail {
   position: relative;
@@ -100,7 +100,7 @@
 }
 
 /* Create a soldier silhouette overlay effect */
-.thumbnail-slide:before {
+/* .thumbnail-slide:before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -109,9 +109,9 @@
   height: 15px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-}
+} */
 
-.soldier-icon {
+/* .soldier-icon {
   position: absolute;
   bottom: 2px;
   left: 50%;
@@ -121,7 +121,7 @@
   background-color: #fff;
   border-radius: 50%;
   z-index: 2;
-}
+} */
 
 /* Adjust main slider for better spacing with thumbnails */
 .product-swiper-container {
@@ -129,9 +129,9 @@
 }
 
 /* Improve active state visibility */
-.swiper-slide-thumb-active .soldier-icon {
+/* .swiper-slide-thumb-active .soldier-icon {
   background-color: #ff5500;
   box-shadow: 0 0 5px rgba(255, 85, 0, 0.7);
-}
+} */
 
 
