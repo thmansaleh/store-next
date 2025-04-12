@@ -1,5 +1,7 @@
 import { addOrUpdateCartItem, cartLocalStorage, createCart, getCartByUserOrSession } from '@/app/utils/cart';
+import { getOrCreateSessionId } from '@/app/utils/generateSessionId';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 /**
  * Add to Cart Button Component
@@ -19,12 +21,14 @@ const AddToCartButton = ({
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const options = useSelector(state=>state.options);
+
 
   // Get user info - in a real app, this would come from your auth context or state
   const userId = 1; // Replace with actual user ID if you have auth implemented
 //   const sessionId = cartLocalStorage.getSessionId();
-  const sessionId = 'ytuiohjki'
 
+  const sessionId =getOrCreateSessionId()
   const handleAddToCart = async () => {
     try {
       setIsLoading(true);
@@ -50,20 +54,20 @@ const AddToCartButton = ({
         }
       } else {
         // No session ID or user ID, create a new cart
-        const newCart = await createCart(null, null);
+        const newCart = await createCart(null, sessionId);
         cartId = newCart.cart_id;
         
         // Save session ID for guest users
-        if (newCart.session_id) {
-          cartLocalStorage.setSessionId(newCart.session_id);
-        }
+        // if (newCart.session_id) {
+        //   cartLocalStorage.setSessionId(newCart.session_id);
+        // }
       }
 
       // Step 2: Add the product to the cart
-      await addOrUpdateCartItem(cartId, productId, quantity);
+      await addOrUpdateCartItem(cartId, productId, quantity,options.selections);
       
       // Execute callback if provided
-      onAddToCart({ cartId, productId, quantity });
+      onAddToCart({ cartId, productId, quantity, options});
       
     } catch (err) {
       setError(err.message || 'Failed to add item to cart');

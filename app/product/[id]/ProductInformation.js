@@ -1,6 +1,6 @@
 
 'use client'
-import { useProduct } from '@/app/api/product';
+// import { useProduct } from '@/app/api/product';
 
 export default function ProductInformation({product}){
 

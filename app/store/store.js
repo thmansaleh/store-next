@@ -9,6 +9,7 @@ import productPage from './features/productPage';
 import home from './features/home';
 import search from './features/search';
 import addressReducer from './features/addresses'
+import  optionsReducer from './features/options';
 const store = configureStore({
     reducer: {
         navigation: navigationReducer,
@@ -20,6 +21,7 @@ const store = configureStore({
         home:home,
         search:search,
 address: addressReducer,
+options: optionsReducer,
 
 
 

@@ -74,13 +74,15 @@ export const getCartItems = async (cartId) => {
  * @param {number} quantity - Quantity to add/update
  * @returns {Promise<Object>} - Operation result
  */
-export const addOrUpdateCartItem = async (cartId, productId, quantity) => {
+export const addOrUpdateCartItem = async (cartId, productId, quantity,options) => {
+  // console.log('server',options)
+  // return null
   const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ product_id: productId, quantity }),
+    body: JSON.stringify({ product_id: productId, quantity ,options}),
   });
   return handleResponse(response);
 };
