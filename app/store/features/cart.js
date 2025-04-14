@@ -1,4 +1,5 @@
 "use client"
+import { API_BASE_URL } from '@/app/urls';
 import { createSlice, createAsyncThunk, createSelector } from '@reduxjs/toolkit';
 
 // API service layer - keeps API logic separate from state management
@@ -8,19 +9,19 @@ const cartAPI = {
     if (userId) params.append('user_id', userId);
     if (sessionId) params.append('session_id', sessionId);
     
-    const response = await fetch(`/api/cart/user-cart?${params}`);
+    const response = await fetch(`${API_BASE_URL}/cart/user-cart?${params}`);
     if (!response.ok) throw new Error('Failed to fetch cart');
     return response.json();
   },
   
   fetchItems: async (cartId) => {
-    const response = await fetch(`/api/cart/${cartId}/items`);
+    const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items`);
     if (!response.ok) throw new Error('Failed to fetch cart items');
     return response.json();
   },
   
   addItem: async (cartId, productId, quantity, options = []) => {
-    const response = await fetch(`/api/cart/${cartId}/items`, {
+    const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ product_id: productId, quantity, options })
@@ -30,7 +31,7 @@ const cartAPI = {
   },
   
   updateItemQuantity: async (cartId, itemId, quantity) => {
-    const response = await fetch(`/api/cart/${cartId}/items/${itemId}`, {
+    const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items/${itemId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ quantity })
@@ -40,7 +41,7 @@ const cartAPI = {
   },
   
   removeItem: async (cartId, itemId) => {
-    const response = await fetch(`/api/cart/${cartId}/items/${itemId}`, {
+    const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items/${itemId}`, {
       method: 'DELETE'
     });
     if (!response.ok) throw new Error('Failed to remove item from cart');
@@ -48,7 +49,7 @@ const cartAPI = {
   },
   
   clearCart: async (cartId) => {
-    const response = await fetch(`/api/cart/${cartId}/items`, {
+    const response = await fetch(`${API_BASE_URL}/cart/${cartId}/items`, {
       method: 'DELETE'
     });
     if (!response.ok) throw new Error('Failed to clear cart');

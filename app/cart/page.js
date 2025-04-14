@@ -10,7 +10,10 @@ import { useDispatch } from "react-redux";
 import {changeAlertStatus} from "@/app/store/features/cart"
 import Items from "./Items"
 import  EmptyCart from "./EmptyCart"
+import Content from "./Content"
 export default function Cart(){
+  return <Content/>
+  return null
     const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cart.items);
 
