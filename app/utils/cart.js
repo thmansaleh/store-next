@@ -150,7 +150,7 @@ export const calculateCartTotals = (items) => {
 
 // Utility function to manage cart in localStorage for guest users
 export const cartLocalStorage = {
-  getSessionId: () => localStorage.getItem('cart_session_id'),
-  setSessionId: (sessionId) => localStorage.setItem('cart_session_id', sessionId),
-  clearSessionId: () => localStorage.removeItem('cart_session_id'),
+  getSessionId: () => localStorage.getItem('session_id'),
+  setSessionId: (sessionId) => localStorage.setItem('session_id', sessionId),
+  clearSessionId: () => localStorage.removeItem('session_id'),
 };
