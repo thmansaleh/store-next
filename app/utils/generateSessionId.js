@@ -1,5 +1,5 @@
 export function getOrCreateSessionId() {
-    const localStorageKey = 'sessionId';
+    const localStorageKey = 'session_id';
     
     // Try to get existing session ID from localStorage
     let sessionId = localStorage.getItem(localStorageKey);
