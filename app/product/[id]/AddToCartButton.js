@@ -25,7 +25,7 @@ const AddToCartButton = ({
 
 
   // Get user info - in a real app, this would come from your auth context or state
-  const userId = 1; // Replace with actual user ID if you have auth implemented
+  const userId = null; // Replace with actual user ID if you have auth implemented
 //   const sessionId = cartLocalStorage.getSessionId();
 
   const sessionId =getOrCreateSessionId()
