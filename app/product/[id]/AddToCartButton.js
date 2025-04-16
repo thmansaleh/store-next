@@ -49,7 +49,7 @@ const AddToCartButton = ({
           
           // For guest users, save the session ID
           if (!userId && newCart.session_id) {
-            cartLocalStorage.setSessionId(newCart.session_id);
+            
           }
         }
       } else {
