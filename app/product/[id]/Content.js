@@ -1,5 +1,4 @@
 "use client"
-import Flip from '@/app/components/flip/Flip';
 // import AddToCartButton from './AddToCartButton1';
 import FreeDelivery from './FreeDelivery';
 import ProductInformation from './ProductInformation';

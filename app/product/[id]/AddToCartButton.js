@@ -1,3 +1,4 @@
+'use client'
 import { addOrUpdateCartItem, cartLocalStorage, createCart, getCartByUserOrSession } from '@/app/utils/cart';
 import { getOrCreateSessionId } from '@/app/utils/generateSessionId';
 import { useState } from 'react';

@@ -1,17 +1,19 @@
 // utils/authUtils.js
 
+import { API_BASE_URL } from "../urls";
+
 // Base URL of the backend API
-const BASE_URL = 'http://localhost:5000/api/auth';
 
 // Function to register a new user
-export async function registerUser(username, email, password, firstName, lastName) {
+export async function registerUser(email,name,phone) {
+    // const email ='thman.saleh@gmail.com'
     try {
-        const response = await fetch(`${BASE_URL}/register`, {
+        const response = await fetch(`${API_BASE_URL}/auth/new-user`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username, email, password, first_name: firstName, last_name: lastName })
+            body: JSON.stringify({ email,name,phone })
         });
 
         const data = await response.json();

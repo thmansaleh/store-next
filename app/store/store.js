@@ -10,6 +10,8 @@ import home from './features/home';
 import search from './features/search';
 import addressReducer from './features/addresses'
 import  optionsReducer from './features/options';
+import  AuthModalSlice  from './features/AuthModal';
+// import { AuthModalSlice } from './features/AuthModal';
 const store = configureStore({
     reducer: {
         navigation: navigationReducer,
@@ -22,6 +24,8 @@ const store = configureStore({
         search:search,
 address: addressReducer,
 options: optionsReducer,
+authModal: AuthModalSlice,
+
 
 
 

@@ -1,3 +1,4 @@
+'use client'
 export function getOrCreateSessionId() {
     const localStorageKey = 'session_id';
     

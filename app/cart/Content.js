@@ -20,6 +20,7 @@ import OrderDetailes from './OrderDetailes';
 import Items from './Items';
 import EmptyCart from './EmptyCart';
 import BackArrowBtn from '../components/BackArrowBtn';
+import RedirectToCheckoutPageBtn from './RedirectToCheckoutPageBtn';
 
 export default function ShoppingCart() {
   const dispatch = useDispatch();
@@ -192,6 +193,7 @@ export default function ShoppingCart() {
             </div>
           </div> */}
           <OrderDetailes/>
+          <RedirectToCheckoutPageBtn/>
         </>
       )}
     </div>
