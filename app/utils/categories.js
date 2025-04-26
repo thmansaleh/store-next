@@ -12,7 +12,7 @@ export async function getAllCategories() {
   }
   
 
-export async function fetchCategoryProducts(slug) {
+export async function getCategoryProducts(slug) {
   const response = await fetch(`/api/categories/slug/${slug}/products`);
   
   if (!response.ok) {
