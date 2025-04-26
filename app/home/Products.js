@@ -15,7 +15,8 @@ return <div className="grid grid-cols-2 gap-2 bg-white">
 
 data.map((product,i) => {
 if(i%2 !=0)
-return <SingleProduct key={product.product_id} data={product}/>
+  // {id,name,Image,price,description
+return <SingleProduct key={product.product_id} price={product.price} description={product.description} name={product.name} id={product.product_id} img={product.img_url}/>
 })
 
 }
@@ -27,7 +28,7 @@ return <SingleProduct key={product.product_id} data={product}/>
 {
 data.map((product,i) => {
 if(i%2===0)
-return <SingleProduct key={product.product_id}  data={product}/>
+  return <SingleProduct key={product.product_id} price={product.price} description={product.description} name={product.name} id={product.product_id} img={product.img_url}/>
 })
 }
 </div>

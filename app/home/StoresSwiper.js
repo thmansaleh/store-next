@@ -56,7 +56,7 @@ export default function StoresSwiper() {
         {categories.map((category) => (
           <SwiperSlide key={category.category_id}>
             <Link 
-              href={`/categories/${category.category_id}`} 
+              href={`/categories/${category.slug}`} 
               className='flex flex-col items-center space-y-2 inline-block'
             >
               <div className='ring-2 ring-gray-100 flex overflow-hidden justify-center items-center rounded-full w-14 h-14 object-contain relative'>

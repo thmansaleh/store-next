@@ -1,4 +1,8 @@
+import useSWR from "swr"
+
 export default function Categories(){
+      // const {data,error,isLoading} =useSWR()
+  
 return <div className="p-5">
   <div className="flex gap-x-6 gap-y-8 font-bold text-base  flex-wrap">
     <div>
