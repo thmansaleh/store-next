@@ -83,9 +83,12 @@ export const ContactForm = ({
       
       // Success
       setShowSuccess(true);
-      localStorage.setItem('userId',data.token)
+      localStorage.setItem('userToken',data.token)
       setSuccessMessage('تم إرسال معلومات الاتصال بنجاح!');
-      
+      setTimeout(()=>{
+redirect(`/checkout`)
+
+},3000)
       // Reset form
       setName('');
       setPhone('');
