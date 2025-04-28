@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { API_BASE_URL } from "../urls";
-export const processPayment = async (paymentData,userToken) => {
+export const processPayment = async (paymentData,addressId,userToken) => {
   try {
     const response = await axios.get(`${API_BASE_URL}/pay`, {
-      params: paymentData, // Pass data as query parameters
+      addressId: addressId, // Pass data as query parameters
       headers: {
         'userToken': userToken,
         'Content-Type': 'application/json',
