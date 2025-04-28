@@ -1,5 +1,5 @@
 'use client';
-
+import { redirect } from 'next/navigation'
 import { useState, useEffect } from 'react';
 import { sendOTPVerification, verifyOTP } from '../../utils/email';
 import { EmailComponent } from './Email';
@@ -69,14 +69,14 @@ export const Content = () => {
       if (response.status) {
         setShowError(false);
         setShowSuccess(true);
+localStorage.setItem('userToken',response. userToken)
 
         setTimeout(() => {
         if(!response.userExists){
             setContact(true)
 
         }else{
-            localStorage.setItem('userId',response.token)
-
+            redirect(`/checkout`)
         }
         }, 2000);
       } else if (response.status === false) {
