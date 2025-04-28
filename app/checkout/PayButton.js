@@ -20,7 +20,7 @@ const userToken=localStorage.getItem('userToken')
     };
 
     try {
-      const response = await processPayment(paymentData,userToken);
+      const response = await processPayment(paymentData,1, userToken);
       console.log('Payment successful:', response);
     } catch (error) {
       console.error('Payment failed:', error.message);
