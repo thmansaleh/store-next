@@ -1,6 +1,7 @@
 'use client';
 
 import { registerUser } from '@/app/utils/auth';
+import { redirect } from 'next/navigation';
 import { useState } from 'react';
 
 export const ContactForm = ({

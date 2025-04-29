@@ -1,9 +1,8 @@
 import { API_BASE_URL } from "../urls";
 
-const BASE_URL = 'http://localhost:3000/api/email';  // Replace with your actual base URL
 export async function fetchUserAddresses(userId) {
     try {
-      const response = await fetch(`/api/addresses/user/${userId}`);
+      const response = await fetch(`${API_BASE_URL}/addresses/user/${userId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch addresses for user');
       }
@@ -15,7 +14,7 @@ export async function fetchUserAddresses(userId) {
   }
   export async function fetchAddressById(addressId) {
     try {
-      const response = await fetch(`/api/addresses/${addressId}`);
+      const response = await fetch(`${API_BASE_URL}/addresses/${addressId}`);
       if (!response.ok) {
         throw new Error('Address not found');
       }

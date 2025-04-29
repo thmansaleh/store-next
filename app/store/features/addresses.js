@@ -1,22 +1,24 @@
 import { API_BASE_URL } from '@/app/urls';
-import { createAddress } from '@/app/utils/addresses';
+import { 
+  fetchUserAddresses as fetchUserAddressesUtil,
+  createAddress as createAddressUtil,
+  updateAddress as updateAddressUtil,
+  deleteAddress as deleteAddressUtil
+} from '@/app/utils/addresses';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
-
-// Base URL for API requests
-
 
 // Async thunk to fetch addresses for a user
 export const fetchUserAddresses = createAsyncThunk(
   'address/fetchUserAddresses',
   async (userId, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/addresses/user/${userId}`);
-      const data = await response.data;
-      return data
+      const data = await fetchUserAddressesUtil(userId);
+      if (!data) {
+        throw new Error('No addresses found');
+      }
+      return data;
     } catch (error) {
-      return rejectWithValue(error.data || 'Failed to fetch addresses');
+      return rejectWithValue(error.message || 'Failed to fetch addresses');
     }
   }
 );
@@ -24,14 +26,15 @@ export const fetchUserAddresses = createAsyncThunk(
 // Async thunk to add a new address
 export const addAddress = createAsyncThunk(
   'address/addAddress',
-  async ({ userId, userName,addressName }, { rejectWithValue }) => {
-    
+  async ({ userId, userName, addressName }, { rejectWithValue }) => {
     try {
-      const data = await   createAddress({ userId, addressName,userName })
-
-       return data
+      const data = await createAddressUtil({ userId, addressName, userName });
+      if (!data) {
+        throw new Error('Failed to create address');
+      }
+      return data;
     } catch (error) {
-      return rejectWithValue(error.data || 'Failed to add address');
+      return rejectWithValue(error.message || 'Failed to add address');
     }
   }
 );
@@ -41,10 +44,13 @@ export const updateAddress = createAsyncThunk(
   'address/updateAddress',
   async ({ addressId, addressData }, { rejectWithValue }) => {
     try {
-      const response = await axios.put(`${API_BASE_URL}/address/${addressId}`, addressData);
-      return response.data;
+      const data = await updateAddressUtil(addressId, addressData);
+      if (!data) {
+        throw new Error('Failed to update address');
+      }
+      return data;
     } catch (error) {
-      return rejectWithValue(error.response.data || 'Failed to update address');
+      return rejectWithValue(error.message || 'Failed to update address');
     }
   }
 );
@@ -54,25 +60,13 @@ export const deleteAddress = createAsyncThunk(
   'address/deleteAddress',
   async (addressId, { rejectWithValue }) => {
     try {
-      await axios.delete(`${API_BASE_URL}/address/${addressId}`);
+      const data = await deleteAddressUtil(addressId);
+      if (!data) {
+        throw new Error('Failed to delete address');
+      }
       return addressId; // Return the ID to remove it from state
     } catch (error) {
-      return rejectWithValue(error.response.data || 'Failed to delete address');
-    }
-  }
-);
-
-// Async thunk to set an address as default
-export const setDefaultAddress = createAsyncThunk(
-  'address/setDefaultAddress',
-  async ({ userId, addressId }, { rejectWithValue }) => {
-    try {
-      const response = await axios.patch(
-        `${API_BASE_URL}/address/user/${userId}/default/${addressId}`
-      );
-      return response.data;
-    } catch (error) {
-      return rejectWithValue(error.response.data || 'Failed to set default address');
+      return rejectWithValue(error.message || 'Failed to delete address');
     }
   }
 );
@@ -110,15 +104,14 @@ const addressSlice = createSlice({
       })
       .addCase(fetchUserAddresses.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        console.log('data',action.payload)
         state.addresses = action.payload;
         // Set selectedAddressId if there's a default address
         const defaultAddress = action.payload.find(addr => addr.isDefault);
         if (defaultAddress) {
-          state.selectedAddressId = defaultAddress.id;
+          state.selectedAddressId = defaultAddress.address_id;
         } else if (action.payload.length > 0) {
           // Otherwise select the first address
-          state.selectedAddressId = action.payload[0].id;
+          state.selectedAddressId = action.payload[0].address_id;
         }
       })
       .addCase(fetchUserAddresses.rejected, (state, action) => {
@@ -131,7 +124,6 @@ const addressSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(addAddress.fulfilled, (state, action) => {
-        console.log(action)
         state.status = 'succeeded';
         state.addresses.push(action.payload);
         // Select the new address
@@ -154,11 +146,11 @@ const addressSlice = createSlice({
       .addCase(updateAddress.fulfilled, (state, action) => {
         state.status = 'succeeded';
         // Replace the updated address in the array
-        const index = state.addresses.findIndex(addr => addr.id === action.payload.id);
+        const index = state.addresses.findIndex(addr => addr.address_id === action.payload.address_id);
         if (index !== -1) {
           state.addresses[index] = {
             ...action.payload,
-            selected: state.selectedAddressId === action.payload.id
+            selected: state.selectedAddressId === action.payload.address_id
           };
         }
       })
@@ -174,10 +166,10 @@ const addressSlice = createSlice({
       .addCase(deleteAddress.fulfilled, (state, action) => {
         state.status = 'succeeded';
         // Remove the deleted address from the array
-        state.addresses = state.addresses.filter(addr => addr.id !== action.payload);
+        state.addresses = state.addresses.filter(addr => addr.address_id !== action.payload);
         // If the selected address was deleted, select another one
         if (state.selectedAddressId === action.payload) {
-          state.selectedAddressId = state.addresses.length > 0 ? state.addresses[0].id : null;
+          state.selectedAddressId = state.addresses.length > 0 ? state.addresses[0].address_id : null;
           // Update selected status
           if (state.addresses.length > 0) {
             state.addresses = state.addresses.map((address, idx) => ({
@@ -190,30 +182,6 @@ const addressSlice = createSlice({
       .addCase(deleteAddress.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload || 'Failed to delete address';
-      })
-
-      // Handle setDefaultAddress
-      .addCase(setDefaultAddress.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(setDefaultAddress.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        // Update isDefault flag for all addresses
-        state.addresses = state.addresses.map(addr => ({
-          ...addr,
-          isDefault: addr.id === action.payload.id
-        }));
-        // Select the default address
-        state.selectedAddressId = action.payload.id;
-        // Update selected status
-        state.addresses = state.addresses.map(address => ({
-          ...address,
-          selected: address.id === action.payload.id
-        }));
-      })
-      .addCase(setDefaultAddress.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.payload || 'Failed to set default address';
       });
   },
 });
@@ -225,8 +193,8 @@ export default addressSlice.reducer;
 // Selectors
 export const selectAllAddresses = (state) => state.address.addresses;
 export const selectAddressById = (state, addressId) => 
-  state.address.addresses.find(addr => addr.id === addressId);
+  state.address.addresses.find(addr => addr.address_id === addressId);
 export const selectSelectedAddress = (state) => 
-  state.address.addresses.find(addr => addr.id === state.address.selectedAddressId);
+  state.address.addresses.find(addr => addr.address_id === state.address.selectedAddressId);
 export const selectAddressStatus = (state) => state.address.status;
 export const selectAddressError = (state) => state.address.error;

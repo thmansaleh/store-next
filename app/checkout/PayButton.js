@@ -6,22 +6,13 @@ export default function PayButton() {
 
   const handlePayment = async () => {
 const userToken=localStorage.getItem('userToken')
+const sessionId=localStorage.getItem('session_id')
     setLoading(true);
-    const paymentData = {
-      user_id: 1,
-      payment_method: 'credit_card',
-      amount: 50.99,
-      token: 'secure_payment_token_here',
-      items: [
-        { product_id: 1, quantity: 2, price: 20 },
-        { product_id: 2, quantity: 1, price: 10.99 }
-      ],
-      address_id: 1
-    };
+   
 
     try {
-      const response = await processPayment(paymentData,1, userToken);
-      console.log('Payment successful:', response);
+      const response = await processPayment(1, userToken,sessionId);
+      // console.log('Payment successful:', response);
     } catch (error) {
       console.error('Payment failed:', error.message);
     } finally {
