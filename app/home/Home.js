@@ -18,7 +18,7 @@ export default function Home({products}){
   <Commitments/>
 <FreeReturnSection/>
 <StoresSwiper/>
-//<SwiperFreemodeSection/>
+
 
 
 
