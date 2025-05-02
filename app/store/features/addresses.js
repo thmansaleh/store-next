@@ -1,22 +1,18 @@
-import { API_BASE_URL } from '@/app/urls';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { 
   fetchUserAddresses as fetchUserAddressesUtil,
   createAddress as createAddressUtil,
   updateAddress as updateAddressUtil,
   deleteAddress as deleteAddressUtil
 } from '@/app/utils/addresses';
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// Async thunk to fetch addresses for a user
+// Async thunk to fetch addresses
 export const fetchUserAddresses = createAsyncThunk(
   'address/fetchUserAddresses',
-  async (userId, { rejectWithValue }) => {
+  async (userToken, { rejectWithValue }) => {
     try {
-      const data = await fetchUserAddressesUtil(userId);
-      if (!data) {
-        throw new Error('No addresses found');
-      }
-      return data;
+      const data = await fetchUserAddressesUtil(userToken);
+      return data || [];
     } catch (error) {
       return rejectWithValue(error.message || 'Failed to fetch addresses');
     }
@@ -26,29 +22,38 @@ export const fetchUserAddresses = createAsyncThunk(
 // Async thunk to add a new address
 export const addAddress = createAsyncThunk(
   'address/addAddress',
-  async ({ userId, userName, addressName }, { rejectWithValue }) => {
+  async ({ userToken, addressData }, { rejectWithValue }) => {
     try {
-      const data = await createAddressUtil({ userId, addressName, userName });
+      const data = await createAddressUtil(userToken, addressData);
       if (!data) {
         throw new Error('Failed to create address');
       }
-      return data;
+      return {
+        address_id: data.address_id,
+        address_name: data.address_name,
+        // Add other address fields as needed
+        status: 'active' // Default status for new addresses
+      };
     } catch (error) {
       return rejectWithValue(error.message || 'Failed to add address');
     }
   }
 );
 
-// Async thunk to update an existing address
+// Async thunk to update an address
 export const updateAddress = createAsyncThunk(
   'address/updateAddress',
-  async ({ addressId, addressData }, { rejectWithValue }) => {
+  async ({ userToken, addressData }, { rejectWithValue }) => {
     try {
-      const data = await updateAddressUtil(addressId, addressData);
+      const data = await updateAddressUtil(userToken, addressData);
       if (!data) {
         throw new Error('Failed to update address');
       }
-      return data;
+      return {
+        address_id: data.address_id,
+        address_name: data.address_name,
+        status: data.status || 'active' // Maintain or update status
+      };
     } catch (error) {
       return rejectWithValue(error.message || 'Failed to update address');
     }
@@ -58,137 +63,152 @@ export const updateAddress = createAsyncThunk(
 // Async thunk to delete an address
 export const deleteAddress = createAsyncThunk(
   'address/deleteAddress',
-  async (addressId, { rejectWithValue }) => {
+  async (addressId , { rejectWithValue }) => {
     try {
-      const data = await deleteAddressUtil(addressId);
-      if (!data) {
-        throw new Error('Failed to delete address');
-      }
-      return addressId; // Return the ID to remove it from state
+      await deleteAddressUtil(addressId);
+      return addressId;
     } catch (error) {
       return rejectWithValue(error.message || 'Failed to delete address');
     }
   }
 );
 
-// Initial state
 const initialState = {
   addresses: [],
   selectedAddressId: null,
   status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
+  lastAction: null, // Track last action type
 };
 
-// Create the slice
 const addressSlice = createSlice({
   name: 'address',
   initialState,
   reducers: {
-    // Select an address (locally, without API call)
     selectAddress: (state, action) => {
       state.selectedAddressId = action.payload;
-      // Update selected status in addresses array
       state.addresses = state.addresses.map(address => ({
         ...address,
         selected: address.address_id === action.payload
       }));
     },
-    // Reset the state (useful for logout, etc.)
+    updateAddressStatus: (state, action) => {
+      const { addressId, status } = action.payload;
+      const addressIndex = state.addresses.findIndex(addr => addr.address_id === addressId);
+      if (addressIndex !== -1) {
+        state.addresses[addressIndex].status = status;
+      }
+    },
     resetAddressState: () => initialState,
+    clearAddressError: (state) => {
+      state.error = null;
+    }
   },
   extraReducers: (builder) => {
     builder
       // Handle fetchUserAddresses
       .addCase(fetchUserAddresses.pending, (state) => {
         state.status = 'loading';
+        state.lastAction = 'fetch';
       })
       .addCase(fetchUserAddresses.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.addresses = action.payload;
-        // Set selectedAddressId if there's a default address
-        const defaultAddress = action.payload.find(addr => addr.isDefault);
-        if (defaultAddress) {
-          state.selectedAddressId = defaultAddress.address_id;
-        } else if (action.payload.length > 0) {
-          // Otherwise select the first address
+        state.addresses = action.payload.map(address => ({
+          ...address,
+          selected: address.address_id === state.selectedAddressId,
+          status: address.status || 'active' // Ensure status exists
+        }));
+        
+        // Auto-select first address if none selected
+        if (!state.selectedAddressId && action.payload.length > 0) {
           state.selectedAddressId = action.payload[0].address_id;
+          if (state.addresses.length > 0) {
+            state.addresses[0].selected = true;
+          }
         }
       })
       .addCase(fetchUserAddresses.rejected, (state, action) => {
         state.status = 'failed';
-        state.error = action.payload || 'Failed to fetch addresses';
+        state.error = action.payload;
       })
 
       // Handle addAddress
       .addCase(addAddress.pending, (state) => {
         state.status = 'loading';
+        state.lastAction = 'add';
       })
       .addCase(addAddress.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.addresses.push(action.payload);
-        // Select the new address
-        state.selectedAddressId = action.payload.address_id;
-        // Update selected status in addresses array
-        state.addresses = state.addresses.map(address => ({
-          ...address,
-          selected: address.address_id === action.payload.address_id
+        const newAddress = {
+          ...action.payload,
+          selected: true,
+          status: 'active' // New addresses are active by default
+        };
+        state.addresses.push(newAddress);
+        state.selectedAddressId = newAddress.address_id;
+        
+        // Ensure only one address is selected
+        state.addresses = state.addresses.map(addr => ({
+          ...addr,
+          selected: addr.address_id === newAddress.address_id
         }));
       })
       .addCase(addAddress.rejected, (state, action) => {
         state.status = 'failed';
-        state.error = action.payload || 'Failed to add address';
+        state.error = action.payload;
       })
 
       // Handle updateAddress
       .addCase(updateAddress.pending, (state) => {
         state.status = 'loading';
+        state.lastAction = 'update';
       })
       .addCase(updateAddress.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        // Replace the updated address in the array
-        const index = state.addresses.findIndex(addr => addr.address_id === action.payload.address_id);
+        const index = state.addresses.findIndex(
+          addr => addr.address_id === action.payload.address_id
+        );
         if (index !== -1) {
           state.addresses[index] = {
-            ...action.payload,
+            ...state.addresses[index], // Keep existing properties
+            ...action.payload, // Update with new properties
             selected: state.selectedAddressId === action.payload.address_id
           };
         }
       })
       .addCase(updateAddress.rejected, (state, action) => {
         state.status = 'failed';
-        state.error = action.payload || 'Failed to update address';
+        state.error = action.payload;
       })
 
       // Handle deleteAddress
       .addCase(deleteAddress.pending, (state) => {
         state.status = 'loading';
+        state.lastAction = 'delete';
       })
       .addCase(deleteAddress.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        // Remove the deleted address from the array
-        state.addresses = state.addresses.filter(addr => addr.address_id !== action.payload);
-        // If the selected address was deleted, select another one
+        state.addresses = state.addresses.filter(
+          addr => addr.address_id !== action.payload
+        );
+        
+        // Handle selected address deletion
         if (state.selectedAddressId === action.payload) {
-          state.selectedAddressId = state.addresses.length > 0 ? state.addresses[0].address_id : null;
-          // Update selected status
+          state.selectedAddressId = state.addresses.length > 0 
+            ? state.addresses[0].address_id 
+            : null;
+          
           if (state.addresses.length > 0) {
-            state.addresses = state.addresses.map((address, idx) => ({
-              ...address,
-              selected: idx === 0 // Select the first one
-            }));
+            state.addresses[0].selected = true;
           }
         }
       })
       .addCase(deleteAddress.rejected, (state, action) => {
         state.status = 'failed';
-        state.error = action.payload || 'Failed to delete address';
+        state.error = action.payload;
       });
-  },
+  }
 });
-
-// Export actions and reducer
-export const { selectAddress, resetAddressState } = addressSlice.actions;
-export default addressSlice.reducer;
 
 // Selectors
 export const selectAllAddresses = (state) => state.address.addresses;
@@ -198,3 +218,17 @@ export const selectSelectedAddress = (state) =>
   state.address.addresses.find(addr => addr.address_id === state.address.selectedAddressId);
 export const selectAddressStatus = (state) => state.address.status;
 export const selectAddressError = (state) => state.address.error;
+export const selectLastAddressAction = (state) => state.address.lastAction;
+export const selectActiveAddresses = (state) => 
+  state.address.addresses.filter(addr => addr.status === 'active');
+
+// Actions
+export const { 
+  selectAddress, 
+  updateAddressStatus,
+  resetAddressState,
+  clearAddressError
+} = addressSlice.actions;
+
+// Reducer
+export default addressSlice.reducer;

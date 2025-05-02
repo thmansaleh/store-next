@@ -1,17 +1,25 @@
 import { API_BASE_URL } from "../urls";
 
-export async function fetchUserAddresses(userId) {
-    try {
-      const response = await fetch(`${API_BASE_URL}/addresses/user/${userId}`);
-      if (!response.ok) {
-        throw new Error('Failed to fetch addresses for user');
+export async function fetchUserAddresses(userToken) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/addresses/user`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'userToken': userToken // custom header
       }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error(`Error fetching addresses for user ${userId}:`, error);
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch addresses for user');
     }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching addresses:', error);
   }
+}
   export async function fetchAddressById(addressId) {
     try {
       const response = await fetch(`${API_BASE_URL}/addresses/${addressId}`);
@@ -24,26 +32,32 @@ export async function fetchUserAddresses(userId) {
       console.error(`Error fetching address with ID ${addressId}:`, error);
     }
   }
-  export async function createAddress(addressData) {
-// console.table(addressData.userName)
-    // return null
+
+
+  export async function createAddress(userToken, addressData) {
     try {
       const response = await fetch(`${API_BASE_URL}/addresses`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'userToken': userToken // Add your token here
         },
         body: JSON.stringify(addressData),
       });
+  
       if (!response.ok) {
         throw new Error('Failed to create address');
       }
+  
       const data = await response.json();
       return data;
     } catch (error) {
       console.error('Error creating address:', error);
     }
   }
+  
+
+
   export async function updateAddress(addressId, updatedData) {
 
     try {

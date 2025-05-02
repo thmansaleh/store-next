@@ -18,12 +18,12 @@ return <div className=" p-2 sticky top-0 bg-white flex items-center z-50 justify
 
 
   <div className="relative w-1/2 h-12 bg-white">
-  
+{/*   
   <Image
   src={logo}
 
   className='w-full h-full object-contain'
-  />
+  /> */}
 
 
   </div>
