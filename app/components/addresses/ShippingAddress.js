@@ -65,7 +65,7 @@ const ShippingAddressPage = () => {
 
     dispatch(addAddress({ 
       userToken, 
-      addressData: { addressName, name: userName } 
+      addressData: {address_name: addressName, name: userName } 
     }));
 
     setShowAddressForm(false);
@@ -110,12 +110,9 @@ const ShippingAddressPage = () => {
 
   return (
     <div className="bg-gray-50 py-8" dir="rtl" lang="ar">
-      <div className="max-w-md mx-auto bg-white rounded-xl shadow-sm overflow-hidden">
+      <div className="max-w-md mx-auto bg-white  overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-emerald-500 to-teal-600 p-6 text-white">
-          <h1 className="text-2xl font-bold mb-1">عنوان الشحن</h1>
-          <p className="text-emerald-50 text-sm">حدد عنوان استلام الطلب، واحرص على صحة بيانات الموقع</p>
-        </div>
+      
 
         <div className="p-6">
           {/* Empty state */}

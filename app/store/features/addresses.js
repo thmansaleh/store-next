@@ -43,9 +43,9 @@ export const addAddress = createAsyncThunk(
 // Async thunk to update an address
 export const updateAddress = createAsyncThunk(
   'address/updateAddress',
-  async ({ userToken, addressData }, { rejectWithValue }) => {
+  async ({ addressId, addressData }, { rejectWithValue }) => {
     try {
-      const data = await updateAddressUtil(userToken, addressData);
+      const data = await updateAddressUtil(addressId, addressData);
       if (!data) {
         throw new Error('Failed to update address');
       }

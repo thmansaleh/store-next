@@ -42,7 +42,7 @@ export async function fetchUserAddresses(userToken) {
           'Content-Type': 'application/json',
           'userToken': userToken // Add your token here
         },
-        body: JSON.stringify(addressData),
+        body: JSON.stringify({address_name:addressData.address_name}),
       });
   
       if (!response.ok) {
@@ -66,7 +66,7 @@ export async function fetchUserAddresses(userToken) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(updatedData),
+        body: JSON.stringify({address_name:updatedData.address_name}),
       });
       if (!response.ok) {
         throw new Error('Failed to update address');

@@ -70,6 +70,13 @@ export default function PayButton({ className = '', size = 'default' }) {
   `;
 
   return (
+    <div className="border-t border-gray-200 pt-6">
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className="text-gray-600 mb-5">
+        <p className="mb-1">سيتم توصيل طلبك خلال 3-5 أيام عمل</p>
+        <p className="text-sm">بالضغط على زر الإتمام، فإنك توافق على <a href="#" className="text-emerald-600 hover:underline">شروط الخدمة</a></p>
+      </div>
+  </div>
     <div className="relative" dir="rtl">
       {error && (
         <div className="absolute -top-12 left-0 right-0 bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded-md text-sm text-center animate-fade-in">
@@ -100,6 +107,8 @@ export default function PayButton({ className = '', size = 'default' }) {
         )}
       </button>
     </div>
+    </div>
+
   );
 }
 

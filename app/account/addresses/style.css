@@ -1,0 +1,168 @@
+/* AddressManagement.css */
+
+/* Base styles */
+.address-management {
+    font-family: 'Tajawal', 'Noto Sans Arabic', sans-serif;
+  }
+  
+  /* Animation styles */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  }
+  
+  /* Animation classes */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.4s ease-out;
+  }
+  
+  .animate-pulse {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .scale-102 {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Address card styles */
+  .address-card {
+    transition: all 0.3s ease;
+  }
+  
+  .address-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .address-card.selected {
+    background-color: #ecfdf5;
+    border-color: #10b981;
+  }
+  
+  /* Modal animations */
+  .modal-overlay {
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .modal-content {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  /* Empty state animations */
+  .empty-icon {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 640px) {
+    .address-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .modal-actions {
+      flex-direction: column;
+    }
+  }
+  
+  /* Form focus effects */
+  .form-input:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  }
+  
+  /* Button hover effects */
+  .btn-primary {
+    transition: all 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f9fafb;
+  }
+  
+  /* Loading spinner animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Selection indicator animation */
+  .selection-indicator {
+    transition: all 0.3s ease;
+  }
+  
+  .address-card:hover .selection-indicator {
+    border-color: #10b981;
+  }
+  
+  /* Search bar styles */
+  .search-input {
+    transition: all 0.2s ease;
+  }
+  
+  .search-input:focus {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    border-color: #10b981;
+  }
+  
+  /* Decorative elements animations */
+  .decorative-icon {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* RTL specific adjustments */
+  [dir="rtl"] .space-x-reverse > * + * {
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+  
+  /* Toast notification styles */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    padding: 16px 24px;
+    background-color: #10b981;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .toast.error {
+    background-color: #ef4444;
+  }
+  
+  /* Add this import to your main component file */
+  /* import './AddressManagement.css'; */

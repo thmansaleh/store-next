@@ -21,6 +21,7 @@ import Items from './Items';
 import EmptyCart from './EmptyCart';
 import BackArrowBtn from '../components/BackArrowBtn';
 import RedirectToCheckoutPageBtn from './RedirectToCheckoutPageBtn';
+import { getOrCreateSessionId } from '../utils/generateSessionId';
 
 export default function ShoppingCart() {
   const dispatch = useDispatch();
@@ -40,14 +41,12 @@ export default function ShoppingCart() {
       const userId = localStorage.getItem('user_id');
       
       // For guest users, use a session ID
-      const sessionId = localStorage.getItem('session_id') || 
-                       `guest_${Math.random().toString(36).substring(2, 15)}`;
+      // const sessionId = localStorage.getItem('session_id') || 
+      //                  `guest_${Math.random().toString(36).substring(2, 15)}`;
       
+      const sessionId = getOrCreateSessionId()
       // Store session ID if it's new
-      if (!localStorage.getItem('session_id')) {
-        localStorage.setItem('session_id', sessionId);
-      }
-
+   
       // Initialize the cart
       dispatch(initializeCart({ user_id: userId, session_id: sessionId }));
     }

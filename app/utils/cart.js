@@ -46,6 +46,13 @@ export const getCartByUserOrSession = async (userId = null, sessionId = null) =>
   const response = await fetch(`${API_BASE_URL}/cart/user-cart?${queryParams.toString()}`);
   return handleResponse(response);
 };
+export const getCartItemsBySession = async (sessionId) => {
+  const queryParams = new URLSearchParams();
+  if (sessionId) queryParams.append('session_id', sessionId);
+
+  const response = await fetch(`${API_BASE_URL}/cart/session/items?${queryParams.toString()}`);
+  return handleResponse(response);
+};
 
 /**
  * Gets cart by cart ID
