@@ -9,7 +9,7 @@ export default function Categories() {
 
 
 return <>
-  <Header/>
+  
  <CategoriesItems/>
 </>
   return <>
