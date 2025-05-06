@@ -1,11 +1,32 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
 export default function CleanSlider() {
+  const [screenHeight, setScreenHeight] = useState(0);
+
+  // Calculate screen height on client side
+  useEffect(() => {
+    const updateScreenHeight = () => {
+      setScreenHeight(window.innerHeight);
+    };
+    
+    // Set initial value
+    updateScreenHeight();
+    
+    // Update on resize
+    window.addEventListener('resize', updateScreenHeight);
+    
+    return () => {
+      window.removeEventListener('resize', updateScreenHeight);
+    };
+  }, []);
+
+  const sliderHeight = screenHeight / 3; // One third of device height
+
   const images = [
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/store-6d415.firebasestorage.app/o/products%2F1743789819976%2F1000200857.jpg?alt=media&token=50ffefde-24dc-4ecd-946a-a694e9d42b65',
@@ -32,9 +53,10 @@ export default function CleanSlider() {
         }}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         className="py-4"
+        style={{ height: screenHeight > 0 ? `${sliderHeight}px` : '33vh' }}
       >
         {images.map((item, i) => (
-          <SwiperSlide key={i} className="h-72">
+          <SwiperSlide key={i} style={{ height: '100%' }}>
             <div className="h-full w-full overflow-hidden rounded-lg transition-all duration-300 hover:shadow-lg">
               <img 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
