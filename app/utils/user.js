@@ -3,7 +3,7 @@ export async function getUsername(token) {
   try {
     if (!token) return null;
     
-    const response = await fetch(`${API_BASE_URL}/get-username?token=${token}`);
+    const response = await fetch(`${API_BASE_URL}/auth/get-username?token=${token}`);
     const data = await response.json();
     
     return data.success ? { name: data.name, userId: data.userId } : null;
