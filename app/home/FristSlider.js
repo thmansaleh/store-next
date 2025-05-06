@@ -19,7 +19,7 @@ export default function CleanSlider() {
   ];
 
   // ثابت للارتفاع - تقريباً ثلث ارتفاع شاشة iPhone Pro Max
-  const fixedHeight = 930;
+  const fixedHeight = 300;
 
   return (
     <div className="max-w-6xl mx-auto">
