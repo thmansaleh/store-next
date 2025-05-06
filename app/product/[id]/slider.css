@@ -70,7 +70,7 @@
 
 .thumbnail-slide.swiper-slide-thumb-active {
   opacity: 1;
-  border-color: #059669
+  border-color: #059669;
   position: relative;
 }
 
