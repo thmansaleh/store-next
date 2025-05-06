@@ -54,7 +54,7 @@ const UserProfile = () => {
           <span className="text-sm text-gray-500">Guest</span>
         ) : (
           <span className="text-sm font-medium text-gray-900">
-            {user?.name || 'Guest'}
+            {user?.name }
           </span>
         )}
         {!isLoading && !error && (
