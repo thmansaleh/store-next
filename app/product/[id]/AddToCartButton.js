@@ -72,7 +72,7 @@ const AddToCartButton = ({
       onClick={handleAddToCart}
       className={className}
     >
-      <div className="flex items-center justify-center gap-4 focus:outline-none rounded-lg w-full bg-black text-sm font-semibold text-white py-3 text-center">
+      <div className="flex items-center justify-center gap-4 focus:outline-none rounded-lg w-full bg-emerald-600 text-sm font-semibold text-white py-3 text-center">
         <svg  
           aria-hidden="true"  
           className={isLoading ? "w-5 h-5 animate-spin fill-black" : "hidden"} 
