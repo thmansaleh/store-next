@@ -70,7 +70,7 @@
 
 .thumbnail-slide.swiper-slide-thumb-active {
   opacity: 1;
-  border-color: #575757;
+  border-color: #059669
   position: relative;
 }
 
@@ -84,7 +84,7 @@
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid #000;
+  border-bottom: 8px solid #059669;
 } */
 
 .soldier-thumbnail {
