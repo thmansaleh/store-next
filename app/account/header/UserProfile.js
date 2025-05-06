@@ -1,30 +1,42 @@
 import useSWR from 'swr'
 import { getUsername } from '@/app/utils/user'
-import { useEffect } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 const UserProfile = () => {
-  // Get token from localStorage
-  const userToken = typeof window !== 'undefined' ? localStorage.getItem('userToken') : null
+  const [userToken, setUserToken] = useState(null)
 
-  // SWR fetch function
-  const fetchUserData = async () => {
+  // Safely get token from localStorage (client-side only)
+  useEffect(() => {
+    setUserToken(localStorage.getItem('userToken'))
+  }, [])
+
+  // Memoized fetch function
+  const fetchUserData = useCallback(async () => {
     if (!userToken) return null
-    return await getUsername(userToken)
-  }
+    try {
+      const user = await getUsername(userToken)
+      return user
+    } catch (error) {
+      console.error('Failed to fetch user:', error)
+      throw error // Important for SWR to handle the error
+    }
+  }, [userToken])
 
+  // SWR configuration
   const { data: user, error, isLoading } = useSWR(
-    userToken ? 'userData' : null, 
+    userToken ? ['userData', userToken] : null, // Dynamic key based on token
     fetchUserData,
     {
       revalidateOnFocus: false,
-      shouldRetryOnError: false
+      shouldRetryOnError: false,
+      dedupingInterval: 60000 // Prevent duplicate requests within 60s
     }
   )
 
-  // Optional: Sync across tabs
+  // Sync across tabs
   useEffect(() => {
-    const handleStorageChange = () => {
-      if (typeof window !== 'undefined') {
+    const handleStorageChange = (e) => {
+      if (e.key === 'userToken') {
         const newToken = localStorage.getItem('userToken')
         if (newToken !== userToken) {
           window.location.reload()
@@ -38,6 +50,7 @@ const UserProfile = () => {
 
   return (
     <div className="flex items-center gap-3">
+      {/* Profile picture/icon */}
       <div className={`relative flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 ${isLoading ? 'animate-pulse' : ''}`}>
         {!isLoading && (
           <svg 
@@ -50,7 +63,8 @@ const UserProfile = () => {
           </svg>
         )}
       </div>
-      
+
+      {/* User info */}
       <div className="flex flex-col">
         {isLoading ? (
           <div className="h-4 w-24 bg-gray-100 rounded animate-pulse"></div>
