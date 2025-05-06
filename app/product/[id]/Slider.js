@@ -23,7 +23,7 @@ export default function Slider({images}) {
     <div className="slider-container">
       <Swiper 
         style={{
-          "--swiper-pagination-color": "black",
+          "--swiper-pagination-color": "#059669",
           "--swiper-pagination-bullet-inactive-color": "#999999",
           "--swiper-pagination-bullet-inactive-opacity": "1",
           "--swiper-pagination-bullet-size": "10px",
