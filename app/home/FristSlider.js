@@ -8,22 +8,16 @@ import 'swiper/css/pagination';
 export default function Slider() {
   const images = [
     {
-      img: 'https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-elegant-luxury-perfume-atmosphere-golden-banner-image_179699.jpg',
-      title: 'عطور',
-      subTitle: 'تصفح قائمة العطور',
-      route: '/'
+      img: 'https://firebasestorage.googleapis.com/v0/b/store-6d415.firebasestorage.app/o/products%2F1743789819976%2F1000200857.jpg?alt=media&token=50ffefde-24dc-4ecd-946a-a694e9d42b65',
+      
     },
     {
-      img: 'https://img.pikbest.com/ai/illus_our/20230423/ceca83011ac0d00aaad5085ee820d4ed.jpg!w700wp',
-      title: 'ساعات ',
-      subTitle: 'ساعات ذكية',
-      route: '/'
+      img: 'https://firebasestorage.googleapis.com/v0/b/store-6d415.firebasestorage.app/o/products%2F1743790508956%2F1000200868.jpg?alt=media&token=8b8fa7d5-d8e7-4bbc-8208-95a0c49345e2',
+      
     },
     {
-      img: 'https://png.pngtree.com/thumb_back/fh260/background/20230705/pngtree-kitchen-essentials-3d-rendered-set-of-home-appliances-image_3797261.jpg',
-      title: 'اجهزة منزلية',
-      subTitle: '',
-      route: '/'
+      img: 'https://firebasestorage.googleapis.com/v0/b/store-6d415.firebasestorage.app/o/products%2F1743790205450%2F1000200861.jpg?alt=media&token=2292f196-8113-4ba3-a71b-ba57ba175525',
+      
     },
   ];
 
@@ -52,7 +46,7 @@ export default function Slider() {
     >
       {images.map((e, i) => (
         <SwiperSlide key={i} className="mb-8 h-64 w-64  ">
-          <img className="w-full h-full object-contain rounded-md  " src={e.img} alt={e.title} />
+          <img className="w-full h-full object-contain rounded-md  " src={e.img} alt={e.img} />
         </SwiperSlide>
       ))}
     </Swiper>
