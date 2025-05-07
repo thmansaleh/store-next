@@ -2,21 +2,7 @@ import Link from "next/link"
 function Footer() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
-    <div className="flex flex-col items-center mb-8">
-      <div className="mb-4">
-        <svg className="w-24 h-24" viewBox="0 0 120 120">
-          <path d="M60,20 L70,50 L100,50 L75,70 L85,100 L60,80 L35,100 L45,70 L20,50 L50,50 Z" fill="url(#grad1)" />
-          <defs>
-            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{"stop-color":"#6a43a9","stop-opacity":"1"}} />
-              <stop offset="100%" style={{"stop-color":"#4292c7","stop-opacity":"1"}} />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      {/* Verification Text */}
-      <p className="text-xl text-center mb-2">موثق لدى منصة الأعمال</p>
-    </div>
+    
     {/* Important Links Section */}
     <h2 className="text-2xl font-bold text-center mb-8">روابط مهمة</h2>
     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 text-sm text-semibold">
