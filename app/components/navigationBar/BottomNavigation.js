@@ -45,11 +45,11 @@ export default function BottomNavigation() {
                 setActiveTab(item.id);
                 router.push(item.path);
               }}
-              className="flex flex-col items-center justify-center w-16 h-full relative"
+              className="flex flex-col items-center justify-center w-16 h-full relative outline-none"
             >
               {/* No top line indicator */}
               
-              <div className={`flex flex-col items-center transition-all duration-200 ${isActive ? 'transform -translate-y-1' : ''}`}>
+              <div className={`flex flex-col items-center transition-all duration-200  ${isActive ? 'transform -translate-y-1' : ''}`}>
                 <Icon 
                   size={20} 
                   className={`mb-1 transition-colors ${isActive ? 'text-emerald-500' : 'text-gray-500 dark:text-gray-400'}`} 
