@@ -5,11 +5,15 @@ import RecentSearch from "./RecentSearch"
 import SearchInput from "./SearchInput"
 import SearchTrends from "./SearchTrends"
 import ProductsList from "./ProductsList"
-import Search from "./Content"
+import Content from "./Content"
+import BackArrowBtn from "../components/BackArrowBtn"
 
 
 export default function Serach(){
-  return <Search/>
+  return <>
+  <BackArrowBtn/>
+  <Content/>
+  </>
   const searchValue=useSelector(state=>state.search.searchValue)
 
 if (searchValue) {

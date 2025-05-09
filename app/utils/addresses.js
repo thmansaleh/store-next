@@ -46,7 +46,7 @@ export async function fetchUserAddresses(userToken) {
       });
   
       if (!response.ok) {
-        throw new Error('Failed to create address');
+        // throw new Error('Failed to create address');
       }
   
       const data = await response.json();

@@ -4,7 +4,9 @@ import styles from './styles.css'
 import {useRef } from "react"
  import { useRouter } from 'next/navigation'
 import {icons} from "./NavigationIcons"
+import BottomNavigation from './BottomNavigation';
 export default function NavigationBar(){
+  return <BottomNavigation/>
     const alert = useSelector(state => state.cart.alert);
 const cartItems = useSelector(state => state.cart.items);
 

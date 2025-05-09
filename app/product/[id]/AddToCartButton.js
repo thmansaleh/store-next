@@ -4,16 +4,7 @@ import { getOrCreateSessionId } from '@/app/utils/generateSessionId';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-/**
- * Add to Cart Button Component
- * 
- * @param {Object} props
- * @param {number} props.productId - ID of the product to add to cart
- * @param {number} props.quantity - Initial quantity (default: 1)
- * @param {function} props.onAddToCart - Optional callback after successful add
- * @param {string} props.buttonText - Text to display on button (default: "إضافة الى السلة")
- * @param {string} props.className - CSS classes for button styling
- */
+
 const AddToCartButton = ({ 
   productId, 
   quantity = 1, 

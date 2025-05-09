@@ -1,5 +1,5 @@
 'use client'
-import SingleProduct from "./SingleProduct"
+import ProductCard from "../components/product/ProductCard"
 import { useProducts} from '../api/products'
 import ProductsLoading from './ProductsLoading'
 import { swrHomeProducts } from "../libs/swr/homeProducts"
@@ -16,7 +16,7 @@ return <div className="grid grid-cols-2 gap-2 bg-white">
 data.map((product,i) => {
 if(i%2 !=0)
   // {id,name,Image,price,description
-return <SingleProduct key={product.product_id} price={product.price} description={product.description} name={product.name} id={product.product_id} img={product.img_url}/>
+return <ProductCard key={product.product_id} price={product.price} description={product.description} name={product.name} id={product.product_id} img={product.img_url}/>
 })
 
 }
@@ -28,7 +28,7 @@ return <SingleProduct key={product.product_id} price={product.price} description
 {
 data.map((product,i) => {
 if(i%2===0)
-  return <SingleProduct key={product.product_id} price={product.price} description={product.description} name={product.name} id={product.product_id} img={product.img_url}/>
+  return <ProductCard key={product.product_id} price={product.price} description={product.description} name={product.name} id={product.product_id} img={product.img_url}/>
 })
 }
 </div>

@@ -1,12 +1,13 @@
 "use client"
 import Link from "next/link"
 import Image from 'next/image'
-import SwiperPrice from "./SwiperPrice"
-export default function SingleProduct({id,name,img,price,description}){
+import SwiperPrice from "../../home/SwiperPrice"
+import { FRONTEND_URL } from "@/app/urls"
+export default function ProductCard({id,name,img,price,description}){
   let random = Math.floor(Math.random() * 101)
 
  
-const url =`./product/${id}`
+const url =`${FRONTEND_URL}/product/${id}`
 return <Link  scroll={true}
 prefetch={true} href={{
     pathname: url,

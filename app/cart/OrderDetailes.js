@@ -1,23 +1,47 @@
-
 "use client"
 import Link from "next/link"
 import { useSelector } from "react-redux";
 import { selectCartItemsCount, selectCartTotal } from "../store/features/cart";
-export default function OrderDetailes() {
+import { Package, Truck, CreditCard } from "lucide-react";
 
+export default function OrderDetails() {
   const total = useSelector(selectCartTotal);
   const itemCount = useSelector(selectCartItemsCount);
 
-return  <div className=" my-2 overflow-hidden rounded-xl border border-gray-300 bg-white px-4 py-6 md:mx-4">
-    <div className="my-4 flex justify-between">
-      <span className="text-gray-500 text-sm">المجموع الفرعي</span> <span className="font-bold text-sm">{total} AED</span>
+  return (
+    <div className="my-2 overflow-hidden rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <h3 className="mb-6 flex items-center gap-2 text-lg font-semibold">
+        <Package className="h-5 w-5 text-gray-500" />
+        تفاصيل الطلب
+      </h3>
+      
+      <div className="space-y-4">
+        <div className="flex justify-between">
+          <span className="flex items-center gap-2 text-gray-600">
+            <span>المنتجات ({itemCount})</span>
+          </span>
+          <span className="font-medium">{total} AED</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="flex items-center gap-2 text-gray-600">
+            <Truck className="h-4 w-4" />
+            الشحن
+          </span>
+          <span className="font-medium text-green-600">مجاناً</span>
+        </div>
+        
+        <hr className="my-3 border-gray-200" />
+        
+        <div className="flex justify-between">
+          <span className="font-semibold">المجموع النهائي</span>
+          <span className="text-lg font-bold">{total} د.إ</span>
+        </div>
+      </div>
+      
+     
+      
+   
     </div>
-    <div className="my-4 flex justify-between">
-      <span className="text-gray-500 text-sm">رسوم الشحن</span><span className="flex items-center font-bold text-sm text-green-600">مجانا</span>
-    </div><hr className="my-5 border-gray-300" />
-    <div className="my-4 flex justify-between">
-      <span className="text-md font-bold text-gray-500">المجموع</span><span className="text-md font-bold">{total} د.أ</span>
-    </div>
- 
-  </div>
+  );
 }

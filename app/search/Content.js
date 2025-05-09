@@ -5,7 +5,7 @@ import useSWR from 'swr';
 // import { search } from '@/utils'; // Import the search function from utils
 import './style.css'
 import { search } from '../utils/search';
-const Search = () => {
+const Content = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [animateProduct, setAnimateProduct] = useState(null);
@@ -52,17 +52,17 @@ const Search = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 search-page" dir="rtl" lang="ar">
+    <div className="min-h-screen  py-10 search-page" dir="rtl" lang="ar">
       <div className="max-w-4xl mx-auto">
         {/* Header Bar */}
-        <div className="flex items-center justify-between mb-6 px-4">
+        {/* <div className="flex items-center justify-between mb-6 px-4">
           <Link href="/" className="flex items-center text-emerald-600 hover:text-emerald-700 transition">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
             العودة للرئيسية
           </Link>
-        </div>
+        </div> */}
 
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
           {/* Page Header */}
@@ -224,4 +224,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Content;

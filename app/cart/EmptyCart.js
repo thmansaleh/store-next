@@ -1,11 +1,27 @@
+import Link from "next/link";
+import { ShoppingBag } from "lucide-react";
 
-import Link from "next/link"
-export default function EmptyCart(){
-
-return <div className=" mt-24 flex items-center justify-center flex-col gap-7">
-  {/* <img className="w-36 h-36" src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-7359557-6024626.png?f=webp" alt /> */}
-  <h2 className="text-md text-gray-500">السلة فارغة</h2>
-  <Link className="py-2 text-center w-36 inline-block font-semibold font bg-black text-white text-sm" href="./">تسوق</Link>
-</div>
-
+export default function EmptyCart() {
+  return (
+    <div className="mt-24 flex flex-col items-center justify-center gap-6 text-center">
+      <div className="p-6 rounded-full bg-emerald-100 text-emerald-600">
+        <ShoppingBag className="h-12 w-12" strokeWidth={1.5} />
+      </div>
+      
+      <div className="space-y-2">
+        <h2 className="text-xl font-medium text-gray-800">السلة فارغة</h2>
+        <p className="text-gray-500 max-w-md px-4">
+          لم تقم بإضافة أي منتجات إلى سلة التسوق الخاصة بك بعد
+        </p>
+      </div>
+      
+      <Link
+        href="/"
+        className="px-6 py-3 rounded-md bg-emerald-600 text-white font-medium hover:bg-emerald-800 transition-colors duration-200 flex items-center gap-2"
+      >
+        <ShoppingBag className="h-4 w-4" strokeWidth={2} />
+        ابدأ التسوق الآن
+      </Link>
+    </div>
+  );
 }
