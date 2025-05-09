@@ -45,7 +45,7 @@ export default function BottomNavigation() {
                 setActiveTab(item.id);
                 router.push(item.path);
               }}
-              className="flex flex-col items-center justify-center w-16 h-full relative outline-none"
+              className="flex flex-col items-center justify-center w-16 h-full relative outline-none focus:outline-none"
             >
               {/* No top line indicator */}
               
