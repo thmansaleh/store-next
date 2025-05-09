@@ -6,7 +6,7 @@ export default function SingleProduct({id,name,img,price,description}){
   let random = Math.floor(Math.random() * 101)
 
  
-const url =`product/${id}`
+const url =`./product/${id}`
 return <Link  scroll={true}
 prefetch={true} href={{
     pathname: url,
