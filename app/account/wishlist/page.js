@@ -1,11 +1,16 @@
 
 "use client"
 import Link from 'next/link'
-import Empty from  "./Empty"
 import Header from "@/app/components/header/Header"
 import {useSelector} from  "react-redux"
 import BackArrowBtn from "@/app/components/BackArrowBtn"
+import EmptyFavorites from './EmptyFavorites'
 export default function page() {
+  return <>
+  <BackArrowBtn/>
+
+   <EmptyFavorites/>
+  </>
    
 const items = useSelector(state=>state.wishlist.items)
 

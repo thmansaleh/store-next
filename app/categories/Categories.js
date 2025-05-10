@@ -3,6 +3,7 @@ import { useState } from 'react';
 import useSWR from 'swr';
 import Link from 'next/link';
 import Image from 'next/image';
+import { API_BASE_URL } from '../urls';
 
 // Fetcher function for SWR
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -12,7 +13,7 @@ const Categories = () => {
   
   // Using SWR to fetch categories data
   const { data: categories, error, isLoading } = useSWR(
-    "https://store-api-new.vercel.app/api/categories", 
+    `${API_BASE_URL}/categories`, 
     fetcher
   );
 
@@ -94,14 +95,14 @@ const Categories = () => {
     <div className="min-h-screen bg-gray-50 py-10" dir="rtl" lang="ar">
       <div className="max-w-4xl mx-auto">
         {/* Header Bar */}
-        <div className="flex items-center justify-between mb-6 px-4">
+        {/* <div className="flex items-center justify-between mb-6 px-4">
           <Link href="/" className="flex items-center text-emerald-600 hover:text-emerald-700 transition">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
             العودة للرئيسية
           </Link>
-        </div>
+        </div> */}
 
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
           {/* Page Header */}
@@ -138,17 +139,17 @@ const Categories = () => {
                   className="block"
                 >
                   <div 
-                    className={`transition-all duration-300 transform hover:-translate-y-2 hover:shadow-md ${
+                    className={`transition-all duration-300 transform hover:-translate-y-2  ${
                       animateCategory === category.category_id ? 'scale-102 shadow-md' : ''
                     } flex flex-col items-center`}
                   >
-                    <div className="bg-emerald-50 border border-emerald-100 rounded-full w-20 h-20 mb-3 flex items-center justify-center overflow-hidden shadow-sm hover:shadow transition-all duration-300 hover:border-emerald-300">
+                    <div className="   w-20 h-20 mb-3 flex items-center justify-center overflow-hidden   transition-all duration-300 ">
                       <Image 
                         src={category.image_url} 
                         alt={category.name}
                         width={60}
                         height={60}
-                        className="object-contain animate-fade-in"
+                        className="object-contain animate-fade-in rounded-full"
                         priority={category.category_id <= 6}
                       />
                     </div>
