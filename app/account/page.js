@@ -14,7 +14,7 @@ import Footer from '../components/footer/Footer'
  
 <div className=" p-3 h-f   dark:bg-gray-700">
  
-  <Header/>
+  {/* <Header/> */}
 <FirstSecton/>
 <Section/>
 

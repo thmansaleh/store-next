@@ -155,7 +155,7 @@ const ShippingAddressPage = () => {
                     className="flex items-start cursor-pointer"
                     onClick={() => handleSelectAddress(address.address_id)}
                   >
-                    <div className={`flex-shrink-0 w-5 h-5 rounded-full mr-3 mt-1 flex items-center justify-center ${
+                    <div className={`flex-shrink-0 w-5 h-5 rounded-full ml-3 mt-1 flex items-center justify-center ${
                       address.selected ? 'bg-emerald-500 border-2 border-emerald-500' : 'border-2 border-gray-300'
                     }`}>
                       {address.selected && (
@@ -170,11 +170,11 @@ const ShippingAddressPage = () => {
                     </div>
                     
                     {/* Badge with number */}
-                    <div className={`absolute -left-2 -top-2 w-6 h-6 rounded-full ${
+                    {/* <div className={`absolute -left-2 -top-2 w-6 h-6 rounded-full ${
                       address.selected ? 'bg-emerald-500' : 'bg-gray-400'
                     } text-white flex items-center justify-center text-xs font-medium`}>
                       {index + 1}
-                    </div>
+                    </div> */}
                   </div>
                   
                   {/* Delete button */}

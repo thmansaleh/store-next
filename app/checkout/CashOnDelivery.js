@@ -7,7 +7,7 @@ function CashOnDelivery() {
               
               <div className="p-4 border rounded-lg border-emerald-500 bg-emerald-50">
                 <div className="flex items-center">
-                  <div className="w-5 h-5 rounded-full mr-3 flex items-center justify-center border-2 border-emerald-500">
+                  <div className="w-5 h-5 rounded-full ml-3 flex items-center justify-center border-2 border-emerald-500">
                     <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
                   </div>
                   <div className="flex items-center">
